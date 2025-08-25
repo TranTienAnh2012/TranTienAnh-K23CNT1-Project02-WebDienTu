@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebDienTu.Models.QuanTriVien>
+
+@{
+    ViewData["Title"] = "Danh sách Quản Trị Viên";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>@ViewData["Title"]</h2>
+    <a asp-action="Create" class="btn btn-primary">+ Thêm mới</a>
+</div>
+
+<table class="table table-striped table-bordered align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.HoTen)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.VaiTro)</th>
+            <th>@Html.DisplayNameFor(model => model.NgayDangKy)</th>
+            <th class="text-center">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* Admin (1) trước, User (2) sau *@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.HoTen</td>
+                <td>@item.Email</td>
+                <td>
+                    @(item.VaiTro == 1 ? "Admin" : "User")
+                </td>
+                <td>@(item.NgayDangKy?.ToString("dd/MM/yyyy"))</td>
+                <td class="text-center">
+                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Edit" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-warning">Sửa</a>
+                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Delete" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-danger">Xóa</a>
+                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Details" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-info">Chi tiết</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,113 @@
+﻿@model WebDienTu.Models.SanPham
+
+@{
+    ViewData["Title"] = "Chỉnh sửa sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<div class="card shadow-sm p-4" style="max-width: 900px; margin:auto;">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="MaSanPham" />
+
+        <div class="row">
+            <!-- Cột bên trái: Thông tin cơ bản -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="TenSanPham" class="form-label fw-bold"></label>
+                    <input asp-for="TenSanPham" class="form-control" />
+                    <span asp-validation-for="TenSanPham" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MaDanhMuc" class="form-label fw-bold"></label>
+                    <select asp-for="MaDanhMuc" class="form-select" asp-items="@(ViewData["MaDanhMuc"] as IEnumerable<SelectListItem>)">
+                        <option value="">-- Chọn danh mục --</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TrangThai" class="form-label fw-bold"></label>
+                    <select asp-for="TrangThai" class="form-select" asp-items="@(ViewBag.TrangThaiList)"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Gia" class="form-label fw-bold"></label>
+                    <input asp-for="Gia" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="GiaBan" class="form-label fw-bold"></label>
+                    <input asp-for="GiaBan" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="SoLuongTon" class="form-label fw-bold"></label>
+                    <input asp-for="SoLuongTon" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NgayThem" class="form-label fw-bold"></label>
+                    <input asp-for="NgayThem" type="date" class="form-control" />
+                </div>
+            </div>
+
+            <!-- Cột bên phải: Hình ảnh và chi tiết khác -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="HinhAnh" class="form-label fw-bold"></label>
+                    <select asp-for="HinhAnh" class="form-select" asp-items="ViewBag.ImageList" id="HinhAnhDropdown"></select>
+                    <div class="mt-3 text-center">
+                        <img id="previewImage" src="@Model.HinhAnh" alt="@Model.TenSanPham" class="img-fluid rounded border" style="max-height:250px;" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MoTa" class="form-label fw-bold"></label>
+                    <textarea asp-for="MoTa" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Loai" class="form-label fw-bold"></label>
+                    <input asp-for="Loai" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ThuongHieu" class="form-label fw-bold"></label>
+                    <input asp-for="ThuongHieu" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="XuatXu" class="form-label fw-bold"></label>
+                    <input asp-for="XuatXu" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="BaoHanh" class="form-label fw-bold"></label>
+                    <input asp-for="BaoHanh" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary me-2">
+                <i class="bi bi-save"></i> Lưu
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    
+
+    <script>
+        document.getElementById('HinhAnhDropdown').addEventListener('change', function () {
+            var img = document.getElementById('previewImage');
+            img.src = this.value;
+        });
+    </script>
+}

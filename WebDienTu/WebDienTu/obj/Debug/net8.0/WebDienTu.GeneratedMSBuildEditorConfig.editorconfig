@@ -1,0 +1,223 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebDienTu
+build_property.RootNamespace = WebDienTu
+build_property.ProjectDir = D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/AdminHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Ib21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/ChiTietDonHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpVGlldERvbkhhbmdzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/ChiTietDonHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpVGlldERvbkhhbmdzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/ChiTietDonHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpVGlldERvbkhhbmdzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/ChiTietDonHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpVGlldERvbkhhbmdzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/ChiTietDonHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpVGlldERvbkhhbmdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhGia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaEdpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhGia/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaEdpYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhGia/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaEdpYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhGia/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaEdpYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhGia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaEdpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhMucs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhMucs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhMucs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhMucs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DanhMucs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DonHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DonHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DonHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DonHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/DonHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhblRyaVZpZW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhblRyaVZpZW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhblRyaVZpZW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhblRyaVZpZW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhblRyaVZpZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/SanPhams/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/SanPhams/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/SanPhams/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/SanPhams/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/SanPhams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/Shared/_NavAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9OYXZBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/DonHang/LichSu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uSGFuZ1xMaWNoU3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Home/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Home/XacNhanMua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxYYWNOaGFuTXVhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_BannerNavUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYW5uZXJOYXZVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zz1z254rj6

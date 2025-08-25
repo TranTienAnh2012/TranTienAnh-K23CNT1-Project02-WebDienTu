@@ -1,0 +1,60 @@
+﻿@model IEnumerable<WebDienTu.Models.DanhGia>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SoSao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BinhLuan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayDanhGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNguoiDungNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaSanPhamNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoSao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BinhLuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDanhGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNguoiDungNavigation.MaNguoiDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSanPhamNavigation.MaSanPham)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaDanhGia">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaDanhGia">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaDanhGia">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

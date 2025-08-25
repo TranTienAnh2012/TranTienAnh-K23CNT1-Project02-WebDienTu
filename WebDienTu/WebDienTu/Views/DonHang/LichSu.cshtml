@@ -1,0 +1,74 @@
+﻿@model IEnumerable<WebDienTu.Models.DonHang>
+
+@{
+    ViewData["Title"] = "Lịch sử mua hàng";
+}
+
+<h2 class="mb-4">Lịch sử mua hàng</h2>
+
+@if (TempData["Warning"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Warning"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <p>Bạn chưa có đơn hàng nào.</p>
+}
+else
+{
+    <div class="accordion" id="donHangAccordion">
+        @foreach (var dh in Model)
+        {
+            var statusText = dh.TrangThai == true ? "Đã xác nhận" : "Chờ xác nhận";
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="heading@dh.MaDonHang">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse@dh.MaDonHang" aria-expanded="false" aria-controls="collapse@dh.MaDonHang">
+                        Đơn hàng #@dh.MaDonHang - @statusText - @dh.NgayDatHang?.ToString("dd/MM/yyyy HH:mm")
+                    </button>
+                </h2>
+                <div id="collapse@dh.MaDonHang" class="accordion-collapse collapse" aria-labelledby="heading@dh.MaDonHang" data-bs-parent="#donHangAccordion">
+                    <div class="accordion-body">
+                        @if (dh.ChiTietDonHangs != null && dh.ChiTietDonHangs.Any())
+                        {
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Số lượng</th>
+                                        <th>Thành tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ct in dh.ChiTietDonHangs)
+                                    {
+                                        <tr>
+                                            <td>@ct.MaSanPhamNavigation.TenSanPham</td>
+                                            <td>@ct.DonGia.ToString("N0") VNĐ</td>
+                                            <td>@ct.SoLuong</td>
+                                            <td>@(ct.DonGia * ct.SoLuong).ToString("N0") VNĐ</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="3" class="text-end">Tổng tiền:</th>
+                                        <th>@dh.TongTien.ToString("N0") VNĐ</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>Chưa có sản phẩm nào trong đơn hàng này.</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

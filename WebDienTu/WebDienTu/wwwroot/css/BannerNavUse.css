@@ -1,0 +1,61 @@
+﻿/* Container */
+.tta-carousel {
+    max-width: 100%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Carousel image */
+.tta-carousel-image {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Caption style */
+.tta-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+    .tta-caption h5 {
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    .tta-caption p {
+        font-size: 1rem;
+        color: #f1f1f1;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tta-carousel-image {
+        height: 250px;
+    }
+
+    .tta-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .tta-caption p {
+        font-size: 0.9rem;
+    }
+}
+/* Animation xuất hiện từ dưới lên */
+.tta-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+    /* Khi slide active thêm class này */
+    .tta-caption.show-caption {
+        transform: translateY(0);
+        opacity: 1;
+    }

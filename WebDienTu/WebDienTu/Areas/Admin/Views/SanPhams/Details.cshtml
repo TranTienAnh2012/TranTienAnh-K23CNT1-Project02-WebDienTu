@@ -1,0 +1,106 @@
+﻿@model WebDienTu.Models.SanPham
+
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<div class="card shadow-sm mb-4" style="max-width: 1000px; margin:auto;">
+    <div class="row g-0">
+        <!-- Ảnh sản phẩm -->
+        <div class="col-md-5 text-center p-4 bg-light d-flex align-items-center justify-content-center">
+            @if (!string.IsNullOrEmpty(Model.HinhAnh))
+            {
+                <img src="@Model.HinhAnh" class="img-fluid rounded" alt="@Model.TenSanPham" style="max-height: 400px;" />
+            }
+            else
+            {
+                <span class="text-muted">Chưa có hình</span>
+            }
+        </div>
+
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7">
+            <div class="card-body">
+                <h2 class="card-title mb-3">@Model.TenSanPham</h2>
+
+                <table class="table table-borderless table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Danh mục</th>
+                            <td>@Model.MaDanhMucNavigation?.TenDanhMuc</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Giá</th>
+                            <td>@Model.Gia.ToString("N0") VNĐ</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Giá bán</th>
+                            <td>@Model.GiaBan?.ToString("N0") VNĐ</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Số lượng tồn</th>
+                            <td>@Model.SoLuongTon</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Trạng thái</th>
+                            <td>
+                                @if (Model.TrangThai == true)
+                                {
+                                    <span class="badge bg-success">Hiển thị</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Ẩn</span>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Loại</th>
+                            <td>@Model.Loai</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Thương hiệu</th>
+                            <td>@Model.ThuongHieu</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Xuất xứ</th>
+                            <td>@Model.XuatXu</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Bảo hành</th>
+                            <td>@Model.BaoHanh</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mô tả</th>
+                            <td>@Model.MoTa</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ngày thêm</th>
+                            <td>@Model.NgayThem?.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mt-3">
+                    <a asp-action="Edit" asp-route-id="@Model.MaSanPham" class="btn btn-primary me-2">
+                        <i class="bi bi-pencil-square"></i> Chỉnh sửa
+                    </a>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Thêm hiệu ứng hover nhẹ cho card */
+    .card:hover {
+        transform: translateY(-3px);
+        transition: 0.3s;
+    }
+</style>
