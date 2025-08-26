@@ -22,37 +22,65 @@
     {
         <div class="col">
             <div class="card h-100 shadow-sm border-0 rounded-3 position-relative">
+
                 <!-- Badge giảm giá -->
                 @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
                 {
-                    <span class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom small">
                         <i class="fa-solid fa-tag me-1"></i>
                         Giảm @((1 - item.GiaBan.Value / item.Gia) * 100).ToString("0")%
                     </span>
                 }
 
+                <!-- Ảnh sản phẩm -->
                 <img src="@item.HinhAnh" class="card-img-top" alt="@item.TenSanPham"
                      style="height:200px; object-fit:cover; border-radius: .5rem .5rem 0 0;" />
 
+                <!-- Thông tin -->
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title text-truncate" title="@item.TenSanPham">@item.TenSanPham</h5>
-                    <p class="card-text text-truncate" title="@item.MoTa">@item.MoTa</p>
-                    <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="fw-bold text-primary">
-                            @((item.GiaBan ?? item.Gia).ToString("N0")) VNĐ
-                        </span>
-                        <a asp-controller="Home" asp-action="Details" asp-route-id="@item.MaSanPham" class="btn btn-sm btn-outline-primary">
-                            <i class="fa-solid fa-eye me-1"></i> Xem
-                        </a>
-                        <a asp-controller="Home" asp-action="XacNhanMua" asp-route-sanPhamId="@item.MaSanPham" class="btn btn-sm btn-outline-success">
-                            <i class="fa-solid fa-cart-shopping me-1"></i> Mua
-                        </a>
+                    <h6 class="card-title text-truncate" title="@item.TenSanPham">@item.TenSanPham</h6>
+                    <p class="card-text text-muted small text-truncate" title="@item.MoTa">@item.MoTa</p>
+
+                    <!-- Giá + hành động -->
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold text-primary">
+                                @((item.GiaBan ?? item.Gia).ToString("N0")) VNĐ
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@item.MaSanPham"
+                               class="btn btn-sm btn-outline-primary">
+                                <i class="fa-solid fa-eye me-1"></i> Xem
+                            </a>
+                            <form asp-controller="DonHang" asp-action="MuaHang" method="post" class="d-inline">
+                                <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
+                                <button type="submit" class="btn btn-sm btn-outline-success">
+                                    <i class="fa-solid fa-cart-shopping me-1"></i> Mua
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Footer với icon -->
                 <div class="card-footer d-flex justify-content-around border-0 bg-white">
-                    <button class="btn btn-sm btn-outline-success" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
-                    <button class="btn btn-sm btn-outline-danger" title="Yêu thích"><i class="fa-solid fa-heart"></i></button>
+                    <!-- Thêm vào giỏ hàng -->
+                    <form asp-controller="GioHang" asp-action="AddToCart" method="post" class="d-inline">
+                        <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
+                        <input type="hidden" name="quantity" value="1" /> <!-- số lượng mặc định -->
+                        <button type="submit" class="btn btn-sm btn-outline-success" title="Thêm vào giỏ">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </form>
+
+                    <!-- Yêu thích -->
+                    <button class="btn btn-sm btn-outline-danger" title="Yêu thích">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
                 </div>
+
             </div>
         </div>
     }

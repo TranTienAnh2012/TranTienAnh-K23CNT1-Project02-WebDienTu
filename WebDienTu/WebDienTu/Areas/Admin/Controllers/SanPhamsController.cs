@@ -97,10 +97,11 @@ namespace WebDienTu.Areas.Admin.Controllers
 
             // Trạng thái
             ViewBag.TrangThaiList = new List<SelectListItem>
-    {
-        new SelectListItem { Text = "Hiển thị", Value = "true", Selected = sanPham.TrangThai.GetValueOrDefault() },
-        new SelectListItem { Text = "Ẩn", Value = "false", Selected = !sanPham.TrangThai.GetValueOrDefault() }
-    };
+            {
+                new SelectListItem { Text = "Hiển thị", Value = "True", Selected = sanPham.TrangThai == true },
+                new SelectListItem { Text = "Ẩn", Value = "False", Selected = sanPham.TrangThai == false }
+            };
+
 
             // Hình ảnh
             var rootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
@@ -116,7 +117,6 @@ namespace WebDienTu.Areas.Admin.Controllers
 
         // POST: Admin/SanPhams/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaSanPham,TenSanPham,MaDanhMuc,Gia,MoTa,HinhAnh,SoLuongTon,TrangThai,NgayThem,Loai,GiaBan,ThuongHieu,XuatXu,BaoHanh")] SanPham sanPham)
@@ -132,6 +132,7 @@ namespace WebDienTu.Areas.Admin.Controllers
                 {
                     _context.Update(sanPham);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -144,11 +145,33 @@ namespace WebDienTu.Areas.Admin.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["MaDanhMuc"] = new SelectList(_context.DanhMucs, "MaDanhMuc", "MaDanhMuc", sanPham.MaDanhMuc);
+            else
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                Console.WriteLine("ModelState Errors: " + string.Join("; ", errors));
+            }
+
+            // Reload dropdowns
+            ViewData["MaDanhMuc"] = new SelectList(_context.DanhMucs, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
+
+            ViewBag.TrangThaiList = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Hiển thị", Value = "True", Selected = sanPham.TrangThai == true },
+        new SelectListItem { Text = "Ẩn", Value = "False", Selected = sanPham.TrangThai == false }
+    };
+
+            var rootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+            var imageFiles = Directory.GetFiles(rootPath, "*.*", SearchOption.AllDirectories)
+                                      .Where(f => f.EndsWith(".jpg") || f.EndsWith(".png"))
+                                      .Select(f => "/images/" + Path.GetRelativePath(rootPath, f).Replace("\\", "/"))
+                                      .ToList();
+            ViewBag.ImageList = new SelectList(imageFiles, sanPham.HinhAnh);
+
             return View(sanPham);
         }
+
+
 
         // GET: Admin/SanPhams/Delete/5
         public async Task<IActionResult> Delete(int? id)

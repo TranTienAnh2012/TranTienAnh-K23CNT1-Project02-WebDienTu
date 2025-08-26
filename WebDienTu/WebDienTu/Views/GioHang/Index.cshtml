@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebDienTu.Models.GioHangTam>
+
+<h2>Giỏ hàng</h2>
+
+@if (!Model.Any())
+{
+    <p>Giỏ hàng trống!</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaSanPhamNavigation.TenSanPham</td>
+                    <td>@item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia</td>
+                    <td>@item.SoLuong</td>
+                    <td>@((item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia) * item.SoLuong)</td>
+                    <td>
+                        <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

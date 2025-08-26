@@ -47,7 +47,6 @@ D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Composition.TypedParts.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Memory.Data.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -124,11 +123,6 @@ D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\WebDienTu.sourcelink.json
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.build.json
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.development.json
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets\msbuild.WebDienTu.Microsoft.AspNetCore.StaticWebAssets.props
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets\msbuild.build.WebDienTu.props
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebDienTu.props
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebDienTu.props
-D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.pack.json
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\scopedcss\bundle\WebDienTu.styles.css
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\scopedcss\projectbundle\WebDienTu.bundle.scp.css
@@ -259,3 +253,11 @@ D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\WebDienTu.staticwebassets.endpoints.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -57,21 +57,7 @@ namespace WebDienTu.Controllers
             return View(sp);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> XacNhanMua(int sanPhamId)
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                TempData["Warning"] = "Vui lòng đăng nhập hoặc đăng ký để mua hàng!";
-                return RedirectToAction("Login", "Account");
-            }
-
-            var sp = await _context.SanPhams.FindAsync(sanPhamId);
-            if (sp == null || sp.TrangThai == false)
-                return RedirectToAction("Index", "Home");
-
-            return View(sp);
-        }
+      
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

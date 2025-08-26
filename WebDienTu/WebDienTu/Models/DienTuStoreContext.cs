@@ -49,8 +49,7 @@ public partial class DienTuStoreContext : DbContext
 
             entity.HasOne(d => d.MaDonHangNavigation).WithMany(p => p.ChiTietDonHangs)
                 .HasForeignKey(d => d.MaDonHang)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ChiTietDo__MaDon__48CFD27E");
+                .HasConstraintName("FK_ChiTietDonHang_DonHang");
 
             entity.HasOne(d => d.MaSanPhamNavigation).WithMany(p => p.ChiTietDonHangs)
                 .HasForeignKey(d => d.MaSanPham)

@@ -22,14 +22,17 @@
 
                 <div class="mb-3">
                     <label asp-for="MaDanhMuc" class="form-label fw-bold"></label>
-                    <select asp-for="MaDanhMuc" class="form-select" asp-items="@(ViewData["MaDanhMuc"] as IEnumerable<SelectListItem>)">
+                    <select asp-for="MaDanhMuc" class="form-select"
+                            asp-items="@(ViewData["MaDanhMuc"] as IEnumerable<SelectListItem>)">
                         <option value="">-- Chọn danh mục --</option>
                     </select>
+
+
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="TrangThai" class="form-label fw-bold"></label>
-                    <select asp-for="TrangThai" class="form-select" asp-items="@(ViewBag.TrangThaiList)"></select>
+                    <select asp-for="TrangThai" class="form-select" asp-items="ViewBag.TrangThaiList"></select>
                 </div>
 
                 <div class="mb-3">
@@ -59,7 +62,11 @@
                     <label asp-for="HinhAnh" class="form-label fw-bold"></label>
                     <select asp-for="HinhAnh" class="form-select" asp-items="ViewBag.ImageList" id="HinhAnhDropdown"></select>
                     <div class="mt-3 text-center">
-                        <img id="previewImage" src="@Model.HinhAnh" alt="@Model.TenSanPham" class="img-fluid rounded border" style="max-height:250px;" />
+                        <img id="previewImage"
+                             src="@(string.IsNullOrEmpty(Model.HinhAnh) ? "/images/default.png" : Model.HinhAnh)"
+                             alt="@Model.TenSanPham"
+                             class="img-fluid rounded border"
+                             style="max-height:250px;" />
                     </div>
                 </div>
 
@@ -102,8 +109,6 @@
 </div>
 
 @section Scripts {
-    
-
     <script>
         document.getElementById('HinhAnhDropdown').addEventListener('change', function () {
             var img = document.getElementById('previewImage');
