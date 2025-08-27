@@ -54,12 +54,11 @@
                                class="btn btn-sm btn-outline-primary">
                                 <i class="fa-solid fa-eye me-1"></i> Xem
                             </a>
-                            <form asp-controller="DonHang" asp-action="MuaHang" method="post" class="d-inline">
-                                <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
-                                <button type="submit" class="btn btn-sm btn-outline-success">
-                                    <i class="fa-solid fa-cart-shopping me-1"></i> Mua
-                                </button>
-                            </form>
+                            <a asp-controller="DonHang" asp-action="ThanhToan" asp-route-id="@item.MaSanPham"
+                               class="btn btn-sm btn-outline-success">
+                                <i class="fa-solid fa-cart-shopping me-1"></i> Mua
+                            </a>
+
                         </div>
                     </div>
                 </div>

@@ -82,24 +82,19 @@ public class AccountController : Controller
         {
             // Tạo claims
             var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.HoTen),
-                new Claim(ClaimTypes.Role, user.VaiTro == 1 ? "Admin" : "User"),
-                new Claim("UserId", user.MaNguoiDung.ToString()) // dùng đúng property
-            };
-
-
+        {
+            new Claim(ClaimTypes.Name, user.HoTen),
+            new Claim(ClaimTypes.Role, user.VaiTro == 1 ? "Admin" : "User"), // giữ Role
+            new Claim("UserId", user.MaNguoiDung.ToString())
+        };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-            // Điều hướng
-            if (user.VaiTro == 1) // Admin
-                return RedirectToAction("Index", "AdminHome", new { area = "Admin" });
-            else // User
-                return RedirectToAction("Index", "Home");
+            // Tất cả user và admin đều vào trang user/Home
+            return RedirectToAction("Index", "Home");
         }
 
         ViewBag.Error = "Sai email hoặc mật khẩu";

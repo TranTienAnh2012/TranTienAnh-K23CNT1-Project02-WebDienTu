@@ -64,6 +64,32 @@ public class GioHangController : Controller
         return RedirectToAction("Index");
     }
 
+    // theo dõi số lượng sản phẩm trong giỏ hàng
+    [HttpPost]
+    public async Task<IActionResult> UpdateQuantity(int sanPhamId, int change)
+    {
+        var userIdString = User.FindFirstValue("UserId");
+        if (!int.TryParse(userIdString, out int userId))
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var item = await _context.GioHangTams
+            .FirstOrDefaultAsync(g => g.MaNguoiDung == userId && g.MaSanPham == sanPhamId);
+
+        if (item != null)
+        {
+            item.SoLuong += change;
+            if (item.SoLuong <= 0)
+            {
+                _context.GioHangTams.Remove(item); // Nếu số lượng <= 0 thì xóa luôn
+            }
+            await _context.SaveChangesAsync();
+        }
+
+        return RedirectToAction("Index");
+    }
+
     // Xóa sản phẩm khỏi giỏ hàng
     public async Task<IActionResult> Remove(int id)
     {

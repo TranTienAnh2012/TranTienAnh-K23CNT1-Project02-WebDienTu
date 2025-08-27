@@ -134,6 +134,68 @@ namespace WebDienTu.Controllers
             TempData["Success"] = $"Đơn hàng #{id} đã được hủy!";
             return RedirectToAction("LichSu");
         }
+        [HttpGet]
+        public async Task<IActionResult> ThanhToan(int id)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["Warning"] = "Vui lòng đăng nhập để mua hàng!";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var sp = await _context.SanPhams.FindAsync(id);
+            if (sp == null || sp.TrangThai == false || sp.SoLuongTon <= 0)
+            {
+                TempData["Error"] = "Sản phẩm không hợp lệ hoặc đã hết hàng!";
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(sp);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ThanhToan(int sanPhamId, int soLuong)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["Warning"] = "Vui lòng đăng nhập để mua hàng!";
+                return RedirectToAction("Login", "Account");
+            }
+
+            int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+            var sp = await _context.SanPhams.FindAsync(sanPhamId);
+            if (sp == null || sp.TrangThai == false || sp.SoLuongTon < soLuong)
+            {
+                TempData["Error"] = "Sản phẩm không hợp lệ hoặc hết hàng.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            var donHang = new DonHang
+            {
+                MaNguoiDung = userId,
+                NgayDatHang = DateTime.Now,
+                TongTien = soLuong * (sp.GiaBan ?? sp.Gia),
+                TrangThai = false
+            };
+            _context.DonHangs.Add(donHang);
+            await _context.SaveChangesAsync();
+
+            var chiTiet = new ChiTietDonHang
+            {
+                MaDonHang = donHang.MaDonHang,
+                MaSanPham = sp.MaSanPham,
+                SoLuong = soLuong,
+                DonGia = sp.GiaBan ?? sp.Gia
+            };
+            _context.ChiTietDonHangs.Add(chiTiet);
+
+            sp.SoLuongTon -= soLuong;
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Đơn hàng đã được tạo và chờ admin xác nhận!";
+            return RedirectToAction("LichSu");
+        }
 
     }
 }

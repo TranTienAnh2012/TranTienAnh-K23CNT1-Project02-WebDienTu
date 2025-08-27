@@ -1,36 +1,95 @@
 ﻿@model IEnumerable<WebDienTu.Models.GioHangTam>
 
-<h2>Giỏ hàng</h2>
+@{
+    ViewData["Title"] = "Giỏ hàng";
+    var tongTien = Model.Sum(item => (item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia) * item.SoLuong);
+}
 
-@if (!Model.Any())
-{
-    <p>Giỏ hàng trống!</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Sản phẩm</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-                <th>Hành động</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.MaSanPhamNavigation.TenSanPham</td>
-                    <td>@item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia</td>
-                    <td>@item.SoLuong</td>
-                    <td>@((item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia) * item.SoLuong)</td>
-                    <td>
-                        <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Xóa</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<div class="container mt-4">
+    <h2 class="mb-4"><i class="fa-solid fa-cart-shopping me-2"></i> Giỏ hàng của bạn</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <i class="fa-solid fa-circle-info me-2"></i> Giỏ hàng trống.
+            <a asp-controller="Home" asp-action="Index" class="alert-link">Tiếp tục mua sắm</a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        var gia = item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia;
+                        var thanhTien = gia * item.SoLuong;
+
+                        <tr>
+                            <td style="width:100px">
+                                <img src="@item.MaSanPhamNavigation.HinhAnh" alt="@item.MaSanPhamNavigation.TenSanPham"
+                                     class="img-fluid rounded" style="max-height:80px; object-fit:cover;" />
+                            </td>
+                            <td class="text-start">
+                                <strong>@item.MaSanPhamNavigation.TenSanPham</strong>
+                            </td>
+                            <td>@gia.ToString("N0") VNĐ</td>
+                            <td>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <!-- Nút giảm -->
+                                    <form asp-action="UpdateQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
+                                        <input type="hidden" name="change" value="-1" />
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">-</button>
+                                    </form>
+
+                                    <!-- Hiển thị số lượng -->
+                                    <span class="mx-2">@item.SoLuong</span>
+
+                                    <!-- Nút tăng -->
+                                    <form asp-action="UpdateQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
+                                        <input type="hidden" name="change" value="1" />
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">+</button>
+                                    </form>
+                                </div>
+                            </td>
+
+                            <td class="fw-bold text-primary">@thanhTien.ToString("N0") VNĐ</td>
+                            <td>
+                                <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                    <i class="fa-solid fa-trash"></i> Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-end fw-bold">Tổng cộng:</td>
+                        <td colspan="2" class="fw-bold text-success fs-5">@tongTien.ToString("N0") VNĐ</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
+                <i class="fa-solid fa-arrow-left me-1"></i> Tiếp tục mua sắm
+            </a>
+            <a asp-controller="DonHang" asp-action="ThanhToan" class="btn btn-success">
+                <i class="fa-solid fa-credit-card me-1"></i> Thanh toán
+            </a>
+        </div>
+    }
+</div>
