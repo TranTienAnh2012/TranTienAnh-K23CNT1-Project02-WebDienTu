@@ -28,7 +28,10 @@ public class GioHangController : Controller
             .Include(g => g.MaSanPhamNavigation)
             .Where(g => g.MaNguoiDung == userId)
             .ToListAsync();
-
+        // Thống kê
+        ViewBag.TongSanPham = gioHang.Sum(g => g.SoLuong);
+        ViewBag.ChuaThanhToan = gioHang.Where(g => g.TrangThai == "ChuaThanhToan").Sum(g => g.SoLuong);
+        ViewBag.DaThanhToan = gioHang.Where(g => g.TrangThai == "DaThanhToan").Sum(g => g.SoLuong);
         return View(gioHang);
     }
 

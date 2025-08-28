@@ -13,6 +13,8 @@ public partial class GioHangTam
 
     public int SoLuong { get; set; }
 
+    public string TrangThai { get; set; } = null!;
+
     public virtual QuanTriVien MaNguoiDungNavigation { get; set; } = null!;
 
     public virtual SanPham MaSanPhamNavigation { get; set; } = null!;

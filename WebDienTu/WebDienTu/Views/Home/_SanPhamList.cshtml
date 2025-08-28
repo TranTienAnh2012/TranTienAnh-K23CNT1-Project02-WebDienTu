@@ -1,31 +1,6 @@
 ﻿@model IEnumerable<WebDienTu.Models.SanPham>
 
-@{
-    ViewData["Title"] = "Trang chủ";
-}
-
-<!-- Banner -->
-<partial name="_BannerNavUsers" />
-
-<!-- Thông báo cảnh báo -->
-@if (TempData["Warning"] != null)
-{
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        @TempData["Warning"]
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-}
-<ul class="nav nav-pills mb-3" id="LoaiFilterNav">
-    <li class="nav-item"><a class="nav-link active" href="#" data-loai="">Tất cả</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="Macbook">Macbook</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="iPhone">Iphone</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="Lenovo">Lenovo</a></li>
-</ul>
-
-<div id="SanPhamList">
-    @await Html.PartialAsync("_SanPhamList", Model)
-</div>
-@* <!-- Danh sách sản phẩm -->
+<!-- Danh sách sản phẩm -->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
     @foreach (var item in Model)
@@ -99,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-            
+
 
 
                 <!-- Footer với icon -->
@@ -118,25 +93,8 @@
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
-                
+
             </div>
         </div>
     }
-</div> *@
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            $("#LoaiFilterNav a").click(function (e) {
-                e.preventDefault();
-                $("#LoaiFilterNav a").removeClass("active");
-                $(this).addClass("active");
-
-                var loai = $(this).data("loai");
-
-                $.get("/Home/LocTheoLoai", { loai: loai }, function (res) {
-                    $("#SanPhamList").html(res);
-                });
-            });
-        });
-    </script>
-}
+</div>

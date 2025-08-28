@@ -1,0 +1,18 @@
+﻿@model List<WebDienTu.Models.DanhGia>
+
+@if (Model != null && Model.Any())
+{
+    foreach (var dg in Model.OrderByDescending(d => d.NgayDanhGia))
+    {
+        <div class="border rounded p-2 mb-2">
+            <strong>@(dg.MaNguoiDungNavigation?.HoTen ?? "Người dùng")</strong>
+            <span class="text-muted">(@dg.NgayDanhGia?.ToString("dd/MM/yyyy HH:mm"))</span>
+            <p>@dg.BinhLuan</p>
+            <p>Số sao: @dg.SoSao / 5</p>
+        </div>
+    }
+}
+else
+{
+    <p>Chưa có bình luận nào.</p>
+}

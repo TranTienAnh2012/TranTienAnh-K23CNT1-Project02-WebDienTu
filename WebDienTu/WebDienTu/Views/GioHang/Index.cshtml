@@ -17,6 +17,35 @@
     }
     else
     {
+        <!-- Thống kê -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-info">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-info">Tổng sản phẩm</h5>
+                        <p class="card-text fs-4 fw-bold">@ViewBag.TongSanPham</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-warning">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-warning">Chưa thanh toán</h5>
+                        <p class="card-text fs-4 fw-bold">@ViewBag.ChuaThanhToan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-success">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-success">Đã thanh toán</h5>
+                        <p class="card-text fs-4 fw-bold">@ViewBag.DaThanhToan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bảng giỏ hàng -->
         <div class="table-responsive">
             <table class="table table-bordered align-middle text-center">
                 <thead class="table-light">
@@ -46,17 +75,12 @@
                             <td>@gia.ToString("N0") VNĐ</td>
                             <td>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <!-- Nút giảm -->
                                     <form asp-action="UpdateQuantity" method="post" class="d-inline">
                                         <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
                                         <input type="hidden" name="change" value="-1" />
                                         <button type="submit" class="btn btn-sm btn-outline-secondary">-</button>
                                     </form>
-
-                                    <!-- Hiển thị số lượng -->
                                     <span class="mx-2">@item.SoLuong</span>
-
-                                    <!-- Nút tăng -->
                                     <form asp-action="UpdateQuantity" method="post" class="d-inline">
                                         <input type="hidden" name="sanPhamId" value="@item.MaSanPham" />
                                         <input type="hidden" name="change" value="1" />
@@ -64,7 +88,6 @@
                                     </form>
                                 </div>
                             </td>
-
                             <td class="fw-bold text-primary">@thanhTien.ToString("N0") VNĐ</td>
                             <td>
                                 <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
@@ -93,3 +116,4 @@
         </div>
     }
 </div>
+

@@ -123,6 +123,10 @@ public partial class DienTuStoreContext : DbContext
 
             entity.ToTable("GioHangTam");
 
+            entity.Property(e => e.TrangThai)
+                .HasMaxLength(50)
+                .HasDefaultValue("ChuaThanhToan");
+
             entity.HasOne(d => d.MaNguoiDungNavigation).WithMany(p => p.GioHangTams)
                 .HasForeignKey(d => d.MaNguoiDung)
                 .OnDelete(DeleteBehavior.ClientSetNull)

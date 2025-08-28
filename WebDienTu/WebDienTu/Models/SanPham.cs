@@ -9,7 +9,8 @@ public partial class SanPham
 
     public string TenSanPham { get; set; } = null!;
 
-    public int MaDanhMuc { get; set; }
+    public int MaDanhMuc { get; set; }  // required
+
 
     public decimal Gia { get; set; }
 
@@ -35,12 +36,11 @@ public partial class SanPham
 
     public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; } = new List<ChiTietDonHang>();
 
-    public virtual ICollection<DanhGia > DanhGia { get; set; } = new List<DanhGia >();
+    public virtual ICollection<DanhGia> DanhGia { get; set; } = new List<DanhGia>();
 
     public virtual ICollection<GioHangTam> GioHangTams { get; set; } = new List<GioHangTam>();
 
-    public virtual DanhMuc? MaDanhMucNavigation { get; set; }
-
+    public virtual DanhMuc? MaDanhMucNavigation { get; set; } // nullable
 
     public virtual ICollection<SanPhamDaXem> SanPhamDaXems { get; set; } = new List<SanPhamDaXem>();
 

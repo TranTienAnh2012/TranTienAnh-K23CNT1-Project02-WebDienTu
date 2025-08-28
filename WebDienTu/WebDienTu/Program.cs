@@ -12,21 +12,31 @@ var connectionString = builder.Configuration.GetConnectionString("DienTuStoreCon
 builder.Services.AddDbContext<DienTuStoreContext>(x => x.UseSqlServer(connectionString));
 
 // 👉 Cấu hình Authentication với Cookie
+
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
+        // Các đường dẫn login/logout/denied
         options.LoginPath = "/Account/Login";
         options.LogoutPath = "/Account/Logout";
         options.AccessDeniedPath = "/Account/AccessDenied";
 
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(1); // optional
-        options.SlidingExpiration = true;
+        // Session cookie: sẽ mất khi tắt trình duyệt
+        options.Cookie.HttpOnly = true;   // bảo vệ cookie khỏi JS
+        options.Cookie.IsEssential = true; // bắt buộc cho GDPR/consent
+        options.Cookie.MaxAge = null;      // session cookie
 
-        options.Cookie.HttpOnly = true;
-        options.Cookie.IsEssential = true;
+        // Thời gian tồn tại cookie nếu trình duyệt mở lâu
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // optional
+        options.SlidingExpiration = true; // tự làm mới khi user thao tác
 
-        options.Cookie.MaxAge = null; // 👈 đây: cookie sẽ là session cookie → tắt trình duyệt sẽ mất
+        // Bảo mật
+        options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest; // HTTPS nếu có
     });
+
+// Kích hoạt session nếu dùng
+builder.Services.AddSession();
 
 // 👉 Thêm Session nếu muốn dùng
 builder.Services.AddSession();

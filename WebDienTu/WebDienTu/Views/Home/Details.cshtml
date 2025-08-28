@@ -26,10 +26,10 @@
         <p><strong>Xuất xứ:</strong> @Model.XuatXu</p>
         <p><strong>Bảo hành:</strong> @Model.BaoHanh</p>
 
+        <!-- Các nút hành động -->
         <div class="mt-3 d-flex flex-wrap gap-2">
             @if (User.Identity.IsAuthenticated)
             {
-                <!-- Nút Thêm vào giỏ -->
                 <form asp-controller="GioHang" asp-action="AddToCart" method="post" class="d-inline">
                     <input type="hidden" name="sanPhamId" value="@Model.MaSanPham" />
                     <input type="hidden" name="quantity" value="1" />
@@ -38,7 +38,6 @@
                     </button>
                 </form>
 
-                <!-- Nút Mua ngay -->
                 <form asp-controller="DonHang" asp-action="MuaHang" method="post" class="d-inline">
                     <input type="hidden" name="sanPhamId" value="@Model.MaSanPham" />
                     <button type="submit" class="btn btn-primary btn-md d-flex align-items-center">
@@ -46,32 +45,87 @@
                     </button>
                 </form>
 
-                <!-- Nút Yêu thích -->
                 <button class="btn btn-outline-danger btn-md d-flex align-items-center">
                     <i class="fa-solid fa-heart me-2"></i> Yêu thích
                 </button>
-
-                <!-- Nút Quay lại -->
-                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary btn-md d-flex align-items-center">
-                    <i class="fa-solid fa-arrow-left me-2"></i> Quay lại
-                </a>
-            }
-            else
-            {
-                <div class="alert alert-warning w-100">
-                    Vui lòng
-                    <a asp-controller="Account" asp-action="Login"
-                       asp-route-returnUrl="@Url.Action("Details", "Home", new { id = Model.MaSanPham })">
-                        đăng nhập
-                    </a>
-                    hoặc
-                    <a asp-controller="Account" asp-action="Register">
-                        đăng ký
-                    </a>
-                    để mua hàng và yêu thích sản phẩm.
-                </div>
             }
         </div>
-
     </div>
 </div>
+
+<hr />
+
+<!-- Phần đánh giá -->
+<div id="danhGiaSection">
+    <h4>Đánh giá sản phẩm</h4>
+    <p>Trung bình sao: <span id="trungBinhSao">@ViewBag.TrungBinhSao</span> / 5</p>
+
+    <!-- Danh sách đánh giá (PartialView) -->
+    <div id="danhGiaList">
+        <script>
+            $(document).ready(function() {
+                var maSanPham = @Model.MaSanPham;
+                $("#danhGiaList").load("/DanhGias/List?maSanPham=" + maSanPham);
+            });
+        </script>
+    </div>
+
+
+    <!-- Form đánh giá (chỉ hiển thị nếu đăng nhập) -->
+    @if (User.Identity.IsAuthenticated)
+    {
+        <form id="formDanhGia">
+            <input type="hidden" id="MaSanPham" value="@Model.MaSanPham" />
+
+            <div class="mb-3">
+                <label for="SoSao" class="form-label">Số sao:</label>
+                <select id="SoSao" class="form-select w-auto">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <option value="@i">@i sao</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="BinhLuan" class="form-label">Bình luận:</label>
+                <textarea id="BinhLuan" class="form-control" rows="3" placeholder="Viết bình luận..."></textarea>
+            </div>
+
+            <button type="button" id="btnDanhGia" class="btn btn-primary">Gửi đánh giá</button>
+        </form>
+    }
+    else
+    {
+        <p>Vui lòng <a asp-controller="Account" asp-action="Login">đăng nhập</a> để đánh giá sản phẩm.</p>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            var maSanPham = @Model.MaSanPham;
+            // Load danh sách bình luận ngay khi trang load
+            $("#danhGiaList").load("/DanhGias/List?maSanPham=" + maSanPham);
+
+            $("#btnDanhGia").click(function() {
+                var soSao = $("#SoSao").val();
+                var binhLuan = $("#BinhLuan").val();
+
+                $.post("/DanhGias/Create", { maSanPham, soSao, binhLuan }, function(res) {
+                    if(res.success){
+                        // Reload danh sách đánh giá
+                        $("#danhGiaList").load("/DanhGias/List?maSanPham=" + maSanPham);
+                        // Cập nhật trung bình sao
+                        $("#trungBinhSao").text(res.trungBinh.toFixed(1));
+                        // Xóa nội dung textarea
+                        $("#BinhLuan").val("");
+                    } else {
+                        alert(res.message);
+                    }
+                });
+            });
+        });
+    </script>
+
+}
