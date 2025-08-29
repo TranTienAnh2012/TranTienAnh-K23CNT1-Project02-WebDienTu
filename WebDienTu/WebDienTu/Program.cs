@@ -1,50 +1,55 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.Cookies; // 👈 Thêm cái này
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.EntityFrameworkCore;
+using WebDienTu.Conventions;
 using WebDienTu.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+// ------------------- DỊCH VỤ -------------------
+
+// Add MVC (Controllers + Views)
+builder.Services.AddControllersWithViews(options =>
+{
+    // 👉 Gắn convention: tất cả controller trong Area "Admin" sẽ require [Authorize(Roles="Admin")]
+    options.Conventions.Add(new AdminAreaAuthorization("Admin", "Admin"));
+});
 
 // 👉 Cấu hình DbContext
 var connectionString = builder.Configuration.GetConnectionString("DienTuStoreConnection");
 builder.Services.AddDbContext<DienTuStoreContext>(x => x.UseSqlServer(connectionString));
 
 // 👉 Cấu hình Authentication với Cookie
-
-
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         // Các đường dẫn login/logout/denied
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
-        options.AccessDeniedPath = "/Account/AccessDenied";
+        options.LoginPath = "/Account/Login";         // khi chưa login → redirect                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        options.LogoutPath = "/Account/Logout";       // khi logout → redirect
+        options.AccessDeniedPath = "/Account/AccessDenied"; // khi sai quyền
 
-        // Session cookie: sẽ mất khi tắt trình duyệt
+        // Cookie settings
         options.Cookie.HttpOnly = true;   // bảo vệ cookie khỏi JS
-        options.Cookie.IsEssential = true; // bắt buộc cho GDPR/consent
-        options.Cookie.MaxAge = null;      // session cookie
+        options.Cookie.IsEssential = true; // cookie bắt buộc
+        options.Cookie.MaxAge = null;      // session cookie (mất khi tắt trình duyệt)
 
-        // Thời gian tồn tại cookie nếu trình duyệt mở lâu
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // optional
-        options.SlidingExpiration = true; // tự làm mới khi user thao tác
+        // Expire settings
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // hết hạn sau 30 phút
+        options.SlidingExpiration = true; // tự làm mới nếu còn hoạt động
 
         // Bảo mật
         options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest; // HTTPS nếu có
     });
 
-// Kích hoạt session nếu dùng
-builder.Services.AddSession();
-
-// 👉 Thêm Session nếu muốn dùng
+// 👉 Session
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// ------------------- MIDDLEWARE -------------------
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -56,18 +61,20 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseSession();           // 👈 Kích hoạt session
-app.UseAuthentication();    // 👈 Kích hoạt Authentication trước Authorization
+app.UseSession();           // 👉 Bật Session
+app.UseAuthentication();    // 👉 Phải đặt trước Authorization
 app.UseAuthorization();
 
-// 👉 Cấu hình cho Area trước
+// 👉 Route cho Area (ví dụ: /Admin/AdminHome/Index)
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
-// 👉 Cấu hình mặc định
+// 👉 Route mặc định (user site)
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+

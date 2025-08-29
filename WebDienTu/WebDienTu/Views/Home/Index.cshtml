@@ -7,14 +7,32 @@
 <!-- Banner -->
 <partial name="_BannerNavUsers" />
 
-<!-- Thông báo cảnh báo -->
-@if (TempData["Warning"] != null)
-{
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        @TempData["Warning"]
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-}
+<!-- Container popup ở giữa màn hình -->
+<!-- Popup giữa màn hình -->
+<!-- Overlay -->
+<div id="popupOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background:rgba(0,0,0,0.5); z-index:1040;"></div>
+
+<!-- Popup -->
+<div id="popupNotification" style="display:none; position:fixed; top:50%; left:50%;
+    transform:translate(-50%, -50%) scale(0); background-color:white; border-radius:12px;
+    padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1050; text-align:center;
+    width:280px; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    transition: transform 0.3s ease, opacity 0.3s ease; opacity:0;" >
+
+    <lord-icon id="popupIcon" src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop"
+               colors="primary:#0ab39c,secondary:#405189" style="width:80px;height:80px"></lord-icon>
+
+    <div id="popupTitle" style="margin-top:10px; font-weight:700; font-size:1.1rem;"></div>
+    <div id="popupMessage" style="margin-top:5px; font-size:0.95rem; color:#333;"></div>
+
+    <button id="popupOkBtn" style="margin-top:15px; padding:5px 15px; border:none; border-radius:5px;
+            background-color:#0ab39c; color:white; cursor:pointer;">
+        OK
+    </button>
+</div>
+
+
 <ul class="nav nav-pills mb-3" id="LoaiFilterNav">
     <li class="nav-item"><a class="nav-link active" href="#" data-loai="">Tất cả</a></li>
     <li class="nav-item"><a class="nav-link" href="#" data-loai="Macbook">Macbook</a></li>
@@ -25,6 +43,8 @@
 <div id="SanPhamList">
     @await Html.PartialAsync("_SanPhamList", Model)
 </div>
+
+
 @* <!-- Danh sách sản phẩm -->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
@@ -125,18 +145,64 @@
 </div> *@
 @section Scripts {
     <script>
-        $(document).ready(function () {
-            $("#LoaiFilterNav a").click(function (e) {
+            $(document).ready(function () {
+
+            var successMsg = @Html.Raw(Json.Serialize(TempData["SuccessMessage"]));
+            var warningMsg = @Html.Raw(Json.Serialize(TempData["Warning"]));
+
+            function showPopup(title, message, iconUrl) {
+                if (!message) return;
+
+                $("#popupTitle").text(title);
+                $("#popupMessage").text(message);
+                $("#popupIcon").attr("src", iconUrl);
+
+                $("#popupOverlay").fadeIn(200);
+                $("#popupNotification").css({display:'flex', opacity:0, transform:'scale(0)'}).animate({opacity:1}, 300);
+                $("#popupNotification").css('transform', 'scale(1)');
+
+                var autoHide = setTimeout(hidePopup, 8000);
+
+                $("#popupOkBtn").off("click").on("click", function () {
+                    clearTimeout(autoHide);
+                    hidePopup();
+                });
+
+                function hidePopup() {
+                    $("#popupNotification").animate({opacity:0}, 300, function() {
+                        $(this).css('display','none').css('transform','scale(0)');
+                    });
+                    $("#popupOverlay").fadeOut(200);
+                }
+            }
+
+            if (successMsg) {
+                showPopup("Thành công!", successMsg, "https://cdn.lordicon.com/lupuorrc.json");
+            } else if (warningMsg) {
+                showPopup("Cảnh báo!", warningMsg, "https://cdn.lordicon.com/tdrtiskw.json");
+            }
+
+            // ========================
+            // Ajax lọc sản phẩm theo loại
+            // ========================
+            $("#LoaiFilterNav").on("click", "a", function (e) {
                 e.preventDefault();
+
                 $("#LoaiFilterNav a").removeClass("active");
                 $(this).addClass("active");
 
                 var loai = $(this).data("loai");
 
-                $.get("/Home/LocTheoLoai", { loai: loai }, function (res) {
-                    $("#SanPhamList").html(res);
-                });
+                $.get("/Home/LocTheoLoai", { loai: loai })
+                    .done(function (res) {
+                        $("#SanPhamList").html(res);
+                    })
+                    .fail(function () {
+                        alert("Lỗi khi tải sản phẩm. Vui lòng thử lại.");
+                    });
             });
+
         });
+
     </script>
 }

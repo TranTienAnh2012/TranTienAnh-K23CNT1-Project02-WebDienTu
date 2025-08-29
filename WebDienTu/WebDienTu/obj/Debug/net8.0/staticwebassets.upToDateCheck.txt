@@ -1,4 +1,5 @@
 wwwroot\css\BannerNavUse.css
+wwwroot\css\DanhSachSanPham.css
 wwwroot\css\NavberUsers.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
