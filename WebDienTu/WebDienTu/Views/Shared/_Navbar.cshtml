@@ -50,6 +50,17 @@
                 </li>
             </ul>
 
+            <!-- Thanh tìm kiếm -->
+            <form id="searchForm" class="d-flex me-auto">
+                <div class="input-group">
+                    <input type="text" id="searchKeyword" class="form-control" name="keyword" placeholder="Tìm sản phẩm..." aria-label="Tìm sản phẩm">
+                    <button class="btn btn-success" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+
             <ul class="navbar-nav">
                 @if (!isAuthenticated)
                 {

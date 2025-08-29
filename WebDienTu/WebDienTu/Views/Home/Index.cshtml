@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Trang chủ";
 }
+<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 
 <!-- Banner -->
 <partial name="_BannerNavUsers" />
@@ -14,14 +15,14 @@
      background:rgba(0,0,0,0.5); z-index:1040;"></div>
 
 <!-- Popup -->
-<div id="popupNotification" style="display:none; position:fixed; top:50%; left:50%;
+<div id="popupNotification" style="display:none; position:fixed; top:40%; left:40%;
     transform:translate(-50%, -50%) scale(0); background-color:white; border-radius:12px;
     padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1050; text-align:center;
     width:280px; display:flex; flex-direction:column; justify-content:center; align-items:center;
     transition: transform 0.3s ease, opacity 0.3s ease; opacity:0;" >
 
-    <lord-icon id="popupIcon" src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop"
-               colors="primary:#0ab39c,secondary:#405189" style="width:80px;height:80px"></lord-icon>
+    <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#0ab39c,secondary:#405189" style="width:120px;height:120px">
+    </lord-icon>
 
     <div id="popupTitle" style="margin-top:10px; font-weight:700; font-size:1.1rem;"></div>
     <div id="popupMessage" style="margin-top:5px; font-size:0.95rem; color:#333;"></div>
@@ -145,8 +146,11 @@
 </div> *@
 @section Scripts {
     <script>
-            $(document).ready(function () {
+        $(document).ready(function () {
 
+            // ========================
+            // Hiển thị popup thông báo
+            // ========================
             var successMsg = @Html.Raw(Json.Serialize(TempData["SuccessMessage"]));
             var warningMsg = @Html.Raw(Json.Serialize(TempData["Warning"]));
 
@@ -158,7 +162,8 @@
                 $("#popupIcon").attr("src", iconUrl);
 
                 $("#popupOverlay").fadeIn(200);
-                $("#popupNotification").css({display:'flex', opacity:0, transform:'scale(0)'}).animate({opacity:1}, 300);
+                $("#popupNotification").css({ display: 'flex', opacity: 0, transform: 'scale(0)' })
+                    .animate({ opacity: 1 }, 300);
                 $("#popupNotification").css('transform', 'scale(1)');
 
                 var autoHide = setTimeout(hidePopup, 8000);
@@ -169,8 +174,8 @@
                 });
 
                 function hidePopup() {
-                    $("#popupNotification").animate({opacity:0}, 300, function() {
-                        $(this).css('display','none').css('transform','scale(0)');
+                    $("#popupNotification").animate({ opacity: 0 }, 300, function () {
+                        $(this).css('display', 'none').css('transform', 'scale(0)');
                     });
                     $("#popupOverlay").fadeOut(200);
                 }
@@ -202,7 +207,24 @@
                     });
             });
 
-        });
+            // ========================
+            // Ajax tìm kiếm sản phẩm
+            // ========================
+            $("#searchForm").on("submit", function (e) {
+                e.preventDefault(); // chặn reload trang
 
+                var keyword = $("#searchKeyword").val();
+
+                $.get("/Home/SearchAjax", { keyword: keyword })
+                    .done(function (res) {
+                        $("#SanPhamList").html(res);
+                    })
+                    .fail(function () {
+                        alert("Lỗi khi tìm kiếm sản phẩm!");
+                    });
+            });
+
+        });
     </script>
 }
+
