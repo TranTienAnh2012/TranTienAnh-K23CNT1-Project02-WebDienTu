@@ -1,0 +1,23 @@
+﻿@model List<WebDienTu.Models.SanPham>
+
+@if (Model != null && Model.Any())
+{
+    <div class="row row-cols-2 row-cols-md-3 g-2">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@item.HinhAnh" class="card-img-top" alt="@item.TenSanPham" style="height:120px; object-fit:cover;">
+                    <div class="card-body p-2">
+                        <h6 class="card-title text-truncate">@item.TenSanPham</h6>
+                        <p class="card-text text-danger fw-bold">@item.GiaBan?.ToString("N0") ?? item.Gia.ToString("N0") VNĐ</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p class="text-muted">Bạn chưa xem sản phẩm nào.</p>
+}

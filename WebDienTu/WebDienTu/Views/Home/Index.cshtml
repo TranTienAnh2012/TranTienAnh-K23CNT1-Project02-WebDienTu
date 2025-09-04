@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Trang chủ";
 }
+@{
+    var currentUserId = ViewBag.MaNguoiDung ?? 0;
+}
 <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 
 <!-- Banner -->
@@ -34,6 +37,14 @@
 </div>
 
 
+<div id="daXemContainer">
+    <!-- Nội dung sẽ load từ Ajax -->
+</div>
+
+
+
+
+
 <ul class="nav nav-pills mb-3" id="LoaiFilterNav">
     <li class="nav-item"><a class="nav-link active" href="#" data-loai="">Tất cả</a></li>
     <li class="nav-item"><a class="nav-link" href="#" data-loai="Macbook">Macbook</a></li>
@@ -45,6 +56,11 @@
     @await Html.PartialAsync("_SanPhamList", Model)
 </div>
 
+<!-- Gọi Hot Keywords -->
+@if (ViewBag.HotKeywords != null && ((List<string>)ViewBag.HotKeywords).Any())
+{
+    @await Html.PartialAsync("_HotKeywords", (List<string>)ViewBag.HotKeywords)
+}
 
 @* <!-- Danh sách sản phẩm -->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
@@ -208,7 +224,7 @@
             });
 
             // ========================
-            // Ajax tìm kiếm sản phẩm
+            // Ajax tìm kiếm sản phẩm (input + gợi ý)
             // ========================
             $("#searchForm").on("submit", function (e) {
                 e.preventDefault(); // chặn reload trang
@@ -224,7 +240,63 @@
                     });
             });
 
+            // Gợi ý keyword khi gõ
+            $("#searchKeyword").on("keyup", function () {
+                var keyword = $(this).val();
+
+                if (keyword.length < 1) {
+                    $("#suggestions").empty();
+                    return;
+                }
+
+                $.get("/Home/GetKeywords", { keyword: keyword })
+                    .done(function (data) {
+                        var suggestions = $("#suggestions");
+                        suggestions.empty();
+                        $.each(data, function (i, item) {
+                            suggestions.append('<li class="list-group-item suggestion-item">' + item + '</li>');
+                        });
+                    });
+            });
+
+            // Click vào gợi ý → fill vào input và search
+            $(document).on("click", ".suggestion-item", function () {
+                var text = $(this).text();
+                $("#searchKeyword").val(text);
+                $("#searchForm").submit();
+                $("#suggestions").empty();
+            });
+
+            // ========================
+            // 🔥 Ajax lọc sản phẩm khi click Hot Keywords
+            // (Đã thêm mới)
+            // ========================
+            $(document).on("click", ".keyword-link", function (e) {
+                e.preventDefault();
+                var keyword = $(this).data("keyword");
+
+                $.get("/Home/SearchAjax", { keyword: keyword })
+                    .done(function (res) {
+                        $("#SanPhamList").html(res);
+                    })
+                    .fail(function () {
+                        alert("Lỗi khi tìm kiếm sản phẩm theo hot keyword!");
+                    });
+            });
+
+        $(function() {
+            var maNguoiDung = @currentUserId;
+            if (maNguoiDung > 0) {
+                $("#daXemContainer").load("/SanPhamDaXem/Index?maNguoiDung=" + maNguoiDung);
+            }
+        });
+
+
+
+
         });
     </script>
 }
+
+
 

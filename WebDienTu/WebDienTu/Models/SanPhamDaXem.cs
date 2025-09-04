@@ -16,4 +16,5 @@ public partial class SanPhamDaXem
     public virtual QuanTriVien MaNguoiDungNavigation { get; set; } = null!;
 
     public virtual SanPham MaSanPhamNavigation { get; set; } = null!;
+  
 }

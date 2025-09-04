@@ -12,6 +12,7 @@ wwwroot\images\Asus\06.jpg
 wwwroot\images\BanneUse\01.jpg
 wwwroot\images\BanneUse\02.jpg
 wwwroot\images\BanneUse\03.jpg
+wwwroot\images\BanneUse\04.jpg
 wwwroot\images\Iphone\01.jpg
 wwwroot\images\Iphone\02.jpg
 wwwroot\images\Iphone\03.jpg

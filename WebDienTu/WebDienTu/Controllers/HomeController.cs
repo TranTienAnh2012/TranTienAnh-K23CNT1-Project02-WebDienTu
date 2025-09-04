@@ -19,11 +19,24 @@ namespace WebDienTu.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // 🔑 Lấy hot keywords
+            var hotKeywords = (await _context.SanPhams
+                    .Where(sp => sp.TrangThai == true)
+                    .Select(sp => new { sp.TenSanPham, sp.ThuongHieu, sp.Loai })
+                    .ToListAsync())
+                    .SelectMany(sp => new[] { sp.TenSanPham, sp.ThuongHieu, sp.Loai })
+                    .Where(k => !string.IsNullOrEmpty(k))
+                    .Distinct()
+                    .Take(20 )
+                    .ToList();
+            ViewBag.HotKeywords = hotKeywords;
+
+            // 🔑 Lấy tất cả sản phẩm
             var sanPhams = await _context.SanPhams
                 .Where(s => s.TrangThai == true)
                 .Include(s => s.MaDanhMucNavigation)
                 .Include(s => s.MaKhuyenMais)
-                .Include(s => s.DanhGia) // thêm include đánh giá
+                .Include(s => s.DanhGia)
                 .ToListAsync();
 
             foreach (var sp in sanPhams)
@@ -36,37 +49,116 @@ namespace WebDienTu.Controllers
                 sp.GiaBan = giamGiaHienHanh != null ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m) : sp.Gia;
             }
 
+            // 👉 Lấy userId từ Claims
+            int? currentUserId = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (!string.IsNullOrEmpty(userIdStr) && int.TryParse(userIdStr, out int userId))
+                {
+                    currentUserId = userId;
+                }
+            }
+
+            // 👉 Lấy sản phẩm đã xem của user hiện tại
+            List<SanPham> daXem = new();
+            if (currentUserId.HasValue)
+            {
+                daXem = await _context.SanPhamDaXems
+                    .Where(x => x.MaNguoiDung == currentUserId.Value)
+                    .OrderByDescending(x => x.ThoiGianXem)
+                    .Include(x => x.MaSanPhamNavigation)
+                    .Select(x => x.MaSanPhamNavigation)
+                    .Take(5)
+                    .ToListAsync();
+            }
+
+            ViewBag.DaXem = daXem;
+
             return View(sanPhams);
         }
 
+
+        //Chi tiết sản phẩm
         public async Task<IActionResult> Details(int id)
         {
-            // Lấy sản phẩm kèm danh mục, khuyến mãi và đánh giá + user đánh giá
+            int? currentUserId = null;
+
+            // 👉 Lấy user id từ Claim
+            if (User.Identity.IsAuthenticated)
+            {
+                var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (!string.IsNullOrEmpty(userIdStr) && int.TryParse(userIdStr, out int userId))
+                {
+                    currentUserId = userId;
+                }
+            }
+
+            // 👉 Lấy sản phẩm theo id
             var sp = await _context.SanPhams
                 .Include(s => s.MaDanhMucNavigation)
                 .Include(s => s.MaKhuyenMais)
                 .Include(s => s.DanhGia)
                     .ThenInclude(d => d.MaNguoiDungNavigation)
+                .AsSplitQuery()
                 .FirstOrDefaultAsync(s => s.MaSanPham == id && s.TrangThai == true);
 
             if (sp == null) return NotFound();
 
-            // Tính giá bán hiện tại dựa trên khuyến mãi
-            var giamGiaHienHanh = sp.MaKhuyenMais
-                .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
+            // ✅ Tính giá bán hiện tại
+            var giamGiaHienHanh = sp.MaKhuyenMais?
+                .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.UtcNow && g.NgayKetThuc >= DateTime.UtcNow)
                 .OrderByDescending(g => g.GiaTri)
                 .FirstOrDefault();
 
-            sp.GiaBan = giamGiaHienHanh != null ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m) : sp.Gia;
+            sp.GiaBan = sp.Gia * (1 - (giamGiaHienHanh?.GiaTri ?? 0) / 100m);
 
-            // Tính trung bình sao
-            var danhGias = sp.DanhGia.Where(d => d.SoSao.HasValue).ToList();
+            // ✅ Tính trung bình sao
+            var danhGias = sp.DanhGia?.Where(d => d.SoSao.HasValue).ToList() ?? new List<DanhGia>();
             ViewBag.TrungBinhSao = danhGias.Any()
                 ? Math.Round(danhGias.Average(d => d.SoSao.Value), 1)
                 : 0;
 
+            // 👉 Lưu vào bảng SanPhamDaXem nếu có user id hợp lệ
+            if (currentUserId.HasValue)
+            {
+                var daXem = await _context.SanPhamDaXems
+                    .FirstOrDefaultAsync(x => x.MaNguoiDung == currentUserId.Value && x.MaSanPham == id);
+
+                if (daXem == null)
+                {
+                    _context.SanPhamDaXems.Add(new SanPhamDaXem
+                    {
+                        MaNguoiDung = currentUserId.Value,
+                        MaSanPham = id,
+                        ThoiGianXem = DateTime.UtcNow
+                    });
+                }
+                else
+                {
+                    daXem.ThoiGianXem = DateTime.UtcNow;
+                }
+
+                // ✅ Giới hạn 20 sản phẩm gần nhất
+                var toDelete = await _context.SanPhamDaXems
+                    .Where(x => x.MaNguoiDung == currentUserId.Value)
+                    .OrderByDescending(x => x.ThoiGianXem)
+                    .Skip(20) // Giữ lại 20 sản phẩm mới nhất
+                    .ToListAsync();
+
+                if (toDelete.Any())
+                {
+                    _context.SanPhamDaXems.RemoveRange(toDelete);
+                }
+
+                await _context.SaveChangesAsync();
+            }
+
             return View(sp);
         }
+
+
+
 
         public async Task<IActionResult> LocTheoLoai(string loai)
         {
@@ -96,7 +188,7 @@ namespace WebDienTu.Controllers
 
             return PartialView("_SanPhamList", sanPhams);
         }
-
+        //🔍 Tìm kiếm sản phẩm (AJAX)
         public async Task<IActionResult> SearchAjax(string keyword)
         {
             var query = _context.SanPhams
@@ -133,7 +225,21 @@ namespace WebDienTu.Controllers
 
             return PartialView("_SanPhamList", sanPhams);
         }
+        // 🔑 Lấy danh sách keyword gợi ý
+        [HttpGet]
+        public async Task<IActionResult> GetKeywords(string keyword)
+        {
+            var keywords = await _context.SanPhams
+                .Where(s => s.TrangThai == true &&
+                            (string.IsNullOrEmpty(keyword) || s.TenSanPham.Contains(keyword)))
+                .SelectMany(s => new[] { s.TenSanPham, s.ThuongHieu, s.Loai })
+                .Where(k => !string.IsNullOrEmpty(k))
+                .Distinct()
+                .Take(10)
+                .ToListAsync();
 
+            return Json(keywords); // Trả về JSON để JS hiển thị gợi ý
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

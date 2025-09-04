@@ -1,0 +1,43 @@
+﻿@model List<string>
+
+<div class="hot-keywords">
+    <h5 class="mb-3">🔑 Mọi Người Cũng Tim Kiếm</h5>
+    <div class="d-flex flex-wrap gap-2">
+        @foreach (var keyword in Model)
+        {
+            <a href="#" class="badge keyword-link" data-keyword="@keyword">
+                @keyword
+            </a>
+        }
+    </div>
+</div>
+
+<style>
+    .hot-keywords {
+        border: 1px solid #dadce0; /* viền mảnh xung quanh */
+        border-radius: 8px; /* bo tròn góc */
+        padding: 16px; /* khoảng cách trong */
+        background-color: #fff; /* nền trắng */
+        margin-top: 20px; /* 👉 cách xuống dưới */
+        margin-bottom: 20px; /* 👉 thêm khoảng cách dưới nếu muốn */
+        box-shadow: 0 2px 6px rgba(60, 64, 67, 0.15); /* 👉 đổ bóng mềm */
+    }
+
+        .hot-keywords .badge {
+            background-color: #f1f3f4 !important;
+            color: #202124 !important;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 6px 14px;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #dadce0;
+            margin-top: 6px;
+        }
+
+            .hot-keywords .badge:hover {
+                background-color: #e8eaed !important;
+                color: #000 !important;
+                text-decoration: none;
+            }
+</style>
