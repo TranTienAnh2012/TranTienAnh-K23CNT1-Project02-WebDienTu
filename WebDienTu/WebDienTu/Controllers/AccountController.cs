@@ -99,7 +99,7 @@ public class AccountController : Controller
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         TempData["SuccessMessage"] = "Bạn đã đăng xuất thành công!";
-        return RedirectToAction("Login");
+        return RedirectToAction("Index", "Home");
     }
 
 

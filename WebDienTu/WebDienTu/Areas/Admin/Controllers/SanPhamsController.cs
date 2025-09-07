@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WebDienTu.Models;
+using X.PagedList; // thêm thư viện này ở đầu
+using X.PagedList.Extensions;
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -20,10 +22,19 @@ namespace WebDienTu.Areas.Admin.Controllers
         }
 
         // GET: Admin/SanPhams
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var dienTuStoreContext = _context.SanPhams.Include(s => s.MaDanhMucNavigation);
-            return View(await dienTuStoreContext.ToListAsync());
+            int pageSize = 5; // số sản phẩm trên mỗi trang
+            int pageNumber = page ?? 1; // nếu page = null thì mặc định là 1
+
+            var query = _context.SanPhams
+                                .Include(s => s.MaDanhMucNavigation)
+                                .OrderByDescending(s => s.NgayThem);
+
+            // Chuyển trực tiếp sang PagedList (không cần async)
+            var pagedList = query.ToPagedList(pageNumber, pageSize);
+
+            return View(pagedList);
         }
 
         // GET: Admin/SanPhams/Details/5

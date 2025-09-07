@@ -8,22 +8,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cssAdmin/site.css" asp-append-version="true" />
+
 </head>
 <body>
     <header>
-        @await Html.PartialAsync("_NavAdmin") <!-- Không dùng <partial /> -->
+        @await Html.PartialAsync("_NavAdmin")
     </header>
 
-    <main class="container mt-4">
-        @RenderBody()
-    </main>
+    <!-- Nội dung chính -->
+    <div id="mainContent" class="content-expanded">
+        <div class="container-fluid p-4">
+            @RenderBody()
+        </div>
+    </div>
 
     <footer class="bg-light text-center text-muted py-3 mt-4 border-top">
         <div class="container">
             &copy; 2025 - WebDienTu Admin
         </div>
     </footer>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.getElementById("sidebar");
+            const toggleBtn = document.getElementById("toggleSidebar");
+            const mainContent = document.getElementById("mainContent");
+
+            // Load trạng thái từ localStorage
+            if (localStorage.getItem("sidebarState") === "collapsed") {
+                sidebar.classList.remove("sidebar-expanded");
+                sidebar.classList.add("sidebar-collapsed");
+
+                mainContent.classList.remove("content-expanded");
+                mainContent.classList.add("content-collapsed");
+            }
+
+            // Toggle
+            toggleBtn.addEventListener("click", function () {
+                sidebar.classList.toggle("sidebar-collapsed");
+                sidebar.classList.toggle("sidebar-expanded");
+
+                mainContent.classList.toggle("content-collapsed");
+                mainContent.classList.toggle("content-expanded");
+
+                // Lưu trạng thái
+                if (sidebar.classList.contains("sidebar-collapsed")) {
+                    localStorage.setItem("sidebarState", "collapsed");
+                } else {
+                    localStorage.setItem("sidebarState", "expanded");
+                }
+            });
+        });
+    </script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

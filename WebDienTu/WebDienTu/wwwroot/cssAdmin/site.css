@@ -1,0 +1,60 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Sidebar mở rộng */
+.sidebar-expanded {
+    width: 250px !important;
+    transition: all 0.3s;
+}
+
+/* Sidebar thu gọn */
+.sidebar-collapsed {
+    width: 60px !important;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+    .sidebar-collapsed .nav-link {
+        font-size: 0; /* Ẩn chữ */
+        transition: font-size 0.2s;
+    }
+
+        .sidebar-collapsed .nav-link::before {
+            font-size: 16px;
+            content: "•"; /* có thể thay bằng icon FontAwesome */
+            margin-right: 0;
+        }
+
+/* Nội dung chính khi sidebar thay đổi */
+.content-expanded {
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+.content-collapsed {
+    margin-left: 60px;
+    transition: all 0.3s;
+}

@@ -261,3 +261,6 @@ D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\X.PagedList.dll
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+D:\TranTienAnh-K23CNT1-Project02-WebDienTu\WebDienTu\WebDienTu\obj\Debug\net8.0\WebDienTu.MvcApplicationPartsAssemblyInfo.cs

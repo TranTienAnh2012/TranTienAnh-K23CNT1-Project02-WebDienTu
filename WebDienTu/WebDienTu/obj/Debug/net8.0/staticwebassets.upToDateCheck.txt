@@ -1,5 +1,4 @@
 wwwroot\css\BannerNavUse.css
-wwwroot\css\DanhSachSanPham.css
 wwwroot\css\NavberUsers.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
@@ -12,7 +11,6 @@ wwwroot\images\Asus\06.jpg
 wwwroot\images\BanneUse\01.jpg
 wwwroot\images\BanneUse\02.jpg
 wwwroot\images\BanneUse\03.jpg
-wwwroot\images\BanneUse\04.jpg
 wwwroot\images\Iphone\01.jpg
 wwwroot\images\Iphone\02.jpg
 wwwroot\images\Iphone\03.jpg
@@ -97,3 +95,6 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\DanhSachSanPham.css
+wwwroot\images\BanneUse\04.jpg
+wwwroot\cssAdmin\site.css
