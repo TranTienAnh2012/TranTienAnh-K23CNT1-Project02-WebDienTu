@@ -47,12 +47,3 @@
 
 🛠️・code-chung → Vừa voice vừa share code.
 
-🌟 Mẹo làm server đẹp
-
-Emoji trước tên kênh → dễ phân biệt.
-
-Category theo nhóm → ví dụ: [THÔNG TIN], [CODE], [THIẾT KẾ].
-
-Pin tin quan trọng → như deadline, repo GitHub.
-
-Có thể thêm bot nhắc deadline (MEE6, Reminder Bot).
