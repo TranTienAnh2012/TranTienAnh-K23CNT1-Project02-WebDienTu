@@ -1,44 +1,113 @@
-﻿@model IEnumerable<WebDienTu.Models.QuanTriVien>
+﻿@model X.PagedList.IPagedList<WebDienTu.Models.QuanTriVien>
+@using X.PagedList.Mvc.Core
+@using X.PagedList
 
 @{
     ViewData["Title"] = "Danh sách Quản Trị Viên";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>@ViewData["Title"]</h2>
-    <a asp-action="Create" class="btn btn-primary">+ Thêm mới</a>
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Thêm quản trị viên mới
+    </a>
+</p>
+
+<!-- Bọc bảng trong table-responsive -->
+<div class="table-responsive">
+    <table class="table table-sm table-striped table-hover table-bordered align-middle">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>STT</th>
+                <th>@Html.DisplayNameFor(model => model.First().HoTen)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Email)</th>
+                <th>@Html.DisplayNameFor(model => model.First().VaiTro)</th>
+                <th>@Html.DisplayNameFor(model => model.First().NgayDangKy)</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                int stt = (Model.PageNumber - 1) * Model.PageSize + 1;
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="text-center">@stt</td>
+                        <td>@item.HoTen</td>
+                        <td>@item.Email</td>
+                        <td>
+                            <span class="badge @(item.VaiTro == 1 ? "bg-success" : "bg-secondary")">
+                                @(item.VaiTro == 1 ? "Admin" : "User")
+                            </span>
+                        </td>
+                        <td>@(item.NgayDangKy?.ToString("dd/MM/yyyy"))</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton-@item.MaNguoiDung" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hành động
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-@item.MaNguoiDung">
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.MaNguoiDung">
+                                            <i class="fas fa-edit me-1"></i> Sửa
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Details" asp-route-id="@item.MaNguoiDung">
+                                            <i class="fas fa-eye me-1"></i> Chi tiết
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.MaNguoiDung">
+                                            <i class="fas fa-trash-alt me-1"></i> Xóa
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    stt++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center">Không có quản trị viên nào.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
-<table class="table table-striped table-bordered align-middle">
-    <thead class="table-dark">
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.HoTen)</th>
-            <th>@Html.DisplayNameFor(model => model.Email)</th>
-            <th>@Html.DisplayNameFor(model => model.VaiTro)</th>
-            <th>@Html.DisplayNameFor(model => model.NgayDangKy)</th>
-            <th class="text-center">Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @* Admin (1) trước, User (2) sau *@
-        @foreach (var item in Model)
+<!-- Thanh phân trang -->
+<div class="d-flex justify-content-center mt-3">
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("Index", new { page }),
+        new PagedListRenderOptions
         {
-            <tr>
-                <td>@item.HoTen</td>
-                <td>@item.Email</td>
-                <td>
-                    @(item.VaiTro == 1 ? "Admin" : "User")
-                </td>
-                <td>@(item.NgayDangKy?.ToString("dd/MM/yyyy"))</td>
-                <td class="text-center">
-                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Edit" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-warning">Sửa</a>
-                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Delete" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-danger">Xóa</a>
-                    <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Details" asp-route-id="@item.MaNguoiDung" class="btn btn-sm btn-info">Chi tiết</a>
-
-                </td>
-            </tr>
+            DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+            DisplayLinkToLastPage = PagedListDisplayMode.Always,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToNextPage = PagedListDisplayMode.Always,
+            MaximumPageNumbersToDisplay = 5,
+            UlElementClasses = new[] { "pagination" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
         }
-    </tbody>
+        )
+</div>
 
-</table>
+<style>
+    /* Giữ cố định tiêu đề khi cuộn */
+    .table thead th {
+        position: sticky;
+        top: 0;
+        background: #212529; /* màu .table-dark */
+        color: white;
+        z-index: 10;
+    }
+</style>

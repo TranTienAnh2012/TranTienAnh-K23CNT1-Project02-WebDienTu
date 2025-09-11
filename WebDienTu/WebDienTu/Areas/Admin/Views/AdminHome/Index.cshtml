@@ -1,6 +1,85 @@
 ﻿@{
     ViewData["Title"] = "Trang Quản Trị";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml"; // Dùng layout riêng
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+
 <h1>Chào mừng Admin</h1>
-<p>Đây là trang tổng quan quản trị.</p>
+<p>Đây là trang tổng quan quản trị của hệ thống WebĐiệnTử.</p>
+
+<!-- Dashboard cards -->
+<div class="row g-4 mt-3">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary h-100">
+            <div class="card-body">
+                <h5 class="card-title">Quản trị viên</h5>
+                <p class="card-text fs-3">@ViewBag.TotalAdmins</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-success h-100">
+            <div class="card-body">
+                <h5 class="card-title">Người dùng</h5>
+                <p class="card-text fs-3">@ViewBag.TotalUsers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-warning h-100">
+            <div class="card-body">
+                <h5 class="card-title">Sản phẩm</h5>
+                <p class="card-text fs-3">@ViewBag.TotalProducts</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-danger h-100">
+            <div class="card-body">
+                <h5 class="card-title">Đơn hàng</h5>
+                <p class="card-text fs-3">@ViewBag.TotalOrders</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-info h-100">
+            <div class="card-body">
+                <h5 class="card-title">Chi tiết đơn hàng</h5>
+                <p class="card-text fs-3">@ViewBag.TotalOrderDetails</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-secondary h-100">
+            <div class="card-body">
+                <h5 class="card-title">Đánh giá</h5>
+                <p class="card-text fs-3">@ViewBag.TotalReviews</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-dark h-100">
+            <div class="card-body">
+                <h5 class="card-title">Danh mục</h5>
+                <p class="card-text fs-3">@ViewBag.TotalCategories</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Thông tin và quy tắc cho Admin -->
+<div class="alert alert-info mt-3" role="alert">
+    <h5>Thông tin & Quy tắc dành cho Admin:</h5>
+    <ul>
+        <li>Admin có quyền quản lý toàn bộ hệ thống: danh mục, sản phẩm, đơn hàng, người dùng và đánh giá.</li>
+        <li>Hãy cẩn trọng khi xóa hoặc chỉnh sửa dữ liệu, vì hành động này ảnh hưởng trực tiếp tới khách hàng và doanh nghiệp.</li>
+        <li>Kiểm tra kỹ thông tin trước khi xác nhận đơn hàng hoặc thay đổi trạng thái sản phẩm.</li>
+        <li>Bảo mật tài khoản Admin: không chia sẻ thông tin đăng nhập với bất kỳ ai.</li>
+        <li>Sử dụng chức năng tìm kiếm và bộ lọc để quản lý dữ liệu hiệu quả hơn.</li>
+        <li>Quản trị viên không được cân thiệp vào các đánh giá và bình luận của khách hàng trừ nhưng bình luận khiếm nhã.</li>
+    </ul>
+</div>

@@ -1,47 +1,56 @@
 ﻿@model WebDienTu.Models.DanhGia
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Thêm đánh giá";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create</h1>
-
-<h4>DanhGium</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="card shadow-sm border-0 mt-3">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Thêm đánh giá mới</h4>
+    </div>
+    <div class="card-body">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="MaSanPham" class="control-label"></label>
-                <select asp-for="MaSanPham" class ="form-control" asp-items="ViewBag.MaSanPham"></select>
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="MaSanPham" class="form-label"></label>
+                <select asp-for="MaSanPham" class="form-select" asp-items="ViewBag.MaSanPham"></select>
+                <span asp-validation-for="MaSanPham" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MaNguoiDung" class="control-label"></label>
-                <select asp-for="MaNguoiDung" class ="form-control" asp-items="ViewBag.MaNguoiDung"></select>
+
+            <div class="mb-3">
+                <label asp-for="MaNguoiDung" class="form-label"></label>
+                <select asp-for="MaNguoiDung" class="form-select" asp-items="ViewBag.MaNguoiDung"></select>
+                <span asp-validation-for="MaNguoiDung" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SoSao" class="control-label"></label>
-                <input asp-for="SoSao" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="SoSao" class="form-label"></label>
+                <input asp-for="SoSao" class="form-control" type="number" min="1" max="5" />
                 <span asp-validation-for="SoSao" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="BinhLuan" class="control-label"></label>
-                <input asp-for="BinhLuan" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="BinhLuan" class="form-label"></label>
+                <textarea asp-for="BinhLuan" rows="3" class="form-control"></textarea>
                 <span asp-validation-for="BinhLuan" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Quay lại
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-plus-circle"></i> Thêm mới
+                </button>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

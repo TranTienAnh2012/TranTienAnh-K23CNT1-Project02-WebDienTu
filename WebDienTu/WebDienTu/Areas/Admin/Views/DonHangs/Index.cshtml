@@ -1,54 +1,72 @@
 ﻿@model IEnumerable<WebDienTu.Models.DonHang>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Quản lý đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NgayDatHang)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TongTien)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrangThai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaNguoiDungNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayDatHang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TongTien)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrangThai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNguoiDungNavigation.MaNguoiDung)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaDonHang">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaDonHang">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaDonHang">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="card shadow-sm border-0 mt-3">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">Danh sách đơn hàng</h4>
+        <a asp-action="Create" class="btn btn-success btn-sm">
+            <i class="bi bi-plus-circle"></i> Thêm mới
+        </a>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.NgayDatHang)</th>
+                    <th>@Html.DisplayNameFor(model => model.TongTien)</th>
+                    <th>@Html.DisplayNameFor(model => model.TrangThai)</th>
+                    <th>@Html.DisplayNameFor(model => model.MaNguoiDungNavigation)</th>
+                    <th class="text-center">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.NgayDatHang?.ToString("dd/MM/yyyy")</td>
+                        <td>@String.Format("{0:N0} đ", item.TongTien)</td>
+                        <td>
+                            @if (item.TrangThai == true)
+                            {
+                                <span class="badge bg-success">Đã xử lý</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning text-dark">Chưa xử lý</span>
+                            }
+                        </td>
+                        <td>@item.MaNguoiDungNavigation?.MaNguoiDung</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton-@item.MaDonHang" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-list"></i> Thao tác
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-@item.MaDonHang">
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.MaDonHang">
+                                            <i class="bi bi-pencil-square text-warning"></i> Sửa
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Details" asp-route-id="@item.MaDonHang">
+                                            <i class="bi bi-info-circle text-info"></i> Chi tiết
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" asp-action="Delete" asp-route-id="@item.MaDonHang">
+                                            <i class="bi bi-trash"></i> Xóa
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

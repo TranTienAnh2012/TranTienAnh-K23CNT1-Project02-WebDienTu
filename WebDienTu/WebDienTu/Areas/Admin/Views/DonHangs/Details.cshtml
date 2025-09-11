@@ -1,43 +1,54 @@
 ﻿@model WebDienTu.Models.DonHang
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Chi tiết đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+<div class="container mt-4">
+    <div class="card shadow-sm border-0 rounded-3">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Chi tiết đơn hàng #@Model.MaDonHang</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row" style="width: 25%;">Người đặt</th>
+                        <td>@Model.MaNguoiDungNavigation?.MaNguoiDung</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ngày đặt hàng</th>
+                        <td>@Model.NgayDatHang?.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tổng tiền</th>
+                        <td>@Model.TongTien.ToString("N0") đ</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trạng thái</th>
+                        <td>
+                            @if (Model.TrangThai == true)
+                            {
+                                <span class="badge bg-success">Đã xác nhận</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning text-dark">Chưa xác nhận</span>
+                            }
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-<div>
-    <h4>DonHang</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NgayDatHang)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NgayDatHang)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TongTien)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TongTien)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaNguoiDungNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaNguoiDungNavigation.MaNguoiDung)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaDonHang">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+            <div class="mt-4 d-flex justify-content-between">
+                <a asp-action="Edit" asp-route-id="@Model.MaDonHang" class="btn btn-primary">
+                    <i class="bi bi-pencil-square"></i> Chỉnh sửa
+                </a>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left-circle"></i> Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

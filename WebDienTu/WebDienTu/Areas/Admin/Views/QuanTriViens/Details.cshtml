@@ -1,49 +1,70 @@
 ﻿@model WebDienTu.Models.QuanTriVien
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Chi tiết quản trị viên";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+<h1 class="mb-4">@ViewData["Title"]</h1>
 
-<div>
-    <h4>QuanTriVien</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HoTen)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HoTen)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MatKhau)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MatKhau)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VaiTro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VaiTro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NgayDangKy)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NgayDangKy)
-        </dd>
-    </dl>
+<div class="card shadow-sm mb-4" style="max-width: 800px; margin:auto;">
+    <div class="row g-0">
+        <!-- Avatar hoặc icon -->
+        <div class="col-md-4 text-center p-4 bg-light d-flex align-items-center justify-content-center">
+            <i class="bi bi-person-circle" style="font-size: 120px; color: #6c757d;"></i>
+        </div>
+
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-8">
+            <div class="card-body">
+                <h2 class="card-title mb-3">@Model.HoTen</h2>
+
+                <table class="table table-borderless table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mật khẩu</th>
+                            <td>@Model.MatKhau</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vai trò</th>
+                            <td>
+                                @if (Model.VaiTro == 1)
+                                {
+                                    <span class="badge bg-danger">Admin</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">User</span>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ngày đăng ký</th>
+                            <td>@Model.NgayDangKy?.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mt-3">
+                    <a asp-action="Edit" asp-route-id="@Model.MaNguoiDung" class="btn btn-primary me-2">
+                        <i class="bi bi-pencil-square"></i> Chỉnh sửa
+                    </a>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaNguoiDung">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<style>
+    .card:hover {
+        transform: translateY(-3px);
+        transition: 0.3s;
+    }
+</style>

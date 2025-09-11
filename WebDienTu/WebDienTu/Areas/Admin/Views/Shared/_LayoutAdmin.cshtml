@@ -1,4 +1,5 @@
-﻿@{
+﻿<!-- _LayoutAdmin.cshtml -->
+@{
     ViewData["Title"] = "Trang Quản Trị";
 }
 <!DOCTYPE html>
@@ -7,65 +8,121 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - @ViewData["Title"]</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/cssAdmin/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-</head>
-<body>
-    <header>
-        @await Html.PartialAsync("_NavAdmin")
-    </header>
+    <style>
+        /* Sidebar */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            overflow: hidden;
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+        #sidebar.collapsed {
+            width: 60px;
+        }
+        #sidebar .nav-link i {
+            width: 20px;
+            margin-right: 10px;
+            text-align: center;
+            transition: margin 0.3s ease;
+        }
+        #sidebar.collapsed .nav-link i {
+            margin-right: 0;
+        }
+        #sidebar .sidebar-text {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #sidebar.collapsed .sidebar-text {
+            display: none;
+            opacity: 0;
+            transform: translateX(-10px);
+        }
 
-    <!-- Nội dung chính -->
-    <div id="mainContent" class="content-expanded">
-        <div class="container-fluid p-4">
-            @RenderBody()
-        </div>
-    </div>
+        /* Main content & footer */
+        #mainContent, #footerAdmin {
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+        #mainContent.collapsed, #footerAdmin.collapsed {
+            margin-left: 60px;
+        }
+        /* Header */
+        #headerAdmin {
+            position: fixed;
+            top: 0;
+            left: 250px; /* mặc định sidebar rộng */
+            right: 0;
+            z-index: 999;
+            height: 60px;
+            transition: left 0.3s ease;
+        }
 
-    <footer class="bg-light text-center text-muted py-3 mt-4 border-top">
-        <div class="container">
-            &copy; 2025 - WebDienTu Admin
-        </div>
-    </footer>
-
-    <!-- Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sidebar = document.getElementById("sidebar");
-            const toggleBtn = document.getElementById("toggleSidebar");
-            const mainContent = document.getElementById("mainContent");
-
-            // Load trạng thái từ localStorage
-            if (localStorage.getItem("sidebarState") === "collapsed") {
-                sidebar.classList.remove("sidebar-expanded");
-                sidebar.classList.add("sidebar-collapsed");
-
-                mainContent.classList.remove("content-expanded");
-                mainContent.classList.add("content-collapsed");
+            #headerAdmin.collapsed {
+                left: 60px; /* khi sidebar thu nhỏ */
             }
 
-            // Toggle
-            toggleBtn.addEventListener("click", function () {
-                sidebar.classList.toggle("sidebar-collapsed");
-                sidebar.classList.toggle("sidebar-expanded");
+    </style>
+</head>
+<body>
+    <header id="headerAdmin" class="bg-dark text-white d-flex justify-content-between align-items-center px-3 py-2">
+        @await Html.PartialAsync("_Header")
+    </header>
 
-                mainContent.classList.toggle("content-collapsed");
-                mainContent.classList.toggle("content-expanded");
+    @await Html.PartialAsync("_NavAdmin")
 
-                // Lưu trạng thái
-                if (sidebar.classList.contains("sidebar-collapsed")) {
-                    localStorage.setItem("sidebarState", "collapsed");
-                } else {
-                    localStorage.setItem("sidebarState", "expanded");
-                }
-            });
-        });
-    </script>
+    <div id="mainContent" class="p-4 mt-5">
+        @RenderBody()
+    </div>
+
+
+    <footer id="footerAdmin" class="bg-light text-center text-muted py-3 mt-4 border-top">
+        @await Html.PartialAsync("_FooterAdmin")
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+              window.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.getElementById("sidebar");
+            const toggleBtn = document.getElementById("toggleSidebar");
+            const mainContent = document.getElementById("mainContent");
+            const footer = document.getElementById("footerAdmin");
+            const header = document.getElementById("headerAdmin");
+
+            if (!sidebar || !toggleBtn) return;
+
+            // Load trạng thái từ localStorage
+            if (localStorage.getItem("sidebarState") === "collapsed") {
+                sidebar.classList.add("collapsed");
+                mainContent.classList.add("collapsed");
+                footer.classList.add("collapsed");
+                header.classList.add("collapsed");
+            }
+
+            toggleBtn.addEventListener("click", function () {
+                sidebar.classList.toggle("collapsed");
+                mainContent.classList.toggle("collapsed");
+                footer.classList.toggle("collapsed");
+                header.classList.toggle("collapsed");
+
+                // Lưu trạng thái
+                localStorage.setItem("sidebarState",
+                    sidebar.classList.contains("collapsed") ? "collapsed" : "expanded"
+                );
+            });
+        });
+
+    </script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

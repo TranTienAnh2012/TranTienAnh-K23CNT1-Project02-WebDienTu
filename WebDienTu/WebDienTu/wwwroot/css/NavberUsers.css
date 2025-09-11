@@ -68,6 +68,22 @@
 .navbar .badge {
     font-size: 0.75rem;
     padding: 4px 6px;
-    border-radius: 50%;
+    border-radius: 70%;
     min-width: 20px;
+}
+#searchForm input:focus {
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+    border-color: #28a745;
+}
+
+#searchForm button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+#searchForm input::placeholder {
+    color: #6c757d;
+    opacity: 1;
+    font-style: italic;
 }

@@ -68,59 +68,80 @@ namespace WebDienTu.Areas.Admin.Controllers
             ViewData["MaNguoiDung"] = new SelectList(_context.QuanTriViens, "MaNguoiDung", "MaNguoiDung", donHang.MaNguoiDung);
             return View(donHang);
         }
-
         // GET: Admin/DonHangs/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var donHang = await _context.DonHangs.FindAsync(id);
-            if (donHang == null)
+            if (donHang == null) return NotFound();
+
+            // Dropdown trạng thái: bind bool
+            ViewBag.TrangThaiList = new SelectList(new[]
             {
-                return NotFound();
-            }
-            ViewData["MaNguoiDung"] = new SelectList(_context.QuanTriViens, "MaNguoiDung", "MaNguoiDung", donHang.MaNguoiDung);
+        new { Value = "true", Text = "Đã xác nhận" },
+        new { Value = "false", Text = "Chưa xác nhận" }
+    }, "Value", "Text", donHang.TrangThai?.ToString().ToLower());
+
+            // Dropdown người đặt
+            ViewData["MaNguoiDung"] = new SelectList(
+                _context.QuanTriViens,
+                "MaNguoiDung",
+                "MaNguoiDung",
+                donHang.MaNguoiDung
+            );
+
             return View(donHang);
         }
-
-        // POST: Admin/DonHangs/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaDonHang,MaNguoiDung,NgayDatHang,TongTien,TrangThai")] DonHang donHang)
         {
-            if (id != donHang.MaDonHang)
-            {
-                return NotFound();
-            }
+            if (id != donHang.MaDonHang) return NotFound();
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(donHang);
+                    var existing = await _context.DonHangs
+                        .Include(d => d.MaNguoiDungNavigation)
+                        .FirstOrDefaultAsync(d => d.MaDonHang == id);
+
+                    if (existing == null) return NotFound();
+
+                    // Update từng field
+                    existing.MaNguoiDung = donHang.MaNguoiDung;
+                    existing.NgayDatHang = donHang.NgayDatHang;
+                    existing.TongTien = donHang.TongTien;
+                    existing.TrangThai = donHang.TrangThai;
+
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DonHangExists(donHang.MaDonHang))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    if (!_context.DonHangs.Any(e => e.MaDonHang == id)) return NotFound();
+                    throw;
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["MaNguoiDung"] = new SelectList(_context.QuanTriViens, "MaNguoiDung", "MaNguoiDung", donHang.MaNguoiDung);
+
+            // Reload dropdown nếu lỗi
+            ViewBag.TrangThaiList = new SelectList(new[]
+            {
+        new { Value = "true", Text = "Đã xác nhận" },
+        new { Value = "false", Text = "Chưa xác nhận" }
+    }, "Value", "Text", donHang.TrangThai?.ToString().ToLower());
+
+            ViewData["MaNguoiDung"] = new SelectList(
+                _context.QuanTriViens,
+                "MaNguoiDung",
+                "MaNguoiDung",
+                donHang.MaNguoiDung
+            );
+
             return View(donHang);
         }
+
 
         // GET: Admin/DonHangs/Delete/5
         public async Task<IActionResult> Delete(int? id)

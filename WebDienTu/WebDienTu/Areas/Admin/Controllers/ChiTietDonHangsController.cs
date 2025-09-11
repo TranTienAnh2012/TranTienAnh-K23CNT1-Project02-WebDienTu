@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WebDienTu.Models;
+using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -20,10 +22,18 @@ namespace WebDienTu.Areas.Admin.Controllers
         }
 
         // GET: Admin/ChiTietDonHangs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            var dienTuStoreContext = _context.ChiTietDonHangs.Include(c => c.MaDonHangNavigation).Include(c => c.MaSanPhamNavigation);
-            return View(await dienTuStoreContext.ToListAsync());
+            int pageSize = 10;
+            int pageNumber = page ?? 1;
+
+            var query = _context.ChiTietDonHangs
+                .Include(c => c.MaDonHangNavigation)
+                .Include(c => c.MaSanPhamNavigation)
+                .OrderByDescending(c => c.MaChiTiet);
+
+            var pagedList = query.ToPagedList(pageNumber, pageSize);
+            return View(pagedList);
         }
 
         // GET: Admin/ChiTietDonHangs/Details/5

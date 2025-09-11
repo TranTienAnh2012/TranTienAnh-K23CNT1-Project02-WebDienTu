@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WebDienTu.Models;
+using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -20,10 +22,20 @@ namespace WebDienTu.Areas.Admin.Controllers
         }
 
         // GET: Admin/DanhMucs
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            return View(await _context.DanhMucs.ToListAsync());
+            int pageSize = 10;
+            int pageNumber = page ?? 1;
+
+            var query = _context.DanhMucs
+                                .OrderBy(d => d.TenDanhMuc);
+
+            var pagedList = query.ToPagedList(pageNumber, pageSize);
+
+            return View(pagedList);
         }
+
+
 
         // GET: Admin/DanhMucs/Details/5
         public async Task<IActionResult> Details(int? id)

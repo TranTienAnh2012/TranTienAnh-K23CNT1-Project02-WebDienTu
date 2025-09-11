@@ -1,11 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WebDienTu.Models;
+using X.PagedList;
+using X.PagedList.Extensions;
+using X.PagedList.Mvc.Core;
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -20,11 +23,20 @@ namespace WebDienTu.Areas.Admin.Controllers
         }
 
         // GET: Admin/DanhGia
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            var dienTuStoreContext = _context.DanhGia.Include(d => d.MaNguoiDungNavigation).Include(d => d.MaSanPhamNavigation);
-            return View(await dienTuStoreContext.ToListAsync());
+            int pageSize = 10; // số dòng mỗi trang
+            int pageNumber = page ?? 1;
+
+            var query = _context.DanhGia
+                .Include(d => d.MaNguoiDungNavigation)
+                .Include(d => d.MaSanPhamNavigation)
+                .OrderByDescending(d => d.NgayDanhGia);
+
+            var pagedList = query.ToPagedList(pageNumber, pageSize);
+            return View(pagedList);
         }
+
 
         // GET: Admin/DanhGia/Details/5
         public async Task<IActionResult> Details(int? id)

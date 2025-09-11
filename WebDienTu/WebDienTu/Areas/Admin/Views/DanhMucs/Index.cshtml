@@ -1,42 +1,54 @@
-﻿@model IEnumerable<WebDienTu.Models.DanhMuc>
+﻿@model X.PagedList.IPagedList<WebDienTu.Models.DanhMuc>
+@using X.PagedList.Mvc.Core;
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh Mục";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Danh Mục</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">+ Thêm mới</a>
 </p>
-<table class="table">
+
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TenDanhMuc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MoTa)
-            </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model[0].TenDanhMuc)</th>
+            <th>@Html.DisplayNameFor(model => model[0].MoTa)</th>
+            <th style="width: 200px;">Thao tác</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenDanhMuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaDanhMuc">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaDanhMuc">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaDanhMuc">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TenDanhMuc</td>
+                <td>@item.MoTa</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.MaDanhMuc">Sửa</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.MaDanhMuc">Chi tiết</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.MaDanhMuc">Xóa</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("Index", new { page }),
+        new PagedListRenderOptions
+        {
+            DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+            DisplayLinkToLastPage = PagedListDisplayMode.Always,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToNextPage = PagedListDisplayMode.Always,
+            UlElementClasses = new[] { "pagination" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        }
+        )
+</div>

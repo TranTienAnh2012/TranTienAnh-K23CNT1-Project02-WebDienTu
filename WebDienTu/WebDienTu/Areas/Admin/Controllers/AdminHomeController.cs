@@ -29,11 +29,23 @@ namespace WebDienTu.Areas.Admin.Controllers
             // Tổng số đơn hàng
             var totalOrders = await _context.DonHangs.CountAsync();
 
+            // Tổng số chi tiết đơn hàng
+            var totalOrderDetails = await _context.ChiTietDonHangs.CountAsync();
+
+            // Tổng số đánh giá
+            var totalReviews = await _context.DanhGia.CountAsync();
+
+            // Tổng số danh mục
+            var totalCategories = await _context.DanhMucs.CountAsync();
+
             // Truyền dữ liệu sang View bằng ViewBag
             ViewBag.TotalAdmins = totalAdmins;
             ViewBag.TotalUsers = totalUsers;
             ViewBag.TotalProducts = totalProducts;
             ViewBag.TotalOrders = totalOrders;
+            ViewBag.TotalOrderDetails = totalOrderDetails;
+            ViewBag.TotalReviews = totalReviews;
+            ViewBag.TotalCategories = totalCategories;
 
             return View();
         }

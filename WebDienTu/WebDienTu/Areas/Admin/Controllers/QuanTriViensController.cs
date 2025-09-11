@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WebDienTu.Models;
+using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -20,14 +22,18 @@ namespace WebDienTu.Areas.Admin.Controllers
         }
 
         // GET: Admin/QuanTriViens
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var list = await _context.QuanTriViens
-                                     .OrderBy(q => q.VaiTro != 1) // Admin trước, Users sau
-                                     .ToListAsync();
+            int pageSize = 5; // số bản ghi trên 1 trang
+            int pageNumber = page ?? 1;
+
+            var list = _context.QuanTriViens
+                               .OrderBy(q => q.VaiTro != 1)
+                               .ToPagedList(pageNumber, pageSize);
 
             return View(list);
         }
+
 
 
         // GET: Admin/QuanTriViens/Details/5

@@ -1,49 +1,40 @@
 ﻿@model WebDienTu.Models.DanhGia
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Chi tiết đánh giá";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+<h2 class="mb-4 text-primary">Chi tiết đánh giá</h2>
 
-<div>
-    <h4>DanhGium</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SoSao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SoSao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BinhLuan)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BinhLuan)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NgayDanhGia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NgayDanhGia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaNguoiDungNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaNguoiDungNavigation.MaNguoiDung)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaSanPhamNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaSanPhamNavigation.MaSanPham)
-        </dd>
-    </dl>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3 fw-bold">Số sao</dt>
+            <dd class="col-sm-9">@Model.SoSao</dd>
+
+            <dt class="col-sm-3 fw-bold">Bình luận</dt>
+            <dd class="col-sm-9">@Model.BinhLuan</dd>
+
+            <dt class="col-sm-3 fw-bold">Ngày đánh giá</dt>
+            <dd class="col-sm-9">@Model.NgayDanhGia?.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-3 fw-bold">Người dùng</dt>
+            <dd class="col-sm-9">
+                @Model.MaNguoiDungNavigation?.HoTen (@Model.MaNguoiDungNavigation?.Email)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Sản phẩm</dt>
+            <dd class="col-sm-9">
+                @Model.MaSanPhamNavigation?.TenSanPham
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaDanhGia">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="mt-3 d-flex justify-content-between">
+    <a asp-action="Index" class="btn btn-secondary">⬅ Quay lại</a>
+    <a asp-action="Edit" asp-route-id="@Model.MaDanhGia" class="btn btn-warning">
+        ✏ Sửa
+    </a>
 </div>

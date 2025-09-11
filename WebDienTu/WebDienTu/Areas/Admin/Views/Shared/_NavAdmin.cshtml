@@ -1,53 +1,66 @@
-﻿<nav id="sidebar" class="d-flex flex-column bg-dark vh-100 p-3 sidebar-expanded"
-     style="width: 250px; position: fixed; top:0; left:0; transition: all 0.3s;">
-
-    <!-- Nút Toggle -->
-    <button id="toggleSidebar" class="btn btn-sm btn-outline-light mb-3 w-100 text-start">
-        ☰
+﻿ <!-- Sidebar -->
+<nav id="sidebar" class="d-flex flex-column bg-dark vh-100 p-2 sidebar-expanded">
+    <button id="toggleSidebar" class="btn btn-sm btn-outline-light mb-3 w-100 text-start d-flex align-items-center">
+        <i class="fas fa-bars"></i>
+        <span class="sidebar-text ms-2">Menu</span>
     </button>
 
-    <a class="navbar-brand text-white mb-4" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
-        Admin Panel
+    <a class="navbar-brand text-white mb-3 d-flex align-items-center" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
+        <i class="fas fa-cogs me-2"></i>
+        <span class="sidebar-text">Admin Panel</span>
     </a>
 
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="DanhMucs" asp-action="Index">Quản lý Danh Mục</a>
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DanhMucs" asp-action="Index">
+                <i class="fas fa-list"></i>
+                <span class="sidebar-text ms-2">Danh Mục</span>
+            </a>
         </li>
-        <li>
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="SanPhams" asp-action="Index">Quản lý sản phẩm</a>
+        <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="SanPhams" asp-action="Index">
+                <i class="fas fa-box-open"></i>
+                <span class="sidebar-text ms-2">Sản phẩm</span>
+            </a>
         </li>
-        <li>
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index">Quản lý Trị Viên</a>
+        <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index">
+                <i class="fas fa-user-shield"></i>
+                <span class="sidebar-text ms-2">Quản trị viên</span>
+            </a>
         </li>
-        <li>
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="DonHangs" asp-action="Index">Đơn Hàng</a>
+        <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DonHangs" asp-action="Index">
+                <i class="fas fa-receipt"></i>
+                <span class="sidebar-text ms-2">Đơn hàng</span>
+            </a>
         </li>
-        <li>
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="ChiTietDonHangs" asp-action="Index">Chi Tiết Đơn Hàng</a>
+        <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="ChiTietDonHangs" asp-action="Index">
+                <i class="fas fa-clipboard-list"></i>
+                <span class="sidebar-text ms-2">Chi Tiết Đơn Hàng</span>
+            </a>
         </li>
-        <li>
-            <a class="nav-link text-white" asp-area="Admin" asp-controller="DanhGia" asp-action="Index">Đánh Giá</a>
+        <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DanhGia" asp-action="Index">
+                <i class="fas fa-star"></i>
+                <span class="sidebar-text ms-2">Đánh Giá</span>
+            </a>
         </li>
     </ul>
 
     <hr class="text-secondary" />
-
-    <ul class="nav flex-column">
-        @if (User.Identity?.IsAuthenticated ?? false)
-        {
-            <li class="nav-item mb-2">
-                <span class="nav-link text-warning">Xin chào: @User.Identity?.Name</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-danger" asp-area="" asp-controller="Account" asp-action="Logout">Đăng xuất</a>
-            </li>
-        }
-        else
-        {
-            <li class="nav-item">
-                <a class="nav-link text-success" asp-controller="Account" asp-action="Login">Đăng nhập</a>
-            </li>
-        }
-    </ul>
+    @if (User.Identity?.IsAuthenticated ?? false)
+    {
+        <div class="mt-auto px-2">
+            <span class="text-warning d-flex align-items-center mb-2">
+                <i class="fas fa-user-shield me-2"></i>
+                <span class="sidebar-text">@User.Identity?.Name</span>
+            </span>
+            <a class="nav-link text-danger d-flex align-items-center p-0" asp-area="" asp-controller="Account" asp-action="Logout">
+                <i class="fas fa-sign-out-alt me-2"></i>
+                <span class="sidebar-text">Đăng xuất</span>
+            </a>
+        </div>
+    }
 </nav>

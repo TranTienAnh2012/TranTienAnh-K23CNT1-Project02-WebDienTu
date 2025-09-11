@@ -1,60 +1,88 @@
-﻿@model IEnumerable<WebDienTu.Models.DanhGia>
+﻿@model IPagedList<WebDienTu.Models.DanhGia>
+@using X.PagedList.Mvc.Core
+@using X.PagedList
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Quản lý đánh giá";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<div class="card shadow-sm border-0 mt-3">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">Danh sách đánh giá</h4>
+        <a asp-action="Create" class="btn btn-success btn-sm">
+            <i class="bi bi-plus-circle"></i> Thêm mới
+        </a>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model[0].SoSao)</th>
+                    <th>@Html.DisplayNameFor(model => model[0].BinhLuan)</th>
+                    <th>@Html.DisplayNameFor(model => model[0].NgayDanhGia)</th>
+                    <th>@Html.DisplayNameFor(model => model[0].MaNguoiDungNavigation)</th>
+                    <th>@Html.DisplayNameFor(model => model[0].MaSanPhamNavigation)</th>
+                    <th class="text-center">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                @item.SoSao ★
+                            </span>
+                        </td>
+                        <td>@item.BinhLuan</td>
+                        <td>@item.NgayDanhGia?.ToString("dd/MM/yyyy")</td>
+                        <td>@item.MaNguoiDungNavigation?.MaNguoiDung</td>
+                        <td>@item.MaSanPhamNavigation?.TenSanPham</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton-@item.MaDanhGia"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-list"></i> Thao tác
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-@item.MaDanhGia">
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.MaDanhGia">
+                                            <i class="bi bi-pencil-square text-warning"></i> Sửa
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-action="Details" asp-route-id="@item.MaDanhGia">
+                                            <i class="bi bi-info-circle text-info"></i> Chi tiết
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" asp-action="Delete" asp-route-id="@item.MaDanhGia">
+                                            <i class="bi bi-trash"></i> Xóa
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SoSao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BinhLuan)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NgayDanhGia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaNguoiDungNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaSanPhamNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoSao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BinhLuan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayDanhGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNguoiDungNavigation.MaNguoiDung)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaSanPhamNavigation.MaSanPham)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaDanhGia">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaDanhGia">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaDanhGia">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <!-- Phân trang -->
+        <div class="d-flex justify-content-center mt-3">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+            new PagedListRenderOptions
+            {
+                DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+                DisplayLinkToLastPage = PagedListDisplayMode.Always,
+                DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                UlElementClasses = new[] { "pagination" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            })
+        </div>
+    </div>
+</div>
