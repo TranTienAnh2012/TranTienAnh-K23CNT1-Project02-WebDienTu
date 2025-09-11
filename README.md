@@ -11,9 +11,9 @@
 
 📇・thanh-vien → Danh sách:
 
-👑 Leader: Trần Tiến Anh
+👑 Leader: Nguyễn Ngọc Hiếu
 
-👥 Thành viên: Nguyễn Ngọc Hiếu, Nguyễn Hoài Nam
+👥 Thành viên:  Trần Tiến Anh, Nguyễn Hoài Nam
 
 💬 2. Thảo luận chung
 
