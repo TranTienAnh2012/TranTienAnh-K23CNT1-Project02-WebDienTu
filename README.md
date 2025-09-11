@@ -11,7 +11,7 @@
 
 📇・thanh-vien → Danh sách:
 
-👑 Leader: Nguyễn Ngọc Hiếu
+👑 Leader: Nguyễn Ngọc Hiếu (Phân Chia Công Việc)
 
 👥 Thành viên:  Trần Tiến Anh, Nguyễn Hoài Nam
 
