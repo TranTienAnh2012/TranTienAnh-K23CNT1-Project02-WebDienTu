@@ -26,63 +26,66 @@
             z-index: 1000;
             transition: width 0.3s ease;
         }
-        #sidebar.collapsed {
-            width: 60px;
-        }
-        #sidebar .nav-link i {
-            width: 20px;
-            margin-right: 10px;
-            text-align: center;
-            transition: margin 0.3s ease;
-        }
-        #sidebar.collapsed .nav-link i {
-            margin-right: 0;
-        }
-        #sidebar .sidebar-text {
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        #sidebar.collapsed .sidebar-text {
-            display: none;
-            opacity: 0;
-            transform: translateX(-10px);
-        }
+
+            #sidebar.collapsed {
+                width: 60px;
+            }
+
+            #sidebar .nav-link i {
+                width: 20px;
+                margin-right: 10px;
+                text-align: center;
+                transition: margin 0.3s ease;
+            }
+
+            #sidebar.collapsed .nav-link i {
+                margin-right: 0;
+            }
+
+            #sidebar .sidebar-text {
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            #sidebar.collapsed .sidebar-text {
+                display: none;
+                opacity: 0;
+                transform: translateX(-10px);
+            }
 
         /* Main content & footer */
         #mainContent, #footerAdmin {
             margin-left: 250px;
             transition: margin-left 0.3s ease;
         }
-        #mainContent.collapsed, #footerAdmin.collapsed {
-            margin-left: 60px;
-        }
+
+            #mainContent.collapsed, #footerAdmin.collapsed {
+                margin-left: 60px;
+            }
+
         /* Header */
         #headerAdmin {
             position: fixed;
             top: 0;
-            left: 250px; /* mặc định sidebar rộng */
-            right: 0;
+            left: 250px;
+            width: calc(100% - 250px);
             z-index: 999;
-            height: 60px;
-            transition: left 0.3s ease;
+            transition: left 0.3s ease, width 0.3s ease;
         }
 
             #headerAdmin.collapsed {
-                left: 60px; /* khi sidebar thu nhỏ */
+                left: 60px;
+                width: calc(100% - 60px);
             }
-
     </style>
 </head>
 <body>
-    <header id="headerAdmin" class="bg-dark text-white d-flex justify-content-between align-items-center px-3 py-2">
+    <header id="headerAdmin" class="bg-dark p-2 border-bottom">
         @await Html.PartialAsync("_Header")
     </header>
-
-    @await Html.PartialAsync("_NavAdmin")
-
+	@await Html.PartialAsync("_NavAdmin")
     <div id="mainContent" class="p-4 mt-5">
         @RenderBody()
     </div>
-
 
     <footer id="footerAdmin" class="bg-light text-center text-muted py-3 mt-4 border-top">
         @await Html.PartialAsync("_FooterAdmin")
@@ -91,7 +94,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-              window.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("DOMContentLoaded", function () {
             const sidebar = document.getElementById("sidebar");
             const toggleBtn = document.getElementById("toggleSidebar");
             const mainContent = document.getElementById("mainContent");
@@ -114,13 +117,12 @@
                 footer.classList.toggle("collapsed");
                 header.classList.toggle("collapsed");
 
-                // Lưu trạng thái
+                // Lưu trạng thái trên localStorage
                 localStorage.setItem("sidebarState",
                     sidebar.classList.contains("collapsed") ? "collapsed" : "expanded"
                 );
             });
         });
-
     </script>
 
     @RenderSection("Scripts", required: false)

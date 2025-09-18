@@ -11,5 +11,7 @@ public partial class DanhMuc
 
     public string? MoTa { get; set; }
 
+    public virtual ICollection<DanhMucThuocTinh> DanhMucThuocTinhs { get; set; } = new List<DanhMucThuocTinh>();
+
     public virtual ICollection<SanPham> SanPhams { get; set; } = new List<SanPham>();
 }

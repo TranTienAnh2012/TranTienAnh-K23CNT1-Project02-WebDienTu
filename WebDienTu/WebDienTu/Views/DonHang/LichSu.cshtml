@@ -62,7 +62,7 @@ else
                         </td>
                         <td>@ct.DonGia.ToString("N0") VNĐ</td>
                         <td>@ct.SoLuong</td>
-                        <td>@(ct.DonGia * ct.SoLuong).ToString("N0") VNĐ</td>
+                        <td>@($"{(ct.DonGia * ct.SoLuong):N0} VNĐ")</td>
                         <td>
                             @if (dh.TrangThai == false)
                             {

@@ -1,6 +1,7 @@
 wwwroot\cssAdmin\site.css
 wwwroot\css\BannerNavUse.css
 wwwroot\css\DanhSachSanPham.css
+wwwroot\css\NavberUsers.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\Asus\01.jpg
@@ -97,4 +98,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\NavberUsers.css

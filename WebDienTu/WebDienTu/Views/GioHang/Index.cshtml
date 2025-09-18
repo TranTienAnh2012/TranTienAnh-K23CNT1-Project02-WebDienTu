@@ -107,12 +107,20 @@
         </div>
 
         <div class="d-flex justify-content-between mt-3">
+    	@*Quay lại trang chủ để thêm sản phẩm khác hoặc tiến hành thanh toán. *@
             <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
                 <i class="fa-solid fa-arrow-left me-1"></i> Tiếp tục mua sắm
             </a>
-            <a asp-controller="DonHang" asp-action="ThanhToan" class="btn btn-success">
-                <i class="fa-solid fa-credit-card me-1"></i> Thanh toán
-            </a>
+
+           @*  Khi bấm Thanh toán, toàn bộ sản phẩm trong giỏ sẽ được đưa vào bảng Đơn hàng + Chi tiết đơn hàng.
+            Giỏ hàng sẽ được làm trống.
+            Admin có thể xác nhận đơn hàng bên phía quản trị. *@
+            <form asp-controller="GioHang" asp-action="ThanhToanGioHang" method="post" asp-antiforgery="true">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-credit-card"></i> Thanh toán
+                </button>
+            </form>
+
         </div>
     }
 </div>

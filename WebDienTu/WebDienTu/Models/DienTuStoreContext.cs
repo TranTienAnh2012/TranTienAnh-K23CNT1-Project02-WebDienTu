@@ -21,7 +21,11 @@ public partial class DienTuStoreContext : DbContext
 
     public virtual DbSet<DanhMuc> DanhMucs { get; set; }
 
+    public virtual DbSet<DanhMucThuocTinh> DanhMucThuocTinhs { get; set; }
+
     public virtual DbSet<DonHang> DonHangs { get; set; }
+
+    public virtual DbSet<GiaTriThuocTinh> GiaTriThuocTinhs { get; set; }
 
     public virtual DbSet<GiamGia> GiamGia { get; set; }
 
@@ -32,6 +36,8 @@ public partial class DienTuStoreContext : DbContext
     public virtual DbSet<SanPham> SanPhams { get; set; }
 
     public virtual DbSet<SanPhamDaXem> SanPhamDaXems { get; set; }
+
+    public virtual DbSet<ThuocTinh> ThuocTinhs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -87,6 +93,25 @@ public partial class DienTuStoreContext : DbContext
             entity.Property(e => e.TenDanhMuc).HasMaxLength(100);
         });
 
+        modelBuilder.Entity<DanhMucThuocTinh>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__DanhMucT__3214EC076B7ABBD2");
+
+            entity.ToTable("DanhMucThuocTinh");
+
+            entity.Property(e => e.ThuocTinhId).HasColumnName("ThuocTinhID");
+
+            entity.HasOne(d => d.MaDanhMucNavigation).WithMany(p => p.DanhMucThuocTinhs)
+                .HasForeignKey(d => d.MaDanhMuc)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_DanhMucThuocTinh_DanhMuc");
+
+            entity.HasOne(d => d.ThuocTinh).WithMany(p => p.DanhMucThuocTinhs)
+                .HasForeignKey(d => d.ThuocTinhId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_DanhMucThuocTinh_ThuocTinh");
+        });
+
         modelBuilder.Entity<DonHang>(entity =>
         {
             entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD09655621");
@@ -103,6 +128,27 @@ public partial class DienTuStoreContext : DbContext
                 .HasForeignKey(d => d.MaNguoiDung)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__DonHang__MaNguoi__45F365D3");
+        });
+
+        modelBuilder.Entity<GiaTriThuocTinh>(entity =>
+        {
+            entity.HasKey(e => e.GiaTriId).HasName("PK__GiaTriTh__27E18C65ACC5268A");
+
+            entity.ToTable("GiaTriThuocTinh");
+
+            entity.Property(e => e.GiaTriId).HasColumnName("GiaTriID");
+            entity.Property(e => e.GiaTri).HasMaxLength(255);
+            entity.Property(e => e.ThuocTinhId).HasColumnName("ThuocTinhID");
+
+            entity.HasOne(d => d.MaSanPhamNavigation).WithMany(p => p.GiaTriThuocTinhs)
+                .HasForeignKey(d => d.MaSanPham)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_GiaTriThuocTinh_SanPham");
+
+            entity.HasOne(d => d.ThuocTinh).WithMany(p => p.GiaTriThuocTinhs)
+                .HasForeignKey(d => d.ThuocTinhId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_GiaTriThuocTinh_ThuocTinh");
         });
 
         modelBuilder.Entity<GiamGia>(entity =>
@@ -217,6 +263,16 @@ public partial class DienTuStoreContext : DbContext
                 .HasForeignKey(d => d.MaSanPham)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_SanPhamDaXem_SanPham");
+        });
+
+        modelBuilder.Entity<ThuocTinh>(entity =>
+        {
+            entity.HasKey(e => e.ThuocTinhId).HasName("PK__ThuocTin__3E8FF1EED1DE0D11");
+
+            entity.ToTable("ThuocTinh");
+
+            entity.Property(e => e.ThuocTinhId).HasColumnName("ThuocTinhID");
+            entity.Property(e => e.TenThuocTinh).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);

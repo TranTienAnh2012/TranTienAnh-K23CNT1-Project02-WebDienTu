@@ -1,0 +1,86 @@
+﻿@model WebDienTu.Areas.Admin.ViewModels.SanPhamThuocTinhViewModel
+
+@{
+    ViewData["Title"] = "Thêm thuộc tính sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Thêm thuộc tính cho sản phẩm</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Chọn sản phẩm -->
+            <div class="form-group mb-3">
+                <label for="MaSanPham">Sản phẩm</label>
+                <select asp-for="MaSanPham" class="form-control" asp-items="ViewBag.MaSanPham">
+                    <option value="">-- Chọn sản phẩm --</option>
+                </select>
+            </div>
+
+            <hr />
+            <h5>Thuộc tính & giá trị</h5>
+            <div id="thuocTinhContainer">
+                <!-- Thuộc tính sẽ được load AJAX -->
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <a asp-action="Index" asp-controller="GiaTriThuocTinhs" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script>
+        $(document).ready(function () {
+
+            // Hàm load thuộc tính
+            function loadThuocTinhs(maSanPham) {
+                if (!maSanPham) return;
+
+                $.getJSON('@Url.Action("GetThuocTinhsBySanPham", "SanPhamThuocTinhs", new { area = "Admin" })',
+                    { maSanPham: maSanPham },
+                    function (res) {
+                        var container = $("#thuocTinhContainer");
+                        container.empty();
+
+                        if (res.success && res.data.length > 0) {
+                            $.each(res.data, function (i, item) {
+                                container.append(`
+                                    <div class="form-group mb-2">
+                                        <label>${item.tenThuocTinh}</label>
+                                        <input type="hidden" name="ThuocTinhGiaTris[${i}].ThuocTinhId" value="${item.thuocTinhId}" />
+                                        <input type="text" name="ThuocTinhGiaTris[${i}].GiaTri" class="form-control" placeholder="Nhập giá trị ${item.tenThuocTinh}" />
+                                    </div>
+                                `);
+                            });
+                        } else {
+                            container.append("<p class='text-muted'>Danh mục này chưa có thuộc tính nào.</p>");
+                        }
+                    }
+                ).fail(function () {
+                    alert("Có lỗi xảy ra khi lấy thuộc tính sản phẩm.");
+                });
+            }
+
+            // Khi chọn sản phẩm
+            $("#MaSanPham").change(function () {
+                var maSanPham = $(this).val();
+                loadThuocTinhs(maSanPham);
+            });
+
+            // Nếu page reload mà model có MaSanPham (ví dụ khi validation lỗi), load lại các thuộc tính
+            var selectedSanPham = $("#MaSanPham").val();
+            if (selectedSanPham) {
+                loadThuocTinhs(selectedSanPham);
+            }
+        });
+    </script>
+}

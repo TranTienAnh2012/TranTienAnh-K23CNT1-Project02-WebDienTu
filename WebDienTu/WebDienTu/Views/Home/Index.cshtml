@@ -17,7 +17,7 @@
 <div id="popupOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
      background:rgba(0,0,0,0.5); z-index:1040;"></div>
 
-<!-- Popup -->
+<!-- Popup thiết kế thông báo đăng nhập đăng xuất cảnh bảo -->
 <div id="popupNotification" style="display:none; position:fixed; top:40%; left:40%;
     transform:translate(-50%, -50%) scale(0); background-color:white; border-radius:12px;
     padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1050; text-align:center;
@@ -38,22 +38,22 @@
 
 
 <div id="daXemContainer">
-    <!-- Nội dung sẽ load từ Ajax -->
+    <!-- Nội dung sẽ load từ Ajax  (Tạm thới chưa làm)-->
 </div>
 
-
+@* thanh phần loại (kết hợp AJAX)*@
 <ul class="nav nav-pills mb-3" id="LoaiFilterNav">
     <li class="nav-item"><a class="nav-link active" href="#" data-loai="">Tất cả</a></li>
     <li class="nav-item"><a class="nav-link" href="#" data-loai="Macbook">Macbook</a></li>
     <li class="nav-item"><a class="nav-link" href="#" data-loai="iPhone">Iphone</a></li>
     <li class="nav-item"><a class="nav-link" href="#" data-loai="Lenovo">Lenovo</a></li>
 </ul>
-
+@* Gọi các sản phẩm từ trang _SanPhamList (kết hợp AJAX)*@
 <div id="SanPhamList">
     @await Html.PartialAsync("_SanPhamList", Model)
 </div>
 
-<!-- Gọi Hot Keywords -->
+<!-- Gọi trang Hot Keywords để hiển thị   (kết hợp AJAX)-->
 @if (ViewBag.HotKeywords != null && ((List<string>)ViewBag.HotKeywords).Any())
 {
     @await Html.PartialAsync("_HotKeywords", (List<string>)ViewBag.HotKeywords)

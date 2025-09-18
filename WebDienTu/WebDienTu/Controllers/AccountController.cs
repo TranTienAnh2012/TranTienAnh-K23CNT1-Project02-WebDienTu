@@ -101,6 +101,54 @@ public class AccountController : Controller
         TempData["SuccessMessage"] = "Bạn đã đăng xuất thành công!";
         return RedirectToAction("Index", "Home");
     }
+    [HttpGet]
+    public IActionResult Profile()
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+        var user = _context.QuanTriViens.FirstOrDefault(u => u.MaNguoiDung == userId);
+        if (user == null)
+        {
+            TempData["Error"] = "Không tìm thấy thông tin tài khoản!";
+            return RedirectToAction("Index", "Home");
+        }
+
+        return View(user); // Views/Account/Profile.cshtml
+    }
+
+    [HttpGet]
+    public IActionResult EditProfile()
+    {
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+        var user = _context.QuanTriViens.FirstOrDefault(u => u.MaNguoiDung == userId);
+        if (user == null) return NotFound();
+
+        return View(user);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditProfile(QuanTriVien model)
+    {
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+        var user = _context.QuanTriViens.FirstOrDefault(u => u.MaNguoiDung == userId);
+
+        if (user == null) return NotFound();
+
+        // Cập nhật thông tin
+        user.HoTen = model.HoTen;
+        user.Email = model.Email;
+        // Nếu muốn cho phép đổi mật khẩu thì thêm check riêng
+
+        await _context.SaveChangesAsync();
+
+        TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
+        return RedirectToAction("Profile");
+    }
 
 
     [HttpGet]

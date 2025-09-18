@@ -94,12 +94,14 @@ namespace WebDienTu.Controllers
                 }
             }
 
-            // 👉 Lấy sản phẩm theo id
+            // 👉 Lấy sản phẩm theo id và include luôn các bảng phụ
             var sp = await _context.SanPhams
                 .Include(s => s.MaDanhMucNavigation)
                 .Include(s => s.MaKhuyenMais)
                 .Include(s => s.DanhGia)
                     .ThenInclude(d => d.MaNguoiDungNavigation)
+                .Include(s => s.GiaTriThuocTinhs)         // 🔹 Include thông số sản phẩm
+                    .ThenInclude(gt => gt.ThuocTinh)      // 🔹 Include tên thuộc tính
                 .AsSplitQuery()
                 .FirstOrDefaultAsync(s => s.MaSanPham == id && s.TrangThai == true);
 
@@ -119,7 +121,7 @@ namespace WebDienTu.Controllers
                 ? Math.Round(danhGias.Average(d => d.SoSao.Value), 1)
                 : 0;
 
-            // 👉 Lưu vào bảng SanPhamDaXem nếu có user id hợp lệ
+            // 👉 Lưu vào bảng SanPhamDaXem nếu có user id hợp lệ (nếu muốn)
             if (currentUserId.HasValue)
             {
                 var daXem = await _context.SanPhamDaXems
@@ -143,16 +145,20 @@ namespace WebDienTu.Controllers
                 var toDelete = await _context.SanPhamDaXems
                     .Where(x => x.MaNguoiDung == currentUserId.Value)
                     .OrderByDescending(x => x.ThoiGianXem)
-                    .Skip(20) // Giữ lại 20 sản phẩm mới nhất
+                    .Skip(20)
                     .ToListAsync();
 
                 if (toDelete.Any())
-                {
                     _context.SanPhamDaXems.RemoveRange(toDelete);
-                }
 
                 await _context.SaveChangesAsync();
             }
+
+            // 🔹 Note: Khi view Details, bạn có thể dùng sp.GiaTriThuocTinhs để hiển thị
+            // Ví dụ trong view:
+            // @foreach(var gt in Model.GiaTriThuocTinhs) {
+            //     <tr><td>@gt.ThuocTinh?.TenThuocTinh</td><td>@gt.GiaTri</td></tr>
+            // }
 
             return View(sp);
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 namespace WebDienTu.Models;
@@ -9,8 +10,7 @@ public partial class SanPham
 
     public string TenSanPham { get; set; } = null!;
 
-    public int MaDanhMuc { get; set; }  // required
-
+    public int MaDanhMuc { get; set; }
 
     public decimal Gia { get; set; }
 
@@ -38,9 +38,11 @@ public partial class SanPham
 
     public virtual ICollection<DanhGia> DanhGia { get; set; } = new List<DanhGia>();
 
+    public virtual ICollection<GiaTriThuocTinh> GiaTriThuocTinhs { get; set; } = new List<GiaTriThuocTinh>();
+
     public virtual ICollection<GioHangTam> GioHangTams { get; set; } = new List<GioHangTam>();
 
-    public virtual DanhMuc? MaDanhMucNavigation { get; set; } // nullable
+    public virtual DanhMuc MaDanhMucNavigation { get; set; } = null!;
 
     public virtual ICollection<SanPhamDaXem> SanPhamDaXems { get; set; } = new List<SanPhamDaXem>();
 

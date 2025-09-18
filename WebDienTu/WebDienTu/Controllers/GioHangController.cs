@@ -93,6 +93,87 @@ public class GioHangController : Controller
         return RedirectToAction("Index");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> XacNhanThanhToan()
+    {
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+        var gioHang = await _context.GioHangTams
+            .Include(g => g.MaSanPhamNavigation)
+            .Where(g => g.MaNguoiDung == userId)
+            .ToListAsync();
+
+        if (!gioHang.Any())
+        {
+            TempData["Error"] = "Giỏ hàng trống!";
+            return RedirectToAction("Index");
+        }
+
+        ViewBag.TongTien = gioHang.Sum(g => g.SoLuong * (g.MaSanPhamNavigation.GiaBan ?? g.MaSanPhamNavigation.Gia));
+        return View(gioHang); // tìm view: Views/GioHang/XacNhanThanhToan.cshtml
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ThanhToanGioHang()
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            TempData["Warning"] = "Vui lòng đăng nhập để mua hàng!";
+            return RedirectToAction("Login", "Account");
+        }
+
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+        var gioHang = await _context.GioHangTams
+            .Include(g => g.MaSanPhamNavigation)
+            .Where(g => g.MaNguoiDung == userId)
+            .ToListAsync();
+
+        if (!gioHang.Any())
+        {
+            TempData["Error"] = "Giỏ hàng trống!";
+            return RedirectToAction("Index", "GioHang");
+        }
+
+        // Tạo đơn hàng
+        var donHang = new DonHang
+        {
+            MaNguoiDung = userId,
+            NgayDatHang = DateTime.Now,
+            TongTien = gioHang.Sum(g => g.SoLuong * (g.MaSanPhamNavigation.GiaBan ?? g.MaSanPhamNavigation.Gia)),
+            TrangThai = false
+        };
+        _context.DonHangs.Add(donHang);
+        await _context.SaveChangesAsync();
+
+        // Thêm chi tiết đơn hàng
+        foreach (var item in gioHang)
+        {
+            var chiTiet = new ChiTietDonHang
+            {
+                MaDonHang = donHang.MaDonHang,
+                MaSanPham = item.MaSanPham,
+                SoLuong = item.SoLuong,
+                DonGia = item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia
+            };
+            _context.ChiTietDonHangs.Add(chiTiet);
+
+            // Trừ tồn kho
+            item.MaSanPhamNavigation.SoLuongTon -= item.SoLuong;
+        }
+
+        // Xóa giỏ hàng tạm
+        _context.GioHangTams.RemoveRange(gioHang);
+
+        await _context.SaveChangesAsync();
+
+        TempData["Success"] = "Đặt hàng thành công! Đơn hàng đang chờ admin xác nhận.";
+        return RedirectToAction("Index", "GioHang");
+    }
+
+
+
     // Xóa sản phẩm khỏi giỏ hàng
     public async Task<IActionResult> Remove(int id)
     {
