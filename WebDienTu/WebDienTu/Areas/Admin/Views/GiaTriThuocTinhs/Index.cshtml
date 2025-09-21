@@ -23,61 +23,62 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var spGroup in Model.GroupBy(x => x.MaSanPhamNavigation?.TenSanPham))
+                    @foreach (var spGroup in Model.GroupBy(x => x.MaSanPhamNavigation?.MaSanPham))
                     {
-                        // Thay thế tất cả ký tự không phải chữ, số hoặc dấu "-" bằng "-"
-                        var collapseId = "collapse-" + System.Text.RegularExpressions.Regex.Replace(spGroup.Key ?? "san-pham", @"[^a-zA-Z0-9\-]", "-");
+                        var sanPham = spGroup.First().MaSanPhamNavigation;
+                        var collapseId = "collapse-" + sanPham?.MaSanPham;
 
                         <tr class="table-primary">
-                            <td>@spGroup.Key</td>
+                            <td>@sanPham?.TenSanPham</td>
                             <td>
-                                <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#@collapseId">
+                                <button class="btn btn-sm btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseId">
                                     Xem thuộc tính
                                 </button>
                             </td>
                             <td class="text-center">
-                                <a asp-action="Create" asp-route-sanPham="@spGroup.First().MaSanPhamNavigation?.MaSanPham" class="btn btn-sm btn-success">
+                                <a asp-action="Create" asp-route-sanPham="@sanPham?.MaSanPham" class="btn btn-sm btn-success">
                                     <i class="fas fa-plus-circle"></i>
                                 </a>
                             </td>
                         </tr>
 
-                        <tr class="collapse" id="@collapseId">
-                            <td colspan="3">
-                                <table class="table table-sm table-borderless mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th style="width:40%">Thuộc tính</th>
-                                            <th style="width:40%">Giá trị</th>
-                                            <th class="text-center" style="width:20%">Hành động</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var attr in spGroup)
-                                        {
+                        <tr>
+                            <td colspan="3" class="p-0">
+                                <div class="collapse" id="@collapseId">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <thead>
                                             <tr>
-                                                <td>@attr.ThuocTinh?.TenThuocTinh</td>
-                                                <td>@attr.GiaTri</td>
-                                                <td class="text-center">
-                                                    <a asp-action="Edit" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-warning me-1">
-                                                        <i class="fas fa-edit"></i>
-                                                    </a>
-                                                    <a asp-action="Details" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-info me-1 text-white">
-                                                        <i class="fas fa-info-circle"></i>
-                                                    </a>
-                                                    <a asp-action="Delete" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-danger"
-                                                       onclick="return confirm('Bạn có chắc chắn muốn xóa giá trị thuộc tính này?');">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
-                                                </td>
+                                                <th style="width:40%">Thuộc tính</th>
+                                                <th style="width:40%">Giá trị</th>
+                                                <th class="text-center" style="width:20%">Hành động</th>
                                             </tr>
-                                        }
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var attr in spGroup)
+                                            {
+                                                <tr>
+                                                    <td>@attr.ThuocTinh?.TenThuocTinh</td>
+                                                    <td>@attr.GiaTri</td>
+                                                    <td class="text-center">
+                                                        <a asp-action="Edit" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-warning me-1">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+                                                        <a asp-action="Details" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-info me-1 text-white">
+                                                            <i class="fas fa-info-circle"></i>
+                                                        </a>
+                                                        <a asp-action="Delete" asp-route-id="@attr.GiaTriId" class="btn btn-sm btn-danger"
+                                                           onclick="return confirm('Bạn có chắc chắn muốn xóa giá trị thuộc tính này?');">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
                             </td>
                         </tr>
                     }
-
                 </tbody>
             </table>
         </div>

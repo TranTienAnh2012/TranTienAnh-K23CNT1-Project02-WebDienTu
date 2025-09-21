@@ -14,6 +14,7 @@ wwwroot\images\BanneUse\01.jpg
 wwwroot\images\BanneUse\02.jpg
 wwwroot\images\BanneUse\03.jpg
 wwwroot\images\BanneUse\04.jpg
+wwwroot\images\icon\favicon.jpg
 wwwroot\images\Iphone\01.jpg
 wwwroot\images\Iphone\02.jpg
 wwwroot\images\Iphone\03.jpg
@@ -98,3 +99,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\_SanPhamList.css
