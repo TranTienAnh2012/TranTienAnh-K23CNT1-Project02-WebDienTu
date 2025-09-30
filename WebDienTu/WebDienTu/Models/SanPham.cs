@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebDienTu.Models;
 
@@ -18,7 +19,9 @@ public partial class SanPham
 
     public string? HinhAnh { get; set; }
 
-    public int? SoLuongTon { get; set; }
+    [Range(0, int.MaxValue, ErrorMessage = "Số lượng tồn phải là số nguyên >= 0")]
+    public int SoLuongTon { get; set; }
+
 
     public bool? TrangThai { get; set; }
 
@@ -42,7 +45,8 @@ public partial class SanPham
 
     public virtual ICollection<GioHangTam> GioHangTams { get; set; } = new List<GioHangTam>();
 
-    public virtual DanhMuc MaDanhMucNavigation { get; set; } = null!;
+    public virtual DanhMuc? MaDanhMucNavigation { get; set; }
+
 
     public virtual ICollection<SanPhamDaXem> SanPhamDaXems { get; set; } = new List<SanPhamDaXem>();
 

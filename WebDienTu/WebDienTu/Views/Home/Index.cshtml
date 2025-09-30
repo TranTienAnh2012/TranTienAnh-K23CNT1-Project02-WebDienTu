@@ -43,11 +43,15 @@
 
 @* thanh phần loại (kết hợp AJAX)*@
 <ul class="nav nav-pills mb-3" id="LoaiFilterNav">
-    <li class="nav-item"><a class="nav-link active" href="#" data-loai="">Tất cả</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="Macbook">Macbook</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="iPhone">Iphone</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" data-loai="Lenovo">Lenovo</a></li>
+    <li class="nav-item"><a class="nav-link active" href="#" data-madm="">Tất cả</a></li>
+    @foreach (var dm in (List<WebDienTu.Models.DanhMuc>)ViewBag.DanhMucs)
+    {
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-madm="@dm.MaDanhMuc">@dm.TenDanhMuc</a>
+        </li>
+    }
 </ul>
+
 @* Gọi các sản phẩm từ trang _SanPhamList (kết hợp AJAX)*@
 <div id="SanPhamList">
     @await Html.PartialAsync("_SanPhamList", Model)
@@ -106,7 +110,7 @@
                                         <i class="fa-solid fa-star text-warning me-1"></i>
                                     }
                                     else
-                                    {
+                                    {   
                                         <i class="fa-regular fa-star text-warning me-1"></i>
                                     }
                                 }
@@ -203,22 +207,23 @@
             // ========================
             // Ajax lọc sản phẩm theo loại
             // ========================
-            $("#LoaiFilterNav").on("click", "a", function (e) {
-                e.preventDefault();
+                   $("#LoaiFilterNav").on("click", "a", function (e) {
+                        e.preventDefault();
 
-                $("#LoaiFilterNav a").removeClass("active");
-                $(this).addClass("active");
+                        $("#LoaiFilterNav a").removeClass("active");
+                        $(this).addClass("active");
 
-                var loai = $(this).data("loai");
+                        var madm = $(this).data("madm");
 
-                $.get("/Home/LocTheoLoai", { loai: loai })
-                    .done(function (res) {
-                        $("#SanPhamList").html(res);
-                    })
-                    .fail(function () {
-                        alert("Lỗi khi tải sản phẩm. Vui lòng thử lại.");
+                        $.get("/Home/LocTheoLoai", { madm: madm })
+                            .done(function (res) {
+                                $("#SanPhamList").html(res);
+                            })
+                            .fail(function () {
+                                alert("Lỗi khi tải sản phẩm. Vui lòng thử lại.");
+                            });
                     });
-            });
+
 
             // ========================
             // Ajax tìm kiếm sản phẩm (input + gợi ý)

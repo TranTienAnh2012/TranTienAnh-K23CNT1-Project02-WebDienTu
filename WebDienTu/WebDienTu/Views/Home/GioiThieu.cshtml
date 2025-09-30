@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Một số sản phẩm của web chúng tôi";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Layout User
+}
+@* Đây là thư viện CSS nổi tiếng giúp bạn dễ dàng thêm hiệu ứng động (animation) vào website.
+Thay vì viết CSS animation thủ công, bạn chỉ cần gán class vào phần tử. *@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link href="~/css/GioiThieu.css" rel="stylesheet" />
+@* Nó là một thư viện JavaScript nhỏ gọn (do Matt Boldt phát triển) giúp bạn tạo hiệu ứng gõ phím (typing effect) trên website. *@
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<div class="container py-5">
+    <div class="container py-5 text-center">
+        <h1 class="mb-4 fw-bold animate__animated animate__fadeInDown">
+            @ViewData["Title"]
+        </h1>
+
+        <h2 id="typed-text" class="fw-semibold text-primary"></h2>
+    </div>
+
+
+    <div class="row">
+        <!-- Cột trái: menu sản phẩm -->
+        <div class="col-md-4 animate__animated animate__fadeInLeft">
+            <h3 class="fw-bold">Sản phẩm chính</h3>
+            <ul class="list-group shadow-sm">
+                <li class="list-group-item hover-scale">
+                    <a href="#laptop" class="text-decoration-none text-dark">Laptop Gaming, Laptop Văn phòng</a>
+                </li>
+                <li class="list-group-item hover-scale">
+                    <a href="#smartphone" class="text-decoration-none text-dark">Điện thoại Smartphone chính hãng</a>
+                </li>
+                <li class="list-group-item hover-scale">
+                    <a href="#tablet" class="text-decoration-none text-dark">Máy tính bảng, iPad</a>
+                </li>
+                <li class="list-group-item hover-scale">
+                    <a href="#accessory" class="text-decoration-none text-dark">Phụ kiện công nghệ cao cấp</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cột phải: video -->
+        <div class="col-md-8 text-center animate__animated animate__fadeInRight">
+            <h3 class="fw-bold">Video giới thiệu</h3>
+            <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden mt-3">
+                <iframe src="https://www.youtube.com/embed/ZRpcVfSqTiU"
+                        title="Video review công nghệ"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Các phần nội dung chi tiết -->
+    <div class="mt-5">
+
+        <!-- LAPTOP -->
+        <h3 id="laptop" class="fw-bold">💻 Laptop Gaming & Laptop Văn Phòng</h3>
+        <p>
+            Laptop là thiết bị không thể thiếu trong thời đại số hiện nay, phục vụ cho học tập, làm việc,
+            giải trí và sáng tạo nội dung. Tại <b>WebĐiệnTử</b>, chúng tôi cung cấp hàng loạt sản phẩm
+            từ <b>laptop văn phòng nhỏ gọn</b> đến <b>máy gaming hiệu năng cao</b>, đáp ứng mọi nhu cầu của bạn.
+        </p>
+        <p>
+            💡 <b>Laptop Gaming</b> được trang bị vi xử lý thế hệ mới, card đồ họa rời mạnh mẽ như RTX series, RAM từ 16GB trở lên,
+            cùng hệ thống tản nhiệt tối ưu giúp chơi các tựa game AAA hay làm đồ họa 3D một cách mượt mà.
+            Phù hợp cho game thủ, designer, kỹ sư hoặc người dùng chuyên nghiệp.
+        </p>
+        <p>
+            💼 <b>Laptop Văn Phòng</b> có thiết kế mỏng nhẹ, pin lâu, bàn phím êm và màn hình Full HD sắc nét,
+            giúp bạn dễ dàng làm việc, học online hay di chuyển mà không lo nặng nề. Ngoài ra, khả năng bảo mật và tính ổn định
+            cao rất thích hợp cho môi trường doanh nghiệp.
+        </p>
+        <ul>
+            <li><b>Gaming:</b> MSI Katana, Asus ROG Strix, Acer Nitro 5, Lenovo Legion 5 Pro</li>
+            <li><b>Văn phòng:</b> Dell Inspiron, HP Envy, MacBook Air M2, Lenovo ThinkPad X1</li>
+        </ul>
+
+        <!-- SMARTPHONE -->
+        <h3 id="smartphone" class="fw-bold mt-5">📱 Điện Thoại Smartphone Chính Hãng</h3>
+        <p>
+            Smartphone ngày nay không chỉ là công cụ liên lạc mà còn là trung tâm giải trí, máy ảnh, ví điện tử
+            và công cụ làm việc di động. Chúng tôi tự hào mang đến các sản phẩm <b>chính hãng 100%</b> với giá cạnh tranh,
+            hỗ trợ bảo hành theo tiêu chuẩn quốc tế.
+        </p>
+        <p>
+            📸 <b>Flagship cao cấp</b> như iPhone 15 Pro Max hay Samsung Galaxy S24 Ultra nổi bật với camera chất lượng chuyên nghiệp,
+            hiệu năng vượt trội, trí tuệ nhân tạo hỗ trợ chụp ảnh, quay phim và chỉnh sửa thông minh.
+        </p>
+        <p>
+            📱 <b>Phân khúc tầm trung</b> như Xiaomi Redmi, Oppo Reno hay Vivo Y series cung cấp hiệu năng tốt,
+            pin lớn, sạc nhanh, giá thành hợp lý – lựa chọn hoàn hảo cho học sinh, sinh viên và người dùng phổ thông.
+        </p>
+        <ul>
+            <li><b>Apple iPhone:</b> iPhone 13 / 14 / 15 series – hiệu năng, độ ổn định và hệ sinh thái iOS mượt mà</li>
+            <li><b>Samsung Galaxy:</b> S series, Z Fold/Flip – công nghệ màn hình và camera hàng đầu</li>
+            <li><b>Xiaomi / Oppo / Vivo:</b> giá mềm, pin khỏe, cấu hình ổn định</li>
+        </ul>
+
+        <!-- TABLET -->
+        <h3 id="tablet" class="fw-bold mt-5">📟 Máy Tính Bảng & iPad</h3>
+        <p>
+            <b>Máy tính bảng</b> là lựa chọn linh hoạt giữa smartphone và laptop – lý tưởng cho học sinh, sinh viên,
+            dân văn phòng hay nhà sáng tạo nội dung. Bạn có thể đọc sách, học online, ghi chú, vẽ, chỉnh sửa ảnh
+            hay thậm chí làm việc chuyên nghiệp với bàn phím rời.
+        </p>
+        <p>
+            ✍️ <b>Apple iPad</b> nổi bật với chip Apple Silicon cực mạnh, hỗ trợ Apple Pencil và Magic Keyboard,
+            biến chiếc iPad thành công cụ sáng tạo, vẽ kỹ thuật số hoặc máy tính làm việc thực thụ.
+        </p>
+        <p>
+            📺 <b>Samsung Galaxy Tab</b> mang đến trải nghiệm giải trí tuyệt vời nhờ màn hình Super AMOLED rực rỡ,
+            loa Dolby Atmos sống động cùng khả năng đa nhiệm mượt mà.
+        </p>
+        <ul>
+            <li><b>iPad Series:</b> iPad Gen, iPad Air, iPad Pro – từ cơ bản đến chuyên nghiệp</li>
+            <li><b>Samsung Galaxy Tab:</b> Tab S9, Tab A8 – đa dụng và giá tốt</li>
+            <li><b>Xiaomi Pad:</b> lựa chọn hiệu năng cao với chi phí tiết kiệm</li>
+        </ul>
+
+        <!-- ACCESSORY -->
+        <h3 id="accessory" class="fw-bold mt-5">🎧 Phụ Kiện Công Nghệ Cao Cấp</h3>
+        <p>
+            Phụ kiện là phần không thể thiếu để nâng cao trải nghiệm công nghệ của bạn. Tại <b>WebĐiệnTử</b>,
+            chúng tôi cung cấp hàng trăm sản phẩm chính hãng từ tai nghe, chuột, bàn phím đến sạc nhanh, pin dự phòng.
+        </p>
+        <p>
+            🎧 <b>Tai nghe không dây</b> như AirPods Pro hay Sony WF-1000XM5 mang đến âm thanh chất lượng cao,
+            chống ồn chủ động và kết nối ổn định.
+            ⌨️ <b>Bàn phím & chuột gaming</b> với đèn RGB, độ phản hồi nhanh, phù hợp cho cả làm việc lẫn chơi game.
+            🔋 <b>Phụ kiện sạc nhanh</b> hỗ trợ chuẩn PD, GaN giúp rút ngắn thời gian sạc đáng kể cho thiết bị của bạn.
+        </p>
+        <ul>
+            <li><b>Tai nghe:</b> AirPods, Sony, JBL, Samsung Buds – âm thanh trung thực</li>
+            <li><b>Bàn phím & Chuột:</b> Logitech, Razer, Keychron – thiết kế bền, nhạy</li>
+            <li><b>Phụ kiện khác:</b> sạc nhanh 65W, pin dự phòng 20.000mAh, bao da, balo chống sốc</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Nút lên đầu trang -->
+<a href="#top" class="btn btn-primary rounded-circle shadow"
+   style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Typed("#typed-text", {
+            strings: [
+                "Laptop Gaming mạnh mẽ 🚀",
+                "Điện thoại chính hãng 📱",
+                "Phụ kiện công nghệ mới nhất 🎧"
+            ],
+            typeSpeed: 70,   // tốc độ gõ (ms / ký tự)
+            backSpeed: 50,   // tốc độ xóa
+            backDelay: 1500, // thời gian dừng trước khi xóa
+            loop: true       // lặp lại
+        });
+    });
+</script>

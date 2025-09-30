@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;                 // thêm cái này để làm việc với file
 using System.Linq;
 using System.Threading.Tasks;
 using WebDienTu.Models;
-using X.PagedList; // thêm thư viện này ở đầu
-using X.PagedList.Extensions;
+using X.PagedList;               // phân trang
+using X.PagedList.Extensions;    // mở rộng ToPagedList
 
 namespace WebDienTu.Areas.Admin.Controllers
 {
@@ -78,20 +79,53 @@ namespace WebDienTu.Areas.Admin.Controllers
         // POST: Admin/SanPhams/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Admin/SanPhams/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaSanPham,TenSanPham,MaDanhMuc,Gia,MoTa,HinhAnh,SoLuongTon,TrangThai,NgayThem,Loai,GiaBan,ThuongHieu,XuatXu,BaoHanh")] SanPham sanPham)
+        public async Task<IActionResult> Create([Bind("MaSanPham,TenSanPham,MaDanhMuc,Gia,MoTa,HinhAnh,SoLuongTon,TrangThai,Loai,GiaBan,ThuongHieu,XuatXu,BaoHanh")] SanPham sanPham, IFormFile UploadImage)
         {
             if (ModelState.IsValid)
             {
-              
+                // Nếu admin upload ảnh
+                if (UploadImage != null && UploadImage.Length > 0)
+                {
+                    var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/uploads");
+                    if (!Directory.Exists(uploadPath))
+                    {
+                        Directory.CreateDirectory(uploadPath);
+                    }
 
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(UploadImage.FileName);
+                    var filePath = Path.Combine(uploadPath, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await UploadImage.CopyToAsync(stream);
+                    }
+
+                    // Gán đường dẫn cho trường HinhAnh
+                    sanPham.HinhAnh = "/images/uploads/" + fileName;
+                }
+
+                sanPham.NgayThem = DateTime.Now;
                 _context.Add(sanPham);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-
             }
+
+            // Ghi log lỗi validation
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+            Console.WriteLine("❌ ModelState Errors: " + string.Join(" | ", errors));
+
+            // Reload dropdowns
             ViewData["MaDanhMuc"] = new SelectList(_context.DanhMucs, "MaDanhMuc", "MaDanhMuc", sanPham.MaDanhMuc);
+            var rootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+            var imageFiles = Directory.GetFiles(rootPath, "*.*", SearchOption.AllDirectories)
+                                      .Where(f => f.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || f.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                      .Select(f => "/images/" + Path.GetRelativePath(rootPath, f).Replace("\\", "/"))
+                                      .ToList();
+            ViewBag.ImageList = new SelectList(imageFiles, sanPham.HinhAnh);
+
             return View(sanPham);
         }
 
@@ -128,9 +162,10 @@ namespace WebDienTu.Areas.Admin.Controllers
 
         // POST: Admin/SanPhams/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // POST: Admin/SanPhams/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaSanPham,TenSanPham,MaDanhMuc,Gia,MoTa,HinhAnh,SoLuongTon,TrangThai,NgayThem,Loai,GiaBan,ThuongHieu,XuatXu,BaoHanh")] SanPham sanPham)
+        public async Task<IActionResult> Edit(int id, [Bind("MaSanPham,TenSanPham,MaDanhMuc,Gia,MoTa,HinhAnh,SoLuongTon,TrangThai,NgayThem,Loai,GiaBan,ThuongHieu,XuatXu,BaoHanh")] SanPham sanPham, IFormFile UploadImage)
         {
             if (id != sanPham.MaSanPham)
             {
@@ -141,6 +176,26 @@ namespace WebDienTu.Areas.Admin.Controllers
             {
                 try
                 {
+                    // Nếu admin upload ảnh mới → thay thế ảnh cũ
+                    if (UploadImage != null && UploadImage.Length > 0)
+                    {
+                        var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/uploads");
+                        if (!Directory.Exists(uploadPath))
+                        {
+                            Directory.CreateDirectory(uploadPath);
+                        }
+
+                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(UploadImage.FileName);
+                        var filePath = Path.Combine(uploadPath, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await UploadImage.CopyToAsync(stream);
+                        }
+
+                        sanPham.HinhAnh = "/images/uploads/" + fileName;
+                    }
+
                     _context.Update(sanPham);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -165,7 +220,6 @@ namespace WebDienTu.Areas.Admin.Controllers
 
             // Reload dropdowns
             ViewData["MaDanhMuc"] = new SelectList(_context.DanhMucs, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
-
             ViewBag.TrangThaiList = new List<SelectListItem>
     {
         new SelectListItem { Text = "Hiển thị", Value = "True", Selected = sanPham.TrangThai == true },
@@ -181,7 +235,6 @@ namespace WebDienTu.Areas.Admin.Controllers
 
             return View(sanPham);
         }
-
 
 
         // GET: Admin/SanPhams/Delete/5

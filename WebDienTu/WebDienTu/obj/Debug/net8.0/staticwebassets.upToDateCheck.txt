@@ -1,8 +1,10 @@
 wwwroot\cssAdmin\site.css
 wwwroot\css\BannerNavUse.css
 wwwroot\css\DanhSachSanPham.css
+wwwroot\css\GioiThieu.css
 wwwroot\css\NavberUsers.css
 wwwroot\css\site.css
+wwwroot\css\_SanPhamList.css
 wwwroot\favicon.ico
 wwwroot\images\Asus\01.jpg
 wwwroot\images\Asus\02.jpg
@@ -41,6 +43,10 @@ wwwroot\images\Samsung\02.jpg
 wwwroot\images\Samsung\03.jpg
 wwwroot\images\Samsung\05.jpg
 wwwroot\images\Samsung\06.jpg
+wwwroot\images\uploads\7ab5d924-cdc5-48b2-bb55-d6fb2852c564.jpg
+wwwroot\images\uploads\95a0c781-0e85-4af3-b462-2bf5c4af7b32.jpg
+wwwroot\images\uploads\a8e91cfa-4a60-4e9e-b816-f53a7594d74d.jpg
+wwwroot\images\uploads\f4b8d803-1537-49a7-beae-ca0bbb6b69a0.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -99,4 +105,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\_SanPhamList.css

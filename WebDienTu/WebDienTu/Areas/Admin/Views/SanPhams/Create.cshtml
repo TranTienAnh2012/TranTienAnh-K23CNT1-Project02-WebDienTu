@@ -8,7 +8,7 @@
 <h1 class="mb-4">@ViewData["Title"]</h1>
 
 <div class="card shadow-sm p-4" style="max-width: 900px; margin:auto;">
-    <form asp-action="Create" method="post">
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
         <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
         <div class="row">
@@ -44,6 +44,15 @@
                     <input asp-for="Loai" class="form-control" />
                     <span asp-validation-for="Loai" class="text-danger"></span>
                 </div>
+                <div class="mb-3">
+                    <label asp-for="TrangThai" class="form-label fw-bold"></label>
+                    <select asp-for="TrangThai" class="form-select">
+                        <option value="true">Hiển thị</option>
+                        <option value="false">Ẩn</option>
+                    </select>
+                    <span asp-validation-for="TrangThai" class="text-danger"></span>
+                </div>
+
             </div>
 
             <!-- Cột bên phải: Hình ảnh & thông tin khác -->
@@ -53,9 +62,21 @@
                     <select asp-for="HinhAnh" class="form-select" asp-items="ViewBag.ImageList" id="HinhAnhDropdown">
                         <option value="">-- Chọn hình ảnh --</option>
                     </select>
+
+                    <!-- Thêm input upload ảnh -->
+                    <div class="mt-2">
+                        <input type="file" name="UploadImage" class="form-control" accept="image/*" />
+                    </div>
+
                     <div class="mt-3 text-center">
                         <img id="previewImage" src="" alt="Preview" class="img-fluid rounded border" style="max-height:250px;" />
                     </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="SoLuongTon" class="form-label fw-bold"></label>
+                    <input asp-for="SoLuongTon" class="form-control" type="number" min="0" />
+                    <span asp-validation-for="SoLuongTon" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
@@ -96,11 +117,24 @@
 </div>
 
 @section Scripts {
-
     <script>
+        // Preview khi chọn ảnh từ dropdown
         document.getElementById('HinhAnhDropdown').addEventListener('change', function () {
             var img = document.getElementById('previewImage');
             img.src = this.value;
+        });
+
+        // Preview khi upload ảnh trực tiếp
+        document.querySelector('input[name="UploadImage"]').addEventListener('change', function (event) {
+            var img = document.getElementById('previewImage');
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
         });
     </script>
 }
