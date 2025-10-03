@@ -1,0 +1,47 @@
+﻿/* ==========================
+   BẢNG TRONG ACCORDION THEO THEME
+========================== */
+
+/* Table trong accordion */
+[data-theme="light"] .accordion-body .table {
+    color: #212529;
+}
+
+    [data-theme="light"] .accordion-body .table th {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    [data-theme="light"] .accordion-body .table tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+
+    [data-theme="light"] .accordion-body .table tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+[data-theme="dark"] .accordion-body .table {
+    color: #e4e6eb;
+}
+
+    [data-theme="dark"] .accordion-body .table th {
+        background-color: #333;
+        color: #e4e6eb;
+    }
+
+    [data-theme="dark"] .accordion-body .table tbody tr:nth-child(even) {
+        background-color: #2a2a38;
+    }
+
+    [data-theme="dark"] .accordion-body .table tbody tr:nth-child(odd) {
+        background-color: #2c2c3a;
+    }
+
+/* Optional: hover cho table */
+[data-theme="light"] .accordion-body .table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+[data-theme="dark"] .accordion-body .table tbody tr:hover {
+    background-color: #3a3a4d;
+}

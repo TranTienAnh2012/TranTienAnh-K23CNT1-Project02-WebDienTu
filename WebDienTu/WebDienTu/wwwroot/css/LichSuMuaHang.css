@@ -1,0 +1,91 @@
+﻿/* ==========================
+   TABLE THEME CHUNG
+========================== */
+.table-theme {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-color: #dee2e6;
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .table-theme {
+    background-color: #f8f9fa; /* nền nhạt hơn trắng, dễ nhìn */
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+    [data-theme="light"] .table-theme th {
+        background-color: #e9ecef; /* đầu bảng nổi bật hơn */
+        color: #212529;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    [data-theme="light"] .table-theme td {
+        background-color: #fff; /* hàng dữ liệu trắng */
+        color: #212529;
+        border-top: 1px solid #dee2e6;
+    }
+
+    [data-theme="light"] .table-theme tbody tr.table-light {
+        background-color: #f1f3f5 !important; /* dòng tổng tiền nhạt hơn đầu bảng */
+    }
+
+[data-theme="light"] .badge.bg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+[data-theme="light"] .badge.bg-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+[data-theme="light"] .btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+    [data-theme="light"] .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+/* DARK MODE (giữ nguyên) */
+[data-theme="dark"] .table-theme {
+    background-color: #1e1e2d;
+    color: #e4e6eb;
+    border-color: #3a3a4d;
+}
+
+    [data-theme="dark"] .table-theme th {
+        background-color: #2c2c3a;
+        color: #e4e6eb;
+    }
+
+    [data-theme="dark"] .table-theme td {
+        background-color: #1e1e2d;
+        color: #e4e6eb;
+    }
+
+    [data-theme="dark"] .table-theme tbody tr.table-light {
+        background-color: #2c2c3a !important; /* dòng tổng tiền */
+    }
+
+[data-theme="dark"] .badge.bg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+[data-theme="dark"] .badge.bg-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+[data-theme="dark"] .btn-outline-danger {
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+}
+
+    [data-theme="dark"] .btn-outline-danger:hover {
+        background-color: #ff4d4d;
+        color: #fff;
+    }

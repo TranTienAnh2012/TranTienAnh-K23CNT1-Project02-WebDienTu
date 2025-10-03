@@ -1,3 +1,6 @@
+﻿/* =========================
+   BASE & GLOBAL STYLES
+========================= */
 html {
     font-size: 14px;
     position: relative;
@@ -10,15 +13,178 @@ html {
     }
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    padding-top: 70px; /* cho navbar fixed-top */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-body {
-    margin-bottom: 60px;
-    padding-top: 70px; /* ?? ch?a kho?ng tr?ng cho navbar fixed-top */
+.container, main {
+    background-color: transparent !important;
+    color: inherit;
 }
+
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: #f8f9fa;
+    --footer-bg: #f1f1f1;
+    --border-color: rgba(0,0,0,0.1);
+    --bg-hover: rgba(13,110,253,0.08);
+    --active-color: #0d6efd;
+    --brand-color: #0d6efd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --nav-bg: #1f1f1f;
+    --footer-bg: #181818;
+    --border-color: rgba(255,255,255,0.2);
+    --bg-hover: rgba(255,255,255,0.1);
+    --active-color: #66b2ff;
+    --brand-color: #66b2ff;
+}
+
+/* =========================
+   NAVBAR & FOOTER
+========================= */
+nav, footer {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+    .table th, .table td {
+        color: var(--text-color) !important;
+        border-color: var(--border-color) !important;
+    }
+
+/* =========================
+   FORM
+========================= */
+.form-control, .form-select {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    transition: all 0.3s;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #258cfb !important;
+        box-shadow: 0 0 0 0.2rem rgba(37,140,251,0.25);
+    }
+
+/* =========================
+   BUTTON & FOCUS
+========================= */
+.btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn-link.nav-link:focus,
+    .form-check-input:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    }
+
+/* =========================
+   LIST GROUP & DROPDOWN
+========================= */
+.list-group-item,
+.dropdown-menu,
+.dropdown-item {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+    .dropdown-item:hover {
+        background-color: var(--nav-bg);
+    }
+
+/* =========================
+   NAV TABS
+========================= */
+.nav-tabs .nav-link {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    transition: all 0.3s;
+}
+
+    .nav-tabs .nav-link.active {
+        background-color: var(--nav-bg);
+        color: var(--text-color);
+    }
+/* =========================
+   Hero-section
+========================= */
+/*.hero-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-section .hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.hero-section .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffc107;
+    color: #212529;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-section .cta-button:hover {
+    background: #e0a800;
+}
+
+.hero-section .floating-element {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.2;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+*/

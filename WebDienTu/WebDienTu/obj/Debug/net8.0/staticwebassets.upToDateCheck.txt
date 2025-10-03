@@ -1,8 +1,14 @@
 wwwroot\cssAdmin\site.css
 wwwroot\css\BannerNavUse.css
+wwwroot\css\ChiTietSP.css
 wwwroot\css\DanhSachSanPham.css
+wwwroot\css\GioHang.css
 wwwroot\css\GioiThieu.css
+wwwroot\css\home.css
+wwwroot\css\LichSuMuaHang.css
+wwwroot\css\Login.css
 wwwroot\css\NavberUsers.css
+wwwroot\css\Register.css
 wwwroot\css\site.css
 wwwroot\css\_SanPhamList.css
 wwwroot\favicon.ico
@@ -48,6 +54,7 @@ wwwroot\images\uploads\95a0c781-0e85-4af3-b462-2bf5c4af7b32.jpg
 wwwroot\images\uploads\a8e91cfa-4a60-4e9e-b816-f53a7594d74d.jpg
 wwwroot\images\uploads\f4b8d803-1537-49a7-beae-ca0bbb6b69a0.jpg
 wwwroot\js\site.js
+wwwroot\js\theme-toggle.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

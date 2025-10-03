@@ -1,44 +1,39 @@
-﻿/*.card .card-actions {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+﻿/* ==========================
+   CARD SẢN PHẨM CHUNG
+========================== */
+.card {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: .5rem;
+    border: 1px solid #dee2e6;
 }
 
-.card:hover .card-actions {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-*/
-/* Lớp phủ (overlay) xuất hiện khi hover card */
+/* Overlay nút hover */
 .card-overlay {
-    position: absolute; /* Đặt chồng lên ảnh */
-    inset: 0; /* Trải đều phủ hết vùng ảnh */
-    background: rgba(0, 0, 0, 0.45); /* Nền đen trong suốt */
-    opacity: 0; /* Mặc định ẩn */
-    transition: opacity 0.3s ease; /* Hiệu ứng mờ dần */
-    border-radius: .5rem .5rem 0 0; /* Bo tròn góc trên */
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: .5rem .5rem 0 0;
 }
 
-/* Khi hover vào card thì overlay hiện lên */
 .card:hover .card-overlay {
     opacity: 1;
 }
 
-/* Style chung cho các nút hành động */
+/* Nút hành động */
 .btn-action {
-    padding: 8px 14px; /* Khoảng cách trong nút */
-    border-radius: 20px; /* Bo tròn dạng pill */
-    font-size: 0.85rem; /* Cỡ chữ */
-    font-weight: 500; /* Đậm vừa */
-    transition: all 0.3s ease; /* Hiệu ứng chuyển màu, scale,... */
-    border: none; /* Bỏ viền */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Đổ bóng nhẹ */
-    color: #fff; /* Màu chữ trắng */
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    color: #fff;
 }
 
-/* Nút "Xem" - màu xanh dương gradient */
+/* Gradient riêng cho các nút */
 .btn-view {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
@@ -47,7 +42,6 @@
         background: linear-gradient(135deg, #3a8fde, #00d4e5);
     }
 
-/* Nút "Mua" - màu xanh lá gradient */
 .btn-buy {
     background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
@@ -56,7 +50,6 @@
         background: linear-gradient(135deg, #36c86c, #2fd8c4);
     }
 
-/* Nút "Thêm giỏ" - màu cam/đỏ gradient */
 .btn-cart {
     background: linear-gradient(135deg, #ff9966, #ff5e62);
 }
@@ -65,3 +58,78 @@
         background: linear-gradient(135deg, #e67a4d, #e14b4f);
     }
 
+/* ==========================
+   LIGHT MODE
+========================== */
+[data-theme="light"] .card {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+    [data-theme="light"] .card .text-card-title {
+        color: #212529;
+    }
+
+    [data-theme="light"] .card .text-card-desc {
+        color: #6c757d;
+    }
+
+    [data-theme="light"] .card .text-card-price {
+        color: #0d6efd;
+    }
+
+    [data-theme="light"] .card .text-card-muted {
+        color: #6c757d;
+    }
+
+    [data-theme="light"] .card > span.position-absolute {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+/* ==========================
+   DARK MODE
+========================== */
+[data-theme="dark"] .card {
+    background-color: #1e1e2d;
+    color: #e4e6eb;
+    border: 1px solid #2c2c3a;
+}
+
+    [data-theme="dark"] .card .text-card-title {
+        color: #e4e6eb !important;
+    }
+
+    [data-theme="dark"] .card .text-card-desc {
+        color: #ccc !important;
+    }
+
+    [data-theme="dark"] .card .text-card-price {
+        color: #4facfe !important;
+    }
+
+    [data-theme="dark"] .card .text-card-muted {
+        color: #aaa !important;
+    }
+
+    [data-theme="dark"] .card > span.position-absolute {
+        background-color: #ff4d4d;
+        color: #fff;
+    }
+
+/* Overlay dark mode */
+[data-theme="dark"] .card-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Footer hoặc card-actions */
+[data-theme="dark"] .card-footer {
+    background-color: #2c2c3a !important;
+    border-top: 1px solid #3a3a4d !important;
+}
+
+/* Nút action dark: giữ gradient nhưng text rõ */
+[data-theme="dark"] .btn-action {
+    color: #fff !important;
+}

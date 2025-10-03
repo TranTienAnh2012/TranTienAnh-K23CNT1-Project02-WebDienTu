@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebDienTu</title>
 
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('theme');
+                if (!theme) {
+                    var prefersDark = window.matchMedia &&
+                        window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    theme = prefersDark ? 'dark' : 'light';
+                }
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="~/images/icon/favicon.jpg" />
     <link rel="shortcut icon" type="image/png" href="~/favicon.png" />
@@ -18,15 +34,23 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+    <link rel="stylesheet" href="~/css/NavberUsers.css" asp-append-version="true" />
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebDienTu.styles.css" asp-append-version="true" />
-</head>
+  @*   <link href="~/css/GioiThieu.css" rel="stylesheet" /> <!-- luôn sau site.css -->*@
+
+
+    
+</head> 
 <body>
     <!-- Navbar -->
     <header>
         <partial name="_Navbar" /> <!-- partial riêng cho user -->
     </header>
+   
 
     <!-- Nội dung chính -->
     <div class="container mt-4">
@@ -40,7 +64,7 @@
         <partial name="_Footer" /> <!-- partial riêng cho user -->
     </footer>
 
-   @*  chạy lại 1 lần khi cuộn *@
+    @*  chạy lại 1 lần khi cuộn *@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -49,21 +73,14 @@
         });
     </script>
 
-    @* chạy lại nhiều lận khi cuộn users cuộn nhiều lần *@
-@*  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,   // thời gian chạy hiệu ứng
-            once: false,     // chạy lại mỗi lần cuộn
-            mirror: true     // cho phép animation khi cuộn ngược lên
-        });
-    </script> *@
-
-
     <!-- Script -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Theme Toggle Script -->
+    <script src="~/js/theme-toggle.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

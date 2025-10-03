@@ -170,6 +170,20 @@ namespace WebDienTu.Controllers
             return View(sp);
         }
 
+        // 🔄 Lấy sản phẩm liên quan (theo danh mục)
+        public IActionResult SanPhamLienQuan(int maSanPham, int maDanhMuc)
+        {
+            var spLienQuan = _context.SanPhams
+                .Where(s => s.MaDanhMuc == maDanhMuc
+                         && s.MaSanPham != maSanPham
+                         && s.TrangThai == true)
+                .OrderByDescending(s => s.NgayThem)
+                .Take(5)
+                .ToList();
+
+            return PartialView("_SanPhamLienQuan", spLienQuan);
+        }
+
 
 
         public async Task<IActionResult> LocTheoLoai(int? madm)

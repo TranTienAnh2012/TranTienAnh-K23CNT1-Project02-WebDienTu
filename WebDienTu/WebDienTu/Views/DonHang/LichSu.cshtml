@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Lịch sử mua hàng";
 }
-
+<link href="~/css/LichSuMuaHang.css" rel="stylesheet" />
 <h2 class="mb-4">Lịch sử mua hàng</h2>
 
 @if (TempData["Warning"] != null)
@@ -20,7 +20,7 @@
 }
 else
 {
-    <table class="table table-hover align-middle">
+    <table class="table table-hover align-middle table-theme">
         <thead class="table-primary">
             <tr>
                 <th>Mã Đơn</th>

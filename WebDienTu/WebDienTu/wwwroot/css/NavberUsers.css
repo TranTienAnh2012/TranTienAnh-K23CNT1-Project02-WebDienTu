@@ -1,4 +1,23 @@
-﻿/* Nav link chung */
+﻿/* =========================
+   NAVBAR - LIGHT/DARK
+========================= */
+
+/* Navbar container */
+.navbar {
+    background-color: var(--nav-bg) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Brand */
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--brand-color) !important;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+/* Navbar links */
 .navbar-nav .nav-link {
     margin-right: 1rem;
     font-weight: 500;
@@ -6,20 +25,22 @@
     align-items: center;
     position: relative;
     transition: color 0.3s, transform 0.3s;
-    color: #333; /* màu mặc định */
+    color: var(--text-color) !important;
     padding: 8px 12px;
-    border-radius: 6px; /* bo góc nhẹ */
+    border-radius: 6px;
+    text-decoration: none !important; /* bỏ gạch chân mặc định */
+    outline: none !important; /* bỏ viền khi click */
+    box-shadow: none !important; /* bỏ shadow khi focus */
 }
 
-    /* Icon bên trong nav-link */
     .navbar-nav .nav-link i {
         font-size: 1rem;
-        transition: transform 0.3s;
         margin-right: 6px;
-        color: inherit; /* đồng bộ màu với chữ */
+        transition: transform 0.3s;
+        color: inherit;
     }
 
-    /* Hiệu ứng underline từ giữa ra */
+    /* Hover & active underline effect */
     .navbar-nav .nav-link::after {
         content: "";
         position: absolute;
@@ -27,16 +48,16 @@
         bottom: 4px;
         width: 80%;
         height: 2px;
-        background-color: #0d6efd;
+        background-color: var(--active-color);
         transform: translateX(-50%) scaleX(0);
         transform-origin: center;
         transition: transform 0.4s ease;
+        pointer-events: none; /* tránh bị click focus vào pseudo-element */
     }
 
-    /* Khi hover nav-link */
     .navbar-nav .nav-link:hover {
-        color: #0d6efd;
-        background-color: rgba(13, 110, 253, 0.08); /* nền nhạt khi hover */
+        color: var(--active-color) !important;
+        background-color: var(--bg-hover);
         transform: translateY(-2px);
     }
 
@@ -48,21 +69,24 @@
             transform: translateX(-50%) scaleX(1);
         }
 
-    /* Nav active */
-    .navbar-nav .nav-link.active {
-        color: #0d6efd;
-        font-weight: 600;
+    /* Link active (đang ở trang hiện tại) */
+    .navbar-nav .nav-link::after {
+        bottom: 0; /* hoặc -2px để nằm sát dưới cùng */
+        height: 2px;
     }
 
-/* Brand */
-.navbar-brand {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #0d6efd !important;
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-}
+        .navbar-nav .nav-link.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+    /* Special links */
+    .navbar-nav .nav-link.admin {
+        color: var(--brand-color) !important;
+    }
+
+    .navbar-nav .nav-link.logout {
+        color: #dc3545 !important;
+    }
 
 /* Badge giỏ hàng */
 .navbar .badge {
@@ -70,20 +94,68 @@
     padding: 4px 6px;
     border-radius: 70%;
     min-width: 20px;
-}
-#searchForm input:focus {
-    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
-    border-color: #28a745;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Search form */
+#searchForm input {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+    #searchForm input:focus {
+        box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+        border-color: #28a745;
+    }
+
+    #searchForm input::placeholder {
+        color: #6c757d;
+        opacity: 1;
+        font-style: italic;
+    }
+
 #searchForm button:hover {
-    background-color: #218838;
     transform: scale(1.05);
     transition: all 0.2s ease;
 }
 
-#searchForm input::placeholder {
-    color: #6c757d;
-    opacity: 1;
-    font-style: italic;
+/* Dark mode input override */
+[data-theme="dark"] #searchForm input {
+    background-color: #2c2c2c !important;
+    color: #f8f9fa !important;
+    border-color: #444 !important;
+}
+
+    [data-theme="dark"] #searchForm input::placeholder {
+        color: #ccc !important;
+    }
+/* =========================
+   FIX FOCUS / ACTIVE / OUTLINE
+========================= */
+
+/* Link trong navbar khi focus/active */
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus-visible,
+a.nav-link:focus,
+a.nav-link:active,
+a.nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    color: inherit !important; /* Giữ nguyên màu chữ */
+    caret-color: transparent !important;
+}
+
+    /* Ẩn underline (::after) khi focus/active (chỉ hover hoặc .active mới hiện) */
+    .navbar-nav .nav-link:focus::after,
+    .navbar-nav .nav-link:active::after,
+    .navbar-nav .nav-link:focus-visible::after {
+        transform: translateX(-50%) scaleX(0) !important;
+    }
+
+/* Navbar toggler (nút menu mobile) */
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }

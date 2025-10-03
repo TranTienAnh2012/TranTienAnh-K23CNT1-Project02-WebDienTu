@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<WebDienTu.Models.SanPham>
 
+
 @{
     ViewData["Title"] = "Trang chủ";
 }
 @{
     var currentUserId = ViewBag.MaNguoiDung ?? 0;
 }
+<link rel="stylesheet" href="~/css/home.css" />
+
 <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 
 <!-- Banner -->

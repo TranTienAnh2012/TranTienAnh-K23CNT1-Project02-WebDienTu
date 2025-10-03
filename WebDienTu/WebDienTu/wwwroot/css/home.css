@@ -1,0 +1,128 @@
+﻿/* =========================
+   GLOBAL RESET
+   ========================= */
+body {
+    margin-bottom: 60px;
+    padding-top: 70px; /* chừa khoảng trống cho navbar fixed-top */
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.95rem;
+}
+
+/* Toàn bộ section (banner, filter, list, hot keywords) */
+#daXemContainer,
+#LoaiFilterNav,
+#SanPhamList,
+#HotKeywordsSection {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* =========================
+   NAV-PILLS FILTER
+   ========================= */
+#LoaiFilterNav {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--nav-bg) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+    #LoaiFilterNav .nav-link {
+        margin: 2px;
+        border-radius: 20px;
+        padding: 6px 15px;
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+        border: 1px solid var(--border-color) !important;
+        transition: all 0.2s ease;
+    }
+
+        #LoaiFilterNav .nav-link:hover {
+            background-color: var(--footer-bg) !important;
+        }
+
+        #LoaiFilterNav .nav-link.active {
+            background-color: #0d6efd !important;
+            color: #fff !important;
+            border-color: #0d6efd !important;
+        }
+
+/* =========================
+   CARD SẢN PHẨM
+   ========================= */
+.card {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+    .card .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+.card-footer {
+    background-color: var(--nav-bg) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+/* =========================
+   HOT KEYWORDS
+   ========================= */
+#HotKeywordsSection {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.keyword-link {
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: all 0.2s ease;
+}
+
+    .keyword-link:hover {
+        background-color: var(--nav-bg) !important;
+        text-decoration: none;
+    }
+
+/* =========================
+   POPUP NOTIFICATION
+   ========================= */
+#popupOverlay {
+    background: rgba(0,0,0,0.5);
+}
+
+#popupNotification {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px;
+}
+
+    #popupNotification #popupMessage {
+        color: var(--text-color) !important;
+    }
+
+#popupOkBtn {
+    background-color: #0ab39c !important;
+    color: #fff !important;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+    #popupOkBtn:hover {
+        background-color: #099885 !important;
+    }

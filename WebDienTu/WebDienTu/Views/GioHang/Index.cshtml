@@ -4,7 +4,7 @@
     ViewData["Title"] = "Giỏ hàng";
     var tongTien = Model.Sum(item => (item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia) * item.SoLuong);
 }
-
+<link href="~/css/GioHang.css" rel="stylesheet" />
 <div class="container mt-4">
     <h2 class="mb-4"><i class="fa-solid fa-cart-shopping me-2"></i> Giỏ hàng của bạn</h2>
 
@@ -47,8 +47,8 @@
 
         <!-- Bảng giỏ hàng -->
         <div class="table-responsive">
-            <table class="table table-bordered align-middle text-center">
-                <thead class="table-light">
+            <table class="table table-bordered align-middle text-center table-cart">
+                <thead>
                     <tr>
                         <th>Ảnh</th>
                         <th>Sản phẩm</th>

@@ -3,7 +3,7 @@
 @using System.Security.Claims
 @using WebDienTu.Models
 @using Microsoft.EntityFrameworkCore
-<link href="~/css/NavberUsers.css" rel="stylesheet" />
+
 @{
     var user = HttpContextAccessor.HttpContext.User;
     var isAuthenticated = user.Identity.IsAuthenticated;
@@ -31,34 +31,33 @@
                                .Sum(g => g.SoLuong);
     }
 }
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg shadow-sm fixed-top theme-navbar">
+
     <div class="container-fluid">
-        <a class="navbar-brand text-primary fw-bold" asp-controller="Home" asp-action="Index">WebĐiệnTử</a>
+        <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">WebĐiệnTử</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUser" aria-controls="navbarUser" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarUser">
+        <div class="collapse navbar-collapse " id="navbarUser" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                 </li>
-
-				<li class="nav-item">
-					<a class="nav-link text-dark" asp-controller="Home" asp-action="GioiThieu">Giới thiệu</a>
-				</li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-controller="DonHang" asp-action="LichSu">Lịch sử</a>
+                    <a class="nav-link" asp-controller="Home" asp-action="GioiThieu">Giới thiệu</a>
                 </li>
 
-                
-
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="DonHang" asp-action="LichSu">Lịch sử</a>
+                </li>
             </ul>
 
             <!-- Thanh tìm kiếm  -->
-            <form id="searchForm" class="d-flex me-auto">
+          <form id="searchForm" class="d-flex me-auto" asp-controller="SanPham" asp-action="Search" method="get">
+
                 <div class="input-group" style="width: 300px;">
                     <input type="text" id="searchKeyword" class="form-control rounded-start" name="keyword"
                            placeholder="Tìm sản phẩm..." aria-label="Tìm sản phẩm"
@@ -70,6 +69,16 @@
             </form>
             <!-- Gợi ý keyword -->
             <ul id="suggestions" class="list-group position-absolute" style="z-index: 1000; width: 300px;"></ul>
+
+            <ul class ="navbar-nav">
+                <!-- Nút chuyển sáng / tối -->
+                <li class="nav-item">
+                    <button id="themeToggle" class="btn btn-outline-secondary ms-2" aria-label="Đổi giao diện">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+          
 
             <ul class="navbar-nav">
                 @if (!isAuthenticated)
@@ -100,25 +109,25 @@
                         </a>
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-controller="Account" asp-action="Profile">
+                        <a class="nav-link" asp-controller="Account" asp-action="Profile">
                             <i class="fa-solid fa-user me-1"></i> Xin chào, @userName
                         </a>
                     </li>
-
 
                     @* Nút Admin chỉ hiển thị nếu là admin *@
                     @if (isAdmin)
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-primary" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
+                            <a class="nav-link admin" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
                                 <i class="fa-solid fa-user-shield me-1"></i> Chuyển sang Admin
                             </a>
                         </li>
                     }
 
                     <li class="nav-item">
-                        <a class="nav-link text-danger" asp-controller="Account" asp-action="Logout">
+                        <a class="nav-link logout" asp-controller="Account" asp-action="Logout">
                             <i class="fa-solid fa-right-from-bracket me-1"></i> Đăng xuất
                         </a>
                     </li>
