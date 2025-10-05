@@ -3,28 +3,104 @@
   "WorkspaceRootPath": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\_sanphamlienquan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\_sanphamlienquan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\_sanphamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\_sanphamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\sanphamthuoctinhviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\sanphamthuoctinhviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\05.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\05.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\06.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\06.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\controllers\\chitietdonhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\controllers\\chitietdonhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\_sanphamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\_sanphamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\_sanphamlienquan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\home\\_sanphamlienquan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\dientustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\dientustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\danhmucthuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\danhmucthuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\bannernavuse.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\bannernavuse.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_bannernavusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_bannernavusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\_sanphamlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\_sanphamlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,16 +115,8 @@
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\sanphamdaxem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\home\\gioithieu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,14 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_bannernavusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_bannernavusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -91,14 +151,6 @@
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -109,22 +161,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\_sanphamlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\_sanphamlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\css\\bannernavuse.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\css\\bannernavuse.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\donhang\\lichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -191,10 +227,6 @@
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\controllers\\sanphamthuoctinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -203,24 +235,12 @@
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\controllers\\giatrithuoctinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\dientustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\dientustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\02.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\02.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\03.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\03.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\05.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\05.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\wwwroot\\images\\samsung\\06.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\wwwroot\\images\\samsung\\06.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\controllers\\sanphamdaxemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -233,10 +253,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\sanphamthuoctinhviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\sanphamthuoctinhviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\controllers\\adminhomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -253,14 +269,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\giatrithuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\giatrithuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\models\\danhmucthuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\models\\danhmucthuoctinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -353,14 +361,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\views\\chitietdonhangs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\views\\chitietdonhangs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\controllers\\chitietdonhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|solutionrelative:webdientu\\areas\\admin\\controllers\\chitietdonhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24A9F4E4-9F8A-496C-82CE-3E5CAA709868}|WebDienTu\\WebDienTu.csproj|d:\\trantienanh-k23cnt1-project02-webdientu\\webdientu\\webdientu\\areas\\admin\\views\\quantriviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -506,7 +506,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -514,222 +514,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPham.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPham.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\SanPham.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T10:15:02.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ChiTietDonHang.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ChiTietDonHang.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\ChiTietDonHang.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ChiTietDonHang.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\ChiTietDonHang.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
+              "Title": "SanPhamThuocTinhViewModel.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T17:02:04.977Z",
+              "WhenOpened": "2025-09-15T08:02:39.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Details.cshtml",
               "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\Details.cshtml",
               "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Details.cshtml",
               "RelativeToolTip": "WebDienTu\\Views\\Home\\Details.cshtml",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAuwN8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAowOoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-25T16:49:54.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DonHang.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DonHang.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\DonHang.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DonHang.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\DonHang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T16:57:33.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAmwLkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T16:18:18.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_SanPhamLienQuan.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-03T11:16:06.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_SanPhamList.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAmwG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T16:01:56.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SanPhamDaXem.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamDaXem.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPhamDaXem.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamDaXem.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\SanPhamDaXem.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T13:04:06.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThanhToan.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T13:46:54.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAWwCwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T16:29:58.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DonHangController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DonHangController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\DonHangController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DonHangController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\DonHangController.cs",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAmwMkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T16:56:56.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\cssAdmin\\site.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\cssAdmin\\site.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\cssAdmin\\site.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\cssAdmin\\site.css",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-06T10:35:43.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GioiThieu.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\GioiThieu.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\GioiThieu.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\GioiThieu.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Home\\GioiThieu.cshtml",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAiwKUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-29T16:16:26.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ChiTietSP.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\ChiTietSP.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\ChiTietSP.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\ChiTietSP.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\ChiTietSP.css",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T17:27:06.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_Navbar.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_Navbar.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:57:34.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_BannerNavUsers.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T20:06:25.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:56:52.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_Footer.cshtml",
@@ -737,563 +548,12 @@
               "RelativeToolTip": "WebDienTu\\Views\\Shared\\_Footer.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T19:31:49.698Z"
+              "WhenOpened": "2025-08-25T19:31:49.698Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAL0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-06T10:35:55.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GioiThieu.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioiThieu.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\GioiThieu.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioiThieu.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\GioiThieu.css",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwIEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-29T16:53:47.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "NavberUsers.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\NavberUsers.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\NavberUsers.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\NavberUsers.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\NavberUsers.css",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-25T16:27:11.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T20:38:18.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:54:03.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "LichSuMuaHang.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
-              "ViewState": "AgIAACgAAAAAAAAAAADwv1sAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T16:53:00.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "home.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\home.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\home.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\home.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\home.css",
-              "ViewState": "AgIAAE0AAAAAAAAAAADwv4AAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T11:18:34.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BannerNavUse.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\BannerNavUse.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\BannerNavUse.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\BannerNavUse.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\BannerNavUse.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAcwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-25T20:07:16.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAUwJYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:50:33.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Register.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Register.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\Register.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Register.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\Register.css",
-              "ViewState": "AgIAADUAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T18:48:41.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Login.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Login.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\Login.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Login.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\Login.css",
-              "ViewState": "AgIAABAAAAAAAAAAAAAwwGIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T06:50:14.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_SanPhamList.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\_SanPhamList.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\_SanPhamList.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\_SanPhamList.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\_SanPhamList.css",
-              "ViewState": "AgIAAGAAAAAAAAAAAADwv4cAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-21T16:01:56.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\GioHang\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\GioHang\\Index.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAiwDsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T11:21:07.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "LichSu.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\LichSu.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\DonHang\\LichSu.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\LichSu.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\DonHang\\LichSu.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T17:32:15.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DanhSachSanPham.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-06T10:32:12.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "GioHang.css",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioHang.css",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\GioHang.css",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioHang.css",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\GioHang.css",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwHUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-01T17:05:26.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "_HotKeywords.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-03T09:22:45.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "theme-toggle.js",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\theme-toggle.js",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\js\\theme-toggle.js",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\theme-toggle.js",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\js\\theme-toggle.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-01T10:46:04.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-01T10:59:47.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAuwH0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:38:46.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:37:16.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "_NavAdmin.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:42:04.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T12:57:05.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "QuanTriViensController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:09:33.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "SanPhamsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAAuwNgAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:11:44.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.json",
-              "RelativeDocumentMoniker": "WebDienTu\\appsettings.json",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.json",
-              "RelativeToolTip": "WebDienTu\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-25T08:50:26.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WebDienTu\\appsettings.Development.json",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.Development.json",
-              "RelativeToolTip": "WebDienTu\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-25T08:50:24.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:07:36.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "SanPhamThuocTinhsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:04:13.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Program.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Program.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Program.cs",
-              "RelativeToolTip": "WebDienTu\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T08:52:17.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "DonHangsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAqwLkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:13:16.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "GiaTriThuocTinhsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAuwI4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T06:55:48.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "DienTuStoreContext.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DienTuStoreContext.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\DienTuStoreContext.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DienTuStoreContext.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\DienTuStoreContext.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAuwBoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T08:50:09.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\06.jpg",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\06.jpg",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-09-23T01:26:57.765Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\05.jpg",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\05.jpg",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-09-23T01:27:01.959Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\03.jpg",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\03.jpg",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-09-23T01:27:16.119Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\02.jpg",
-              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\02.jpg",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-09-23T01:27:23.789Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "SanPhamDaXemController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\SanPhamDaXemController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\SanPhamDaXemController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\SanPhamDaXemController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\SanPhamDaXemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T07:47:48.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "DanhGia.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhGia.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhGia.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhGia.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\DanhGia.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:12:31.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "DanhMuc.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMuc.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhMuc.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMuc.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\DanhMuc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T13:20:05.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "SanPhamThuocTinhViewModel.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\SanPhamThuocTinhViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:02:39.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "AdminHomeController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T04:51:48.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAFQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T10:18:40.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwFYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T06:56:40.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "GiaTriThuocTinh.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiaTriThuocTinh.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\GiaTriThuocTinh.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiaTriThuocTinh.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\GiaTriThuocTinh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T02:20:27.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "DanhMucThuocTinh.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMucThuocTinh.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhMucThuocTinh.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMucThuocTinh.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\DanhMucThuocTinh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:44:18.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 3,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1301,287 +561,102 @@
               "RelativeToolTip": "WebDienTu\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T11:22:12.964Z"
+              "WhenOpened": "2025-08-26T11:22:12.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:37:36.226Z"
+              "WhenOpened": "2025-08-25T09:54:03.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "_Header.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ThanhToan.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\DonHang\\ThanhToan.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-10T13:54:08.861Z"
+              "WhenOpened": "2025-08-27T13:46:54.004Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "_FooterAdmin.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-08T00:07:51.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T09:46:36.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwFYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T07:40:54.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T15:38:28.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T07:40:51.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAqwFYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T08:23:51.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "DanhMucsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:11:11.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "DanhGiaController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAQwLYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:15:08.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "ThuocTinhsADController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T06:54:28.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "GioHangTam.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GioHangTam.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\GioHangTam.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GioHangTam.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\GioHangTam.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T05:25:29.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "QuanTriVien.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\QuanTriVien.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\QuanTriVien.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\QuanTriVien.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\QuanTriVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:22:41.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "ThuocTinh.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ThuocTinh.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\ThuocTinh.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ThuocTinh.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\ThuocTinh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T02:18:50.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "GiamGia.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiamGia.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\GiamGia.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiamGia.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\GiamGia.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:40:13.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "WebDienTu\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T08:51:36.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T07:56:54.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwCwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T06:56:29.411Z"
+              "WhenOpened": "2025-08-25T16:29:58.268Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "DanhGiasController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DanhGiasController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\DanhGiasController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DanhGiasController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\DanhGiasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAqAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ChiTietDonHangsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T12:28:53.165Z"
+              "WhenOpened": "2025-08-25T09:13:55.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
-              "Title": "GioHangController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\GioHangController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\GioHangController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\GioHangController.cs",
-              "RelativeToolTip": "WebDienTu\\Controllers\\GioHangController.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAAAFQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Register.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Register.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\Register.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Register.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\Register.css",
+              "ViewState": "AgIAADUAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T18:48:41.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Program.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Program.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Program.cs",
+              "RelativeToolTip": "WebDienTu\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwEEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:19:48.013Z"
+              "WhenOpened": "2025-08-25T08:52:17.197Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
-              "Title": "XacNhanThanhToan.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-11T11:12:36.945Z"
+              "DocumentIndex": 12,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAmwJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:50:33.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "_DanhGiaList.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
-              "RelativeToolTip": "WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T13:28:34.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 87,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-10T07:35:45.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 13,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Profile.cshtml",
               "RelativeDocumentMoniker": "WebDienTu\\Views\\Account\\Profile.cshtml",
@@ -1593,15 +668,939 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
-              "Title": "ChiTietDonHangsController.cs",
-              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
-              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
-              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
-              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\ChiTietDonHangsController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBgAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAqwB8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T09:13:55.667Z"
+              "WhenOpened": "2025-08-25T16:18:18.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAiwGQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T11:21:07.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_SanPhamList.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Home\\_SanPhamList.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T16:01:56.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DanhMucThuocTinh.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMucThuocTinh.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhMucThuocTinh.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMucThuocTinh.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\DanhMucThuocTinh.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T08:44:18.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DienTuStoreContext.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DienTuStoreContext.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\DienTuStoreContext.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DienTuStoreContext.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\DienTuStoreContext.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAuwBoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T08:50:09.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DonHang.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\DonHang.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DonHang.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\DonHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T16:57:33.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_SanPhamLienQuan.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Home\\_SanPhamLienQuan.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAACoAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T11:16:06.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BannerNavUse.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\BannerNavUse.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\BannerNavUse.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\BannerNavUse.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\BannerNavUse.css",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-25T20:07:16.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_BannerNavUsers.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_BannerNavUsers.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T20:06:25.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_SanPhamList.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\_SanPhamList.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\_SanPhamList.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\_SanPhamList.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\_SanPhamList.css",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-21T16:01:56.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:56:52.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ChiTietDonHang.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\ChiTietDonHang.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ChiTietDonHang.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\ChiTietDonHang.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T17:02:04.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPham.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPham.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\SanPham.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T10:15:02.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SanPhamDaXem.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamDaXem.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\SanPhamDaXem.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\SanPhamDaXem.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\SanPhamDaXem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T13:04:06.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\DonHangController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAmwMkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T16:56:56.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\cssAdmin\\site.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\cssAdmin\\site.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\cssAdmin\\site.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\cssAdmin\\site.css",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-06T10:35:43.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GioiThieu.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\GioiThieu.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\GioiThieu.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\GioiThieu.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Home\\GioiThieu.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAiwKUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T16:16:26.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ChiTietSP.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\ChiTietSP.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\ChiTietSP.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\ChiTietSP.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\ChiTietSP.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T17:27:06.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Navbar.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Shared\\_Navbar.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Shared\\_Navbar.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:57:34.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAL0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-06T10:35:55.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GioiThieu.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioiThieu.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\GioiThieu.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioiThieu.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\GioiThieu.css",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-29T16:53:47.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NavberUsers.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\NavberUsers.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\NavberUsers.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\NavberUsers.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\NavberUsers.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-25T16:27:11.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T20:38:18.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LichSuMuaHang.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\LichSuMuaHang.css",
+              "ViewState": "AgIAACgAAAAAAAAAAADwv1sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T16:53:00.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "home.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\home.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\home.css",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv4AAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T11:18:34.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Login.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Login.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\Login.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\Login.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\Login.css",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T06:50:14.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LichSu.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\LichSu.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\DonHang\\LichSu.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DonHang\\LichSu.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\DonHang\\LichSu.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T17:32:15.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "DanhSachSanPham.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\DanhSachSanPham.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-06T10:32:12.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GioHang.css",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioHang.css",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\css\\GioHang.css",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\css\\GioHang.css",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\css\\GioHang.css",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T17:05:26.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_HotKeywords.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\Home\\_HotKeywords.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T09:22:45.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "theme-toggle.js",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\theme-toggle.js",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\js\\theme-toggle.js",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\theme-toggle.js",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\js\\theme-toggle.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-01T10:46:04.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-01T10:59:47.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Edit.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwH0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:38:46.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:37:16.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "_NavAdmin.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_NavAdmin.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:42:04.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhams\\Create.cshtml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T12:57:05.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "QuanTriViensController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\QuanTriViensController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:09:33.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "SanPhamsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamsController.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAuwNgAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:11:44.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.json",
+              "RelativeDocumentMoniker": "WebDienTu\\appsettings.json",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.json",
+              "RelativeToolTip": "WebDienTu\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-25T08:50:26.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WebDienTu\\appsettings.Development.json",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\appsettings.Development.json",
+              "RelativeToolTip": "WebDienTu\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-25T08:50:24.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:07:36.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "SanPhamThuocTinhsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\SanPhamThuocTinhsController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T08:04:13.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "DonHangsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAqwLkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:13:16.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "GiaTriThuocTinhsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\GiaTriThuocTinhsController.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T06:55:48.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\06.jpg",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\06.jpg",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\06.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-23T01:26:57.765Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\05.jpg",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\05.jpg",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\05.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-23T01:27:01.959Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\03.jpg",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\03.jpg",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\03.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-23T01:27:16.119Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\02.jpg",
+              "RelativeDocumentMoniker": "WebDienTu\\wwwroot\\images\\Samsung\\02.jpg",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\wwwroot\\images\\Samsung\\02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "RelativeToolTip": "WebDienTu\\wwwroot\\images\\Samsung\\02.jpg -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-23T01:27:23.789Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [600x600, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "SanPhamDaXemController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\SanPhamDaXemController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\SanPhamDaXemController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\SanPhamDaXemController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\SanPhamDaXemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T07:47:48.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "DanhGia.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhGia.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhGia.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhGia.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\DanhGia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:12:31.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "DanhMuc.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMuc.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\DanhMuc.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\DanhMuc.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\DanhMuc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T13:20:05.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "AdminHomeController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T04:51:48.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAFQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T10:18:40.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Index.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T06:56:40.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "GiaTriThuocTinh.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiaTriThuocTinh.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\GiaTriThuocTinh.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiaTriThuocTinh.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\GiaTriThuocTinh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T02:20:27.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:37:36.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-10T13:54:08.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "_FooterAdmin.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\Shared\\_FooterAdmin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-08T00:07:51.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:46:36.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Create.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:40:54.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\QuanTriViens\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T15:38:28.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:40:51.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\SanPhamThuocTinhs\\Create.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T08:23:51.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "DanhMucsController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DanhMucsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:11:11.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "DanhGiaController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\DanhGiaController.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAQwLYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:15:08.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "ThuocTinhsADController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Controllers\\ThuocTinhsADController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T06:54:28.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "GioHangTam.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GioHangTam.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\GioHangTam.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GioHangTam.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\GioHangTam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T05:25:29.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "QuanTriVien.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\QuanTriVien.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\QuanTriVien.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\QuanTriVien.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\QuanTriVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:22:41.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ThuocTinh.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ThuocTinh.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\ThuocTinh.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ThuocTinh.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\ThuocTinh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T02:18:50.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "GiamGia.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiamGia.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\GiamGia.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\GiamGia.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\GiamGia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T15:40:13.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "WebDienTu\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T08:51:36.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\GiaTriThuocTinhs\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:56:54.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ThuocTinhsAD\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T06:56:29.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "DanhGiasController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DanhGiasController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\DanhGiasController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\DanhGiasController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\DanhGiasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T12:28:53.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "WebDienTu\\Controllers\\GioHangController.cs",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "WebDienTu\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAFQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:19:48.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "XacNhanThanhToan.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\GioHang\\XacNhanThanhToan.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-11T11:12:36.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "_DanhGiaList.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
+              "RelativeToolTip": "WebDienTu\\Views\\DanhGias\\_DanhGiaList.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T13:28:34.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
+              "ToolTip": "D:\\TranTienAnh-K23CNT1-Project02-WebDienTu\\WebDienTu\\WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
+              "RelativeToolTip": "WebDienTu\\Areas\\Admin\\Views\\ChiTietDonHangs\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-10T07:35:45.236Z"
             },
             {
               "$type": "Document",

@@ -214,11 +214,22 @@
                     } else alert(res.message);
                 });
             });
-        });   
-             $(function () {
-                var maSanPham = @Model.MaSanPham;
-                var maDanhMuc = @Model.MaDanhMuc;
-                $("#sanPhamLienQuan").load("/Home/SanPhamLienQuan?maSanPham=" + maSanPham + "&maDanhMuc=" + maDanhMuc);
+        });
+                   $(function () {
+            var maSanPham = @Model.MaSanPham;
+            var maDanhMuc = @Model.MaDanhMuc;
+
+            $("#sanPhamLienQuan").load("/Home/SanPhamLienQuan?maSanPham=" + maSanPham + "&maDanhMuc=" + maDanhMuc, function () {
+                var myCarousel = document.querySelector('#carouselSanPhamLienQuan');
+                if (myCarousel) {
+                    bootstrap.Carousel.getOrCreateInstance(myCarousel, {
+                        interval: 4000,
+                        ride: false
+                    });
+                }
             });
+        });
+
+
     </script>
 }

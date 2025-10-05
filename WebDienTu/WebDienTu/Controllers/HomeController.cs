@@ -171,18 +171,20 @@ namespace WebDienTu.Controllers
         }
 
         // 🔄 Lấy sản phẩm liên quan (theo danh mục)
+        // 🔄 Lấy sản phẩm liên quan (theo danh mục)
         public IActionResult SanPhamLienQuan(int maSanPham, int maDanhMuc)
         {
             var spLienQuan = _context.SanPhams
-                .Where(s => s.MaDanhMuc == maDanhMuc
-                         && s.MaSanPham != maSanPham
-                         && s.TrangThai == true)
-                .OrderByDescending(s => s.NgayThem)
-                .Take(5)
-                .ToList();
+              .Where(s => s.MaDanhMuc == maDanhMuc
+                       && s.MaSanPham != maSanPham
+                       && s.TrangThai == true)
+              .OrderByDescending(s => s.NgayThem)
+              .ToList();
+
 
             return PartialView("_SanPhamLienQuan", spLienQuan);
         }
+
 
 
 

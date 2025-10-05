@@ -49,6 +49,7 @@ wwwroot\images\Samsung\02.jpg
 wwwroot\images\Samsung\03.jpg
 wwwroot\images\Samsung\05.jpg
 wwwroot\images\Samsung\06.jpg
+wwwroot\images\uploads\0f77df08-919a-4343-b364-85c1da8e1dfe.jpg
 wwwroot\images\uploads\7ab5d924-cdc5-48b2-bb55-d6fb2852c564.jpg
 wwwroot\images\uploads\95a0c781-0e85-4af3-b462-2bf5c4af7b32.jpg
 wwwroot\images\uploads\a8e91cfa-4a60-4e9e-b816-f53a7594d74d.jpg

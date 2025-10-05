@@ -295,6 +295,26 @@
                 $("#daXemContainer").load("/SanPhamDaXem/Index?maNguoiDung=" + maNguoiDung);
             }
         });
+         // ========================
+            // 🔥 Nút Xem Thêm
+            // ========================
+           function initXemThem() {
+            const btn = document.getElementById("btnXemThem");
+            if (btn) {
+                btn.addEventListener("click", function () {
+                    document.querySelectorAll(".hidden-product").forEach(el => el.classList.remove("d-none"));
+                    btn.style.display = "none";
+                });
+            }
+        }
+
+        // Gọi khi load trang
+        initXemThem();
+
+        // Gọi lại khi load partial view AJAX
+        $(document).ajaxComplete(function () {
+            initXemThem();
+        });
 
 
 
