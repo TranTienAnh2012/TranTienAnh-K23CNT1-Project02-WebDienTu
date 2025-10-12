@@ -1,76 +1,71 @@
-﻿ <!-- Sidebar -->
-<nav id="sidebar" class="d-flex flex-column bg-dark vh-100 p-2 sidebar-expanded">
-    <button id="toggleSidebar" class="btn btn-sm btn-outline-light mb-3 w-100 text-start d-flex align-items-center">
+﻿<!-- Sidebar Pastel -->
+<nav id="sidebar" class="d-flex flex-column bg-pastel vh-100 p-3 sidebar-expanded">
+    <button id="toggleSidebar" class="btn btn-sm btn-pastel mb-3 w-100 text-start d-flex align-items-center">
         <i class="fas fa-bars"></i>
         <span class="sidebar-text ms-2">Menu</span>
     </button>
 
-    <a class="navbar-brand text-white mb-3 d-flex align-items-center" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
+    <a class="brand-pastel mb-4 d-flex align-items-center text-decoration-none" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">
         <i class="fas fa-cogs me-2"></i>
-        <span class="sidebar-text">Admin Panel</span>
+        <span class="sidebar-text fw-bold">Admin Panel</span>
     </a>
 
-    <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DanhMucs" asp-action="Index">
-                <i class="fas fa-list"></i>
-                <span class="sidebar-text ms-2">Danh Mục</span>
+    <ul class="sidebar-menu list-unstyled flex-column mb-auto">
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="DanhMucs" asp-action="Index">
+                <i class="fas fa-list"></i><span class="sidebar-text ms-2">Danh Mục</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="SanPhams" asp-action="Index">
-                <i class="fas fa-box-open"></i>
-                <span class="sidebar-text ms-2">Sản phẩm</span>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="SanPhams" asp-action="Index">
+                <i class="fas fa-box-open"></i><span class="sidebar-text ms-2">Sản phẩm</span>
+           </a>
+        </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index">
+                <i class="fas fa-user-shield"></i><span class="sidebar-text ms-2">Quản trị viên</span>
+            </a>
+       </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="DonHangs" asp-action="Index">
+                <i class="fas fa-receipt"></i><span class="sidebar-text ms-2">Đơn hàng</span>
+           </a>
+       </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="ChiTietDonHangs" asp-action="Index">
+                <i class="fas fa-clipboard-list"></i><span class="sidebar-text ms-2">Chi Tiết Đơn Hàng</span></a>
+                </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="DanhGia" asp-action="Index">
+                <i class="fas fa-star"></i><span class="sidebar-text ms-2">Đánh Giá</span></a></li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="ThuocTinhsAD" asp-action="Index">
+                <i class="fa-solid fa-sliders"></i><span class="sidebar-text ms-2">Thuộc Tính Sản Phẩm</span></a>
+                </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="GiaTriThuocTinhs" asp-action="Index">
+                <i class="fas fa-tags"></i><span class="sidebar-text ms-2">Giá Trị Sản Phẩm</span></a>
+                </li>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="GiamGias" asp-action="Index">
+                <i class="fa-solid fa-ticket me-2"></i><span class="sidebar-text ms-2">VorCher</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index">
-                <i class="fas fa-user-shield"></i>
-                <span class="sidebar-text ms-2">Quản trị viên</span>
+        <li>
+            <a class="sidebar-item d-flex align-items-center" asp-area="Admin" asp-controller="NguoiDungGiamGias" asp-action="Index">
+                <i class="fa-solid fa-ticket me-2"></i><span class="sidebar-text ms-2">TK Nhận Vorcher</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DonHangs" asp-action="Index">
-                <i class="fas fa-receipt"></i>
-                <span class="sidebar-text ms-2">Đơn hàng</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="ChiTietDonHangs" asp-action="Index">
-                <i class="fas fa-clipboard-list"></i>
-                <span class="sidebar-text ms-2">Chi Tiết Đơn Hàng</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="DanhGia" asp-action="Index">
-                <i class="fas fa-star"></i>
-                <span class="sidebar-text ms-2">Đánh Giá</span>
-            </a>
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="ThuocTinhsAD" asp-action="Index">
-                <i class="fas fa-list"></i>   <!-- icon danh sách -->
-                <span class="sidebar-text ms-2">Thuộc Tính Sản Phẩm</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link text-white d-flex align-items-center" asp-area="Admin" asp-controller="GiaTriThuocTinhs" asp-action="Index">
-                <i class="fas fa-tags"></i>   <!-- icon nhãn / giá trị -->
-                <span class="sidebar-text ms-2">Giá Trị Sản Phẩm</span>
-            </a>
-        </li>
-
     </ul>
 
-    <hr class="text-secondary" />
     @if (User.Identity?.IsAuthenticated ?? false)
     {
-        <div class="mt-auto px-2">
-            <span class="text-warning d-flex align-items-center mb-2">
+        <div class="mt-auto sidebar-footer">
+            <span class="user-info d-flex align-items-center mb-2">
                 <i class="fas fa-user-shield me-2"></i>
                 <span class="sidebar-text">@User.Identity?.Name</span>
             </span>
-            <a class="nav-link text-danger d-flex align-items-center p-0" asp-area="" asp-controller="Account" asp-action="Logout">
+            <a class="sidebar-item logout-item d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Logout">
                 <i class="fas fa-sign-out-alt me-2"></i>
                 <span class="sidebar-text">Đăng xuất</span>
             </a>

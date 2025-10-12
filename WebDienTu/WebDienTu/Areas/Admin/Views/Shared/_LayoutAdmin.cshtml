@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/cssAdmin/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cssAdmin/navbarAdmin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cssAdmin/HeaderAdmin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cssAdmin/HomeAdmin.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
@@ -82,7 +85,7 @@
     </style>
 </head>
 <body>
-    <header id="headerAdmin" class="bg-dark p-2 border-bottom">
+    <header id="headerAdmin" >
         @await Html.PartialAsync("_Header")
     </header>
 	@await Html.PartialAsync("_NavAdmin")

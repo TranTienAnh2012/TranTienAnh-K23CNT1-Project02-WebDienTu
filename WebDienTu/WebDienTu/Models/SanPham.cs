@@ -47,8 +47,12 @@ public partial class SanPham
 
     public virtual DanhMuc? MaDanhMucNavigation { get; set; }
 
-
     public virtual ICollection<SanPhamDaXem> SanPhamDaXems { get; set; } = new List<SanPhamDaXem>();
 
-    public virtual ICollection<GiamGia> MaKhuyenMais { get; set; } = new List<GiamGia>();
+    public virtual ICollection<GiamGia> MaKhuyenMai { get; set; } = new List<GiamGia>();
+
+
+
+
+
 }

@@ -42,19 +42,28 @@ namespace WebDienTu.Controllers
             var sanPhams = await _context.SanPhams
                 .Where(s => s.TrangThai == true)
                 .Include(s => s.MaDanhMucNavigation)
-                .Include(s => s.MaKhuyenMais)
+                .Include(s => s.MaKhuyenMai)
                 .Include(s => s.DanhGia)
                 .ToListAsync();
 
             foreach (var sp in sanPhams)
             {
-                var giamGiaHienHanh = sp.MaKhuyenMais
+                // ✅ Nếu sản phẩm đã có giá tĩnh → dùng luôn
+                if (sp.GiaBan.HasValue)
+                    continue;
+
+                // ✅ Tìm voucher hợp lệ
+                var giamGiaHienHanh = sp.MaKhuyenMai
                     .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
                     .OrderByDescending(g => g.GiaTri)
                     .FirstOrDefault();
 
-                sp.GiaBan = giamGiaHienHanh != null ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m) : sp.Gia;
+                // ✅ Tính giá bán cuối cùng
+                sp.GiaBan = giamGiaHienHanh != null
+                    ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m)
+                    : sp.Gia;
             }
+
 
             // 👉 Lấy userId từ Claims
             int? currentUserId = null;
@@ -104,7 +113,7 @@ namespace WebDienTu.Controllers
             // 👉 Lấy sản phẩm theo id và include luôn các bảng phụ
             var sp = await _context.SanPhams
                 .Include(s => s.MaDanhMucNavigation)
-                .Include(s => s.MaKhuyenMais)
+                .Include(s => s.MaKhuyenMai)
                 .Include(s => s.DanhGia)
                     .ThenInclude(d => d.MaNguoiDungNavigation)
                 .Include(s => s.GiaTriThuocTinhs)         // 🔹 Include thông số sản phẩm
@@ -114,13 +123,20 @@ namespace WebDienTu.Controllers
 
             if (sp == null) return NotFound();
 
-            // ✅ Tính giá bán hiện tại
-            var giamGiaHienHanh = sp.MaKhuyenMais?
-                .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.UtcNow && g.NgayKetThuc >= DateTime.UtcNow)
-                .OrderByDescending(g => g.GiaTri)
-                .FirstOrDefault();
+           
+            // ✅ Tính giá bán hiện tại (giống logic Index)
+            if (!sp.GiaBan.HasValue || sp.GiaBan == 0)
+            {
+                var giamGiaHienHanh = sp.MaKhuyenMai?
+                    .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
+                    .OrderByDescending(g => g.GiaTri)
+                    .FirstOrDefault();
 
-            sp.GiaBan = sp.Gia * (1 - (giamGiaHienHanh?.GiaTri ?? 0) / 100m);
+                sp.GiaBan = giamGiaHienHanh != null
+                    ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m)
+                    : sp.Gia;
+            }
+
 
             // ✅ Tính trung bình sao
             var danhGias = sp.DanhGia?.Where(d => d.SoSao.HasValue).ToList() ?? new List<DanhGia>();
@@ -178,6 +194,7 @@ namespace WebDienTu.Controllers
               .Where(s => s.MaDanhMuc == maDanhMuc
                        && s.MaSanPham != maSanPham
                        && s.TrangThai == true)
+               .Include(s => s.DanhGia) // nạp danh sách đánh giá
               .OrderByDescending(s => s.NgayThem)
               .ToList();
 
@@ -193,7 +210,7 @@ namespace WebDienTu.Controllers
             var sanPhams = _context.SanPhams
                 .Where(s => s.TrangThai == true)
                 .Include(s => s.MaDanhMucNavigation)
-                .Include(s => s.MaKhuyenMais) // Collection
+                .Include(s => s.MaKhuyenMai) // Collection
                 .Include(s => s.DanhGia)      // Collection
                 .AsQueryable();               // 👈 ép về IQueryable
 
@@ -204,14 +221,82 @@ namespace WebDienTu.Controllers
 
             var list = await sanPhams.ToListAsync();
 
-            foreach (var sp in list)
+            foreach (var sp in sanPhams)
             {
-                var giamGiaHienHanh = sp.MaKhuyenMais
+                // ✅ Nếu sản phẩm đã có giá tĩnh → dùng luôn
+                if (sp.GiaBan.HasValue)
+                    continue;
+
+                // ✅ Tìm voucher hợp lệ
+                var giamGiaHienHanh = sp.MaKhuyenMai
                     .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
                     .OrderByDescending(g => g.GiaTri)
                     .FirstOrDefault();
 
-                sp.GiaBan = giamGiaHienHanh != null ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m) : sp.Gia;
+                // ✅ Tính giá bán cuối cùng
+                sp.GiaBan = giamGiaHienHanh != null
+                    ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m)
+                    : sp.Gia;
+            }
+
+
+            return PartialView("_SanPhamList", list);
+        }
+
+
+
+        public async Task<IActionResult> LocTheoTieuChi(string tieuChi, int? madm)
+        {
+            var sanPhams = _context.SanPhams
+                .Where(s => s.TrangThai == true)
+                .Include(s => s.MaDanhMucNavigation)
+                .Include(s => s.MaKhuyenMai)
+                .Include(s => s.DanhGia)
+                .AsQueryable();
+
+            // ✅ Nếu có mã danh mục → lọc trước
+            if (madm.HasValue && madm.Value > 0)
+            {
+                sanPhams = sanPhams.Where(s => s.MaDanhMuc == madm.Value);
+            }
+
+            var list = await sanPhams.ToListAsync();
+
+            // ✅ Tính giá bán thực tế
+            foreach (var sp in sanPhams)
+            {
+                // ✅ Nếu sản phẩm đã có giá tĩnh → dùng luôn
+                if (sp.GiaBan.HasValue)
+                    continue;
+
+                // ✅ Tìm voucher hợp lệ
+                var giamGiaHienHanh = sp.MaKhuyenMai
+                    .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
+                    .OrderByDescending(g => g.GiaTri)
+                    .FirstOrDefault();
+
+                // ✅ Tính giá bán cuối cùng
+                sp.GiaBan = giamGiaHienHanh != null
+                    ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m)
+                    : sp.Gia;
+            }
+
+
+            // ✅ Lọc theo tiêu chí
+            switch (tieuChi)
+            {
+                case "gia-tang":
+                    list = list.OrderBy(s => s.GiaBan ?? s.Gia).ToList();
+                    break;
+                case "gia-giam":
+                    list = list.OrderByDescending(s => s.GiaBan ?? s.Gia).ToList();
+                    break;
+                case "moi-nhat":
+                    list = list.OrderByDescending(s => s.NgayThem).ToList();
+                    break;
+                case "cu-nhat":
+                    list = list.OrderBy(s => s.NgayThem).ToList();
+                    break;
             }
 
             return PartialView("_SanPhamList", list);
@@ -224,7 +309,7 @@ namespace WebDienTu.Controllers
         {
             var query = _context.SanPhams
                 .Include(s => s.MaDanhMucNavigation)
-                .Include(s => s.MaKhuyenMais)
+                .Include(s => s.MaKhuyenMai)
                 .Include(s => s.DanhGia)
                 .Where(s => s.TrangThai == true);
 
@@ -244,15 +329,22 @@ namespace WebDienTu.Controllers
             // Tính giá bán
             foreach (var sp in sanPhams)
             {
-                var giamGiaHienHanh = sp.MaKhuyenMais
+                // ✅ Nếu sản phẩm đã có giá tĩnh → dùng luôn
+                if (sp.GiaBan.HasValue)
+                    continue;
+
+                // ✅ Tìm voucher hợp lệ
+                var giamGiaHienHanh = sp.MaKhuyenMai
                     .Where(g => g.TrangThai && g.NgayBatDau <= DateTime.Now && g.NgayKetThuc >= DateTime.Now)
                     .OrderByDescending(g => g.GiaTri)
                     .FirstOrDefault();
 
+                // ✅ Tính giá bán cuối cùng
                 sp.GiaBan = giamGiaHienHanh != null
                     ? sp.Gia * (1 - giamGiaHienHanh.GiaTri / 100m)
                     : sp.Gia;
             }
+
 
             return PartialView("_SanPhamList", sanPhams);
         }

@@ -116,7 +116,7 @@ namespace WebDienTu.Controllers
             {
                 TempData["Error"] = "Đơn hàng đã được xác nhận, không thể hủy!";
                 return RedirectToAction("LichSu");
-            } 
+            }
 
             // Hoàn lại số lượng tồn
             foreach (var ct in donHang.ChiTietDonHangs)
@@ -134,6 +134,7 @@ namespace WebDienTu.Controllers
             TempData["Success"] = $"Đơn hàng #{id} đã được hủy!";
             return RedirectToAction("LichSu");
         }
+        // GET: Thanh toán
         [HttpGet]
         public async Task<IActionResult> ThanhToan(int id)
         {
@@ -150,11 +151,28 @@ namespace WebDienTu.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            return View(sp);
+            int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+            var userVouchers = await _context.NguoiDungGiamGia
+                .Include(nd => nd.MaKhuyenMaiNavigation)
+                .Where(nd => nd.MaNguoiDung == userId && !nd.DaSuDung &&
+                             nd.MaKhuyenMaiNavigation.TrangThai &&
+                             nd.MaKhuyenMaiNavigation.NgayBatDau <= DateTime.Now &&
+                             nd.MaKhuyenMaiNavigation.NgayKetThuc >= DateTime.Now)
+                .ToListAsync();
+
+            var vm = new ThanhToanViewModel
+            {
+                SanPham = sp,
+                UserVouchers = userVouchers
+            };
+
+            return View(vm);
         }
 
+        // POST: Thanh toán
         [HttpPost]
-        public async Task<IActionResult> ThanhToan(int sanPhamId, int soLuong)
+        public async Task<IActionResult> ThanhToan(int sanPhamId, int soLuong, int? voucherId)
         {
             if (!User.Identity.IsAuthenticated)
             {
@@ -171,31 +189,72 @@ namespace WebDienTu.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            decimal donGia = sp.GiaBan ?? sp.Gia;
+            decimal tongTien = donGia * soLuong;
+
+            // Áp voucher nếu có
+            if (voucherId.HasValue)
+            {
+                var voucher = await _context.GiamGia.FindAsync(voucherId.Value);
+                var userVoucher = await _context.NguoiDungGiamGia
+                    .FirstOrDefaultAsync(nd => nd.MaNguoiDung == userId && nd.MaKhuyenMai == voucherId.Value);
+
+                if (voucher == null || !voucher.TrangThai ||
+                    voucher.NgayBatDau > DateTime.Now || voucher.NgayKetThuc < DateTime.Now ||
+                    userVoucher == null || userVoucher.DaSuDung)
+                {
+                    TempData["Warning"] = "Voucher không hợp lệ hoặc đã sử dụng!";
+                    return RedirectToAction("ThanhToan", new { id = sanPhamId });
+                }
+
+                string loai = (voucher.Loai ?? "").Trim().ToLower();
+                if (loai == "tiền mặt" || loai == "vnđ" || loai == "tien")
+                {
+                    tongTien -= voucher.GiaTri;
+                }
+                else if (loai == "phantram" || loai == "r")
+                {
+                    tongTien -= tongTien * (voucher.GiaTri / 100m);
+                }
+
+                if (tongTien < 0) tongTien = 0;
+
+                // Đánh dấu voucher đã dùng
+                userVoucher.DaSuDung = true;
+                _context.NguoiDungGiamGia.Update(userVoucher);
+                await _context.SaveChangesAsync();
+            }
+
+            // Tạo đơn hàng
             var donHang = new DonHang
             {
                 MaNguoiDung = userId,
                 NgayDatHang = DateTime.Now,
-                TongTien = soLuong * (sp.GiaBan ?? sp.Gia),
+                TongTien = tongTien,
                 TrangThai = false
             };
             _context.DonHangs.Add(donHang);
             await _context.SaveChangesAsync();
 
+            // Thêm chi tiết đơn hàng
             var chiTiet = new ChiTietDonHang
             {
                 MaDonHang = donHang.MaDonHang,
                 MaSanPham = sp.MaSanPham,
                 SoLuong = soLuong,
-                DonGia = sp.GiaBan ?? sp.Gia
+                DonGia = tongTien / soLuong
             };
             _context.ChiTietDonHangs.Add(chiTiet);
 
+            // Trừ tồn kho
             sp.SoLuongTon -= soLuong;
+
             await _context.SaveChangesAsync();
 
-            TempData["Success"] = "Đơn hàng đã được tạo và chờ admin xác nhận!";
+            TempData["Success"] = "Đơn hàng đã được tạo và đang chờ admin xác nhận!";
             return RedirectToAction("LichSu");
         }
+    }
 
     }
-}
+

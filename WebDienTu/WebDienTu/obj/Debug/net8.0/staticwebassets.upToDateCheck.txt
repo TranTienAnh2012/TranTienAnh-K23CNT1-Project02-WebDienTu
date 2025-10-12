@@ -1,3 +1,6 @@
+wwwroot\cssAdmin\HeaderAdmin.css
+wwwroot\cssAdmin\HomeAdmin.css
+wwwroot\cssAdmin\navbarAdmin.css
 wwwroot\cssAdmin\site.css
 wwwroot\css\BannerNavUse.css
 wwwroot\css\ChiTietSP.css
@@ -52,6 +55,7 @@ wwwroot\images\Samsung\06.jpg
 wwwroot\images\uploads\0f77df08-919a-4343-b364-85c1da8e1dfe.jpg
 wwwroot\images\uploads\7ab5d924-cdc5-48b2-bb55-d6fb2852c564.jpg
 wwwroot\images\uploads\95a0c781-0e85-4af3-b462-2bf5c4af7b32.jpg
+wwwroot\images\uploads\9ae1b9e2-2739-4a80-a4c7-da0562d03e88.jpg
 wwwroot\images\uploads\a8e91cfa-4a60-4e9e-b816-f53a7594d74d.jpg
 wwwroot\images\uploads\f4b8d803-1537-49a7-beae-ca0bbb6b69a0.jpg
 wwwroot\js\site.js

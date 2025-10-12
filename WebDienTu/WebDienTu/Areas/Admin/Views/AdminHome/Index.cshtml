@@ -3,83 +3,162 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Chào mừng Admin</h1>
-<p>Đây là trang tổng quan quản trị của hệ thống WebĐiệnTử.</p>
+<h1 class="fw-bold text-primary mb-3">Trang Quản Trị Hệ Thống</h1>
+<p class="text-muted">Tổng quan nhanh về các thành phần trong hệ thống WebĐiệnTử.</p>
 
-<!-- Dashboard cards -->
-<div class="row g-4 mt-3">
+<!-- ====== Danh sách thẻ ====== -->
+<div class="row g-4 mt-3" id="cardContainer">
+
+    <!-- 1 -->
     <div class="col-md-3">
-        <div class="card text-white bg-primary h-100">
-            <div class="card-body">
-                <h5 class="card-title">Quản trị viên</h5>
-                <p class="card-text fs-3">@ViewBag.TotalAdmins</p>
+        <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-blue shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h5 class="card-title">Quản trị viên</h5>
+                    <p class="card-value">@ViewBag.TotalAdmins</p>
+                    <p class="card-desc">Quản lý tài khoản Admin</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 2 -->
     <div class="col-md-3">
-        <div class="card text-white bg-success h-100">
-            <div class="card-body">
-                <h5 class="card-title">Người dùng</h5>
-                <p class="card-text fs-3">@ViewBag.TotalUsers</p>
+        <a asp-area="Admin" asp-controller="QuanTriViens" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-green shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h5 class="card-title">Người dùng</h5>
+                    <p class="card-value">@ViewBag.TotalUsers</p>
+                    <p class="card-desc">Tài khoản khách hàng</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 3 -->
     <div class="col-md-3">
-        <div class="card text-white bg-warning h-100">
-            <div class="card-body">
-                <h5 class="card-title">Sản phẩm</h5>
-                <p class="card-text fs-3">@ViewBag.TotalProducts</p>
+        <a asp-area="Admin" asp-controller="SanPhams" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-orange shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-box"></i></div>
+                    <h5 class="card-title">Sản phẩm</h5>
+                    <p class="card-value">@ViewBag.TotalProducts</p>
+                    <p class="card-desc">Kho hàng & hiển thị</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 4 -->
     <div class="col-md-3">
-        <div class="card text-white bg-danger h-100">
-            <div class="card-body">
-                <h5 class="card-title">Đơn hàng</h5>
-                <p class="card-text fs-3">@ViewBag.TotalOrders</p>
+        <a asp-area="Admin" asp-controller="DonHangs" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-red shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-receipt"></i></div>
+                    <h5 class="card-title">Đơn hàng</h5>
+                    <p class="card-value">@ViewBag.TotalOrders</p>
+                    <p class="card-desc">Quản lý đơn đặt hàng</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 5 -->
     <div class="col-md-3">
-        <div class="card text-white bg-info h-100">
-            <div class="card-body">
-                <h5 class="card-title">Chi tiết đơn hàng</h5>
-                <p class="card-text fs-3">@ViewBag.TotalOrderDetails</p>
+        <a asp-area="Admin" asp-controller="ChiTietDonHangs" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-sky shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-list"></i></div>
+                    <h5 class="card-title">Chi tiết đơn hàng</h5>
+                    <p class="card-value">@ViewBag.TotalOrderDetails</p>
+                    <p class="card-desc">Sản phẩm trong đơn</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 6 -->
     <div class="col-md-3">
-        <div class="card text-white bg-secondary h-100">
-            <div class="card-body">
-                <h5 class="card-title">Đánh giá</h5>
-                <p class="card-text fs-3">@ViewBag.TotalReviews</p>
+        <a asp-area="Admin" asp-controller="DanhGia" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-purple shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h5 class="card-title">Đánh giá</h5>
+                    <p class="card-value">@ViewBag.TotalReviews</p>
+                    <p class="card-desc">Nhận xét khách hàng</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
+    <!-- 7 -->
     <div class="col-md-3">
-        <div class="card text-white bg-dark h-100">
-            <div class="card-body">
-                <h5 class="card-title">Danh mục</h5>
-                <p class="card-text fs-3">@ViewBag.TotalCategories</p>
+        <a asp-area="Admin" asp-controller="DanhMucs" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-pink shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-folder"></i></div>
+                    <h5 class="card-title">Danh mục</h5>
+                    <p class="card-value">@ViewBag.TotalCategories</p>
+                    <p class="card-desc">Nhóm sản phẩm</p>
+                </div>
             </div>
-        </div>
+        </a>
+    </div>
+
+    <!-- 8 -->
+    <div class="col-md-3">
+        <a asp-area="Admin" asp-controller="ThuocTinhsAD" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-violet shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h5 class="card-title">Thuộc tính</h5>
+                    <p class="card-value">@ViewBag.TotalAttributes</p>
+                    <p class="card-desc">Loại đặc trưng sản phẩm</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 9 -->
+    <div class="col-md-3">
+        <a asp-area="Admin" asp-controller="GiaTriThuocTinhs" asp-action="Index" class="text-decoration-none">
+            <div class="info-card gradient-teal shadow-sm">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h5 class="card-title">Giá trị thuộc tính</h5>
+                    <p class="card-value">@ViewBag.TotalAttributeValues</p>
+                    <p class="card-desc">Các giá trị chi tiết</p>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
-<!-- Thông tin và quy tắc cho Admin -->
-<div class="alert alert-info mt-3" role="alert">
-    <h5>Thông tin & Quy tắc dành cho Admin:</h5>
+
+<!-- Quy tắc Admin -->
+<div class="alert alert-info mt-4" role="alert">
+    <h5 class="fw-bold">📘 Thông tin & Quy tắc dành cho Admin:</h5>
     <ul>
-        <li>Admin có quyền quản lý toàn bộ hệ thống: danh mục, sản phẩm, đơn hàng, người dùng và đánh giá.</li>
-        <li>Hãy cẩn trọng khi xóa hoặc chỉnh sửa dữ liệu, vì hành động này ảnh hưởng trực tiếp tới khách hàng và doanh nghiệp.</li>
-        <li>Kiểm tra kỹ thông tin trước khi xác nhận đơn hàng hoặc thay đổi trạng thái sản phẩm.</li>
-        <li>Bảo mật tài khoản Admin: không chia sẻ thông tin đăng nhập với bất kỳ ai.</li>
-        <li>Sử dụng chức năng tìm kiếm và bộ lọc để quản lý dữ liệu hiệu quả hơn.</li>
-        <li>Quản trị viên không được cân thiệp vào các đánh giá và bình luận của khách hàng trừ nhưng bình luận khiếm nhã.</li>
+        <li>Quản lý toàn bộ danh mục, sản phẩm, đơn hàng, người dùng và đánh giá.</li>
+        <li>Không chia sẻ tài khoản Admin với người khác.</li>
+        <li>Kiểm tra kỹ trước khi cập nhật hoặc xóa dữ liệu.</li>
+        <li>Giữ hệ thống hoạt động ổn định và chính xác.</li>
     </ul>
 </div>
+<!-- Nút xem thêm -->
+<div class="text-center mt-3">
+    <button id="btnToggleCards" class="btn btn-outline-primary px-4 rounded-pill">Xem thêm</button>
+</div>
+
+
+<!-- ================== SCRIPT ================== -->
+<script>
+    const btn = document.getElementById("btnToggleCards");
+    const container = document.getElementById("cardContainer");
+
+    btn.addEventListener("click", function () {
+        const expanded = container.classList.toggle("show-all");
+        btn.textContent = expanded ? "Ẩn bớt" : "Xem thêm";
+    });
+</script>

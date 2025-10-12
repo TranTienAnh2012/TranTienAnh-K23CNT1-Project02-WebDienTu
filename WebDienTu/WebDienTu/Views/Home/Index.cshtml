@@ -44,16 +44,29 @@
     <!-- Nội dung sẽ load từ Ajax  (Tạm thới chưa làm)-->
 </div>
 
-@* thanh phần loại (kết hợp AJAX)*@
-<ul class="nav nav-pills mb-3" id="LoaiFilterNav">
-    <li class="nav-item"><a class="nav-link active" href="#" data-madm="">Tất cả</a></li>
+<!-- Thanh phân loại + Lọc -->
+<div class="nav nav-pills d-flex align-items-center justify-content-start flex-wrap mb-3 p-2 bg-light rounded" id="LoaiFilterNav">
+
+    <!-- 🟢 Các danh mục -->
+    <a class="nav-link active me-2" href="#" data-madm="">Tất cả</a>
     @foreach (var dm in (List<WebDienTu.Models.DanhMuc>)ViewBag.DanhMucs)
     {
-        <li class="nav-item">
-            <a class="nav-link" href="#" data-madm="@dm.MaDanhMuc">@dm.TenDanhMuc</a>
-        </li>
+        <a class="nav-link me-2" href="#" data-madm="@dm.MaDanhMuc">@dm.TenDanhMuc</a>
     }
-</ul>
+
+    <!-- 🟣 Bộ lọc sắp xếp (nằm bên phải trong cùng thanh nav) -->
+    <div class="ms-auto">
+        <select id="sortSelect" class="form-select form-select-sm" style="width: 200px;">
+            <option value="">-- Sắp xếp theo --</option>
+            <option value="gia-tang">Giá: Thấp → Cao</option>
+            <option value="gia-giam">Giá: Cao → Thấp</option>
+            <option value="moi-nhat">Mới nhất</option>
+            <option value="cu-nhat">Cũ nhất</option>
+        </select>
+    </div>
+</div>
+
+
 
 @* Gọi các sản phẩm từ trang _SanPhamList (kết hợp AJAX)*@
 <div id="SanPhamList">
@@ -307,6 +320,24 @@
                 });
             }
         }
+                 // ========================
+                    // 🔍 Lọc theo tiêu chí (giá, ngày thêm)
+                // ========================
+        $("#sortSelect").on("change", function () {
+            var tieuChi = $(this).val();
+
+            // ✅ Lấy mã danh mục hiện tại đang active
+            var madm = $("#LoaiFilterNav a.active").data("madm");
+
+            $.get("/Home/LocTheoTieuChi", { tieuChi: tieuChi, madm: madm })
+                .done(function (res) {
+                    $("#SanPhamList").html(res);
+                })
+                .fail(function () {
+                    alert("Lỗi khi lọc sản phẩm theo tiêu chí!");
+                });
+        });
+
 
         // Gọi khi load trang
         initXemThem();

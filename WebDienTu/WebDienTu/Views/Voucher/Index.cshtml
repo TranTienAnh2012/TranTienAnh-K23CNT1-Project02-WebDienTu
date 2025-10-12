@@ -1,0 +1,159 @@
+﻿@model IEnumerable<WebDienTu.Models.GiamGia>
+
+@{
+    ViewData["Title"] = "Danh sách Voucher";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // hoặc layout user
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background: #f9f9ff;
+    }
+
+    h2 {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .voucher-card {
+        border-radius: 16px;
+        border: none;
+        background: linear-gradient(145deg, #ffffff, #f1f1f1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .voucher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .voucher-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.6s;
+        }
+
+        .voucher-card:hover::before {
+            left: 100%;
+        }
+
+        .voucher-card .card-body {
+            padding: 20px;
+        }
+
+    .voucher-title {
+        color: #ff7eb3;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    .voucher-value {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .voucher-date {
+        color: #777;
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        border-radius: 10px;
+        padding: 4px 10px;
+    }
+
+    .btn-voucher {
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+        .btn-voucher:hover {
+            background: linear-gradient(to right, #f6d365, #fda085);
+            color: white;
+            transform: scale(1.05);
+        }
+
+    .alert {
+        border-radius: 10px;
+        font-weight: 500;
+    }
+
+    footer {
+        display: none !important;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 text-gradient">🎀 Danh sách Voucher hiện có</h2>
+
+    <!-- Thông báo -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["Success"]</div>
+    }
+    @if (TempData["Warning"] != null)
+    {
+        <div class="alert alert-warning text-center">@TempData["Warning"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+
+    <!-- Danh sách voucher -->
+    @if (Model != null && Model.Any())
+    {
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="card voucher-card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="voucher-title">@item.TenChuongTrinh</h5>
+                            <p class="voucher-value mb-2">
+                                💰 Giảm: <strong>@item.GiaTri.ToString("N0")₫</strong>
+                            </p>
+                            <p class="voucher-date mb-1">
+                                <i class="fa fa-calendar"></i>
+                                @item.NgayBatDau.ToString("dd/MM/yyyy") - @item.NgayKetThuc.ToString("dd/MM/yyyy")
+                            </p>
+                            <p class="mb-3">
+                                <span class="badge bg-@(item.TrangThai ? "success" : "secondary")">
+                                    @(item.TrangThai ? "Đang hoạt động" : "Ngừng")
+                                </span>
+                            </p>
+
+                            <form asp-action="NhanVoucher" asp-controller="Voucher" method="post">
+                                <input type="hidden" name="id" value="@item.MaKhuyenMai" />
+                                <button type="submit" class="btn btn-voucher">
+                                    <i class="fa fa-gift me-1"></i> Nhận Voucher
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center mt-4">
+            Hiện chưa có voucher nào khả dụng 💡
+        </div>
+    }
+</div>

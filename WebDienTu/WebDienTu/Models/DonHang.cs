@@ -17,6 +17,5 @@ public partial class DonHang
 
     public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; } = new List<ChiTietDonHang>();
 
-    // Navigation property nullable để EF không bắt buộc phải có giá trị khi insert/update
-    public virtual QuanTriVien? MaNguoiDungNavigation { get; set; }
+    public virtual QuanTriVien MaNguoiDungNavigation { get; set; } = null!;
 }

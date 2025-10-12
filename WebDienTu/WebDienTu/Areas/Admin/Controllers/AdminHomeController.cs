@@ -38,6 +38,13 @@ namespace WebDienTu.Areas.Admin.Controllers
             // Tổng số danh mục
             var totalCategories = await _context.DanhMucs.CountAsync();
 
+            // Tổng số thuộc tính
+            var totalAttributes = await _context.ThuocTinhs.CountAsync();
+
+
+            // Tổng số giá trị thuộc tính
+            var totalAttributeValues = await _context.GiaTriThuocTinhs.CountAsync();
+
             // Truyền dữ liệu sang View bằng ViewBag
             ViewBag.TotalAdmins = totalAdmins;
             ViewBag.TotalUsers = totalUsers;
@@ -46,7 +53,8 @@ namespace WebDienTu.Areas.Admin.Controllers
             ViewBag.TotalOrderDetails = totalOrderDetails;
             ViewBag.TotalReviews = totalReviews;
             ViewBag.TotalCategories = totalCategories;
-
+            ViewBag.TotalAttributes = totalAttributes;
+            ViewBag.TotalAttributeValues = totalAttributeValues;
             return View();
         }
     }

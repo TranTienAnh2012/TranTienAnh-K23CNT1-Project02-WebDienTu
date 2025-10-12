@@ -88,12 +88,27 @@
                                     </form>
                                 </div>
                             </td>
+
                             <td class="fw-bold text-primary">@thanhTien.ToString("N0") VNĐ</td>
                             <td>
+                                <div class="d-flex flex-column gap-2">
+                                    <form asp-action="ThanhToanSanPham" method="post" asp-antiforgery="true">
+                                        <input type="hidden" name="gioHangId" value="@item.Id" />
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            <i class="fa-solid fa-credit-card"></i> Thanh toán sản phẩm này
+                                        </button>
+                                    </form>
+
+                                    <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                        <i class="fa-solid fa-trash"></i> Xóa
+                                    </a>                            
+                                </div>
+                            </td>
+                            @* <td>
                                 <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
                                     <i class="fa-solid fa-trash"></i> Xóa
                                 </a>
-                            </td>
+                            </td> *@
                         </tr>
                     }
                 </tbody>

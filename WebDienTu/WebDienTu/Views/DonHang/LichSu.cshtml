@@ -51,6 +51,7 @@ else
                                 <span class="badge bg-warning text-dark">Chờ xác nhận</span>
                             }
                         </td>
+
                         <td>
                             <div class="d-flex align-items-center">
                                 <img src="@ct.MaSanPhamNavigation.HinhAnh"
@@ -62,9 +63,11 @@ else
                         </td>
                         <td>@ct.DonGia.ToString("N0") VNĐ</td>
                         <td>@ct.SoLuong</td>
-                        <td>@($"{(ct.DonGia * ct.SoLuong):N0} VNĐ")</td>
+                        <td>@((ct.DonGia * ct.SoLuong).ToString("N0")) VNĐ</td>
+
+
                         <td>
-                            @if (dh.TrangThai == false)
+                            @if (dh.TrangThai != true)
                             {
                                 <form asp-action="HuyDon" asp-controller="DonHang" method="post"
                                       onsubmit="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
@@ -74,6 +77,7 @@ else
                                     </button>
                                 </form>
                             }
+
                         </td>
                     </tr>
                 }
@@ -85,5 +89,4 @@ else
             }
         </tbody>
     </table>
-
 }

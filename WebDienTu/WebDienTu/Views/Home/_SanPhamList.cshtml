@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<WebDienTu.Models.SanPham>
 
 @{
-    var index = 0;          // Đếm sản phẩm
-    var colPerRow = 5;      // Số cột mỗi hàng
+    var index = 0;
+    var colPerRow = 5;
     var visibleCount = colPerRow * 2; // Hiển thị 2 hàng đầu tiên
 }
 
-<link href="~/css/_SanPhamList.css" rel="stylesheet" />
 
+<link href="~/css/_SanPhamList.css" rel="stylesheet" />
 @if (Model == null || !Model.Any())
 {
     <div class="col-12">
@@ -27,15 +27,18 @@ else
 
             <div class="col @hiddenClass" data-aos="fade-up" data-aos-delay="@delay">
                 <div class="card h-100 shadow-sm border-0 rounded-3 position-relative">
-
                     <!-- Badge giảm giá -->
                     @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
                     {
-                        <span class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom small">
-                            <i class="fa-solid fa-tag me-1"></i>
-                            Giảm @((1 - item.GiaBan.Value / item.Gia) * 100).ToString("0")%
-                        </span>
-                    }
+                        var phanTramGiam = (1 - item.GiaBan.Value / item.Gia) * 100m; // 100m để là decimal
+			                <span class="badge-sale position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom small">
+			                    <i class="fa-solid fa-tag me-1"></i> Giảm @Math.Round(phanTramGiam, 0)%
+	                        </span>
+
+					}
+
+
+
 
                     <!-- Ảnh sản phẩm -->
                     <div class="position-relative">
@@ -67,15 +70,28 @@ else
                         <h6 class="card-title text-card-title text-truncate" title="@item.TenSanPham">@item.TenSanPham</h6>
                         <p class="card-text text-card-desc small text-truncate" title="@item.MoTa">@item.MoTa</p>
 
-                        <!-- Giá + hành động -->
+                        <!-- Giá sản phẩm -->
                         <div class="mt-auto">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="fw-bold text-card-price">
-                                    @((item.GiaBan ?? item.Gia).ToString("N0")) VNĐ
-                                </span>
+                            <div class="mb-2 ">
+                                <!-- căn giữa -->
+                                @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
+                                {
+                                    <div>
+                                         <span class="text-decoration-line-through">@item.Gia.ToString("N0") VNĐ</span>
+                                    </div>
+                                    <div>
+                                         <span class="text-danger fw-semibold">@item.GiaBan.Value.ToString("N0") VNĐ</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div>
+                                         <span>@item.Gia.ToString("N0") VNĐ</span>
+                                    </div>
+                                }
                             </div>
 
-                            <!-- Hiển thị sao -->
+                            <!-- Hiển thị sao đánh giá -->
                             @{
                                 var danhGiaList = item.DanhGia?.Cast<WebDienTu.Models.DanhGia>().ToList();
                             }
@@ -114,11 +130,7 @@ else
     @if (Model.Count() > visibleCount)
     {
         <div class="text-center mt-4">
-            <button id="btnXemThem" class="btn btn-outline-primary px-4">
-                Xem thêm
-            </button>
+            <button id="btnXemThem" class="btn btn-outline-primary px-4">Xem thêm</button>
         </div>
     }
 }
-
-

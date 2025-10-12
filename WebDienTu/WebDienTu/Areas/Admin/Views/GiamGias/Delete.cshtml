@@ -1,0 +1,63 @@
+﻿@model WebDienTu.Models.GiamGia
+
+@{
+    ViewData["Title"] = "Xóa chương trình giảm giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">
+            <i class="fa-solid fa-trash-can me-2"></i>Xóa chương trình giảm giá
+        </h4>
+        <a asp-action="Index" class="btn btn-light btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+    </div>
+
+    <div class="card-body">
+        <div class="alert alert-warning">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>
+            Bạn có chắc chắn muốn <strong>xóa</strong> chương trình giảm giá này không? Hành động này không thể hoàn tác.
+        </div>
+
+        <dl class="row mb-4">
+            <dt class="col-sm-4 fw-semibold text-muted">Tên chương trình</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.TenChuongTrinh)</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Loại giảm giá</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Loai)</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Giá trị</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.GiaTri)</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Ngày bắt đầu</dt>
+            <dd class="col-sm-8">@Model.NgayBatDau.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Ngày kết thúc</dt>
+            <dd class="col-sm-8">@Model.NgayKetThuc.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Trạng thái</dt>
+            <dd class="col-sm-8">
+                @if (Model.TrangThai)
+                {
+                    <span class="badge bg-success">Đang hoạt động</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">Ngừng áp dụng</span>
+                }
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" method="post" class="text-end">
+            <input type="hidden" asp-for="MaKhuyenMai" />
+            <button type="submit" class="btn btn-danger px-4">
+                <i class="fa-solid fa-trash me-2"></i>Xóa
+            </button>
+            <a asp-action="Index" class="btn btn-secondary ms-2 px-4">
+                <i class="fa-solid fa-xmark me-2"></i>Hủy
+            </a>
+        </form>
+    </div>
+</div>

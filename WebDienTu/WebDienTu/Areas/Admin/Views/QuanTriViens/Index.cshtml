@@ -18,7 +18,8 @@
 <!-- Bọc bảng trong table-responsive -->
 <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered align-middle">
-        <thead class="table-dark text-center">
+        <thead class="text-center table-header-gray">
+
             <tr>
                 <th>STT</th>
                 <th>@Html.DisplayNameFor(model => model.First().HoTen)</th>
@@ -102,12 +103,28 @@
 </div>
 
 <style>
-    /* Giữ cố định tiêu đề khi cuộn */
-    .table thead th {
+    /* Header bảng với pastel mint */
+    .table-header-gray th {
+        background-color: #bdf2db; /* xanh pastel mint nhẹ */
+        color: #1a3c34; /* chữ xanh đậm để rõ trên nền nhạt */
+        font-weight: 600;
+        text-align: center;
         position: sticky;
         top: 0;
-        background: #212529; /* màu .table-dark */
-        color: white;
         z-index: 10;
+        border-bottom: 2px solid #9fd7c0; /* viền nhẹ */
+    }
+
+    /* Hiệu ứng hover hàng */
+    .table tbody tr:hover {
+        background-color: #e9fff4; /* sáng hơn khi rê chuột */
+        transition: background-color 0.25s ease;
+    }
+
+    /* Bo góc và đổ bóng nhẹ cho bảng */
+    .table {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 </style>

@@ -1,7 +1,9 @@
-﻿@{
+﻿@model WebDienTu.Models.QuanTriVien
+@{
     ViewData["Title"] = "Đăng nhập";
 }
 <link href="~/css/Login.css" rel="stylesheet" />
+
 <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
     <div class="card shadow-lg rounded-3 p-4" style="width: 100%; max-width: 400px;">
         <div class="text-center mb-4">
@@ -9,35 +11,92 @@
             <p class="text-muted">Nhập thông tin tài khoản của bạn</p>
         </div>
 
-        <form asp-controller="Account" asp-action="Login" method="post">
+        <!-- ✅ Hiển thị thông báo -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success text-center">@TempData["SuccessMessage"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger text-center">@TempData["Error"]</div>
+        }
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger text-center">@ViewBag.Error</div>
+        }
+
+        <!-- ✅ Form đăng nhập -->
+        <form id="loginForm" asp-controller="Account" asp-action="Login" method="post" novalidate>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label asp-for="Email" class="form-label"></label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="example@email.com" required />
+                    <input asp-for="Email" class="form-control" placeholder="example@email.com" />
                 </div>
+                <span asp-validation-for="Email" class="text-danger small"></span>
             </div>
 
+            <!-- ✅ Mật khẩu có icon con mắt -->
             <div class="mb-3">
-                <label for="matKhau" class="form-label">Mật khẩu</label>
+                <label asp-for="MatKhau" class="form-label"></label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" id="matKhau" name="matKhau" placeholder="********" required />
+                    <input asp-for="MatKhau" id="MatKhau" class="form-control" type="password" placeholder="********" />
+                    <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
                 </div>
+                <span asp-validation-for="MatKhau" class="text-danger small"></span>
+            </div>
+
+            <!-- Cảnh báo khi để trống -->
+            <div class="alert alert-danger d-none" id="loginWarning">
+                Vui lòng nhập đầy đủ Email và Mật khẩu!
             </div>
 
             <button type="submit" class="btn btn-primary w-100 fw-bold">Đăng nhập</button>
         </form>
 
-        @if (ViewBag.Error != null)
-        {
-            <div class="alert alert-danger mt-3 text-center">@ViewBag.Error</div>
-        }
-
         <div class="mt-3 text-center">
-            <small class="text-muted">Chưa có tài khoản? <a asp-controller="Account" asp-action="Register">Đăng ký</a></small>
+            <small class="text-muted">
+                Chưa có tài khoản?
+                <a asp-controller="Account" asp-action="Register">Đăng ký</a>
+            </small>
         </div>
     </div>
 </div>
 
+<!-- ✅ Script kiểm tra + Hiển thị mật khẩu -->
+<script>
+    // Cảnh báo khi để trống
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        const email = document.getElementById("Email").value.trim();
+        const matKhau = document.getElementById("MatKhau").value.trim();
+        const warning = document.getElementById("loginWarning");
 
+        if (!email || !matKhau) {
+            e.preventDefault();
+            warning.classList.remove("d-none");
+        } else {
+            warning.classList.add("d-none");
+        }
+    });
+
+    // Hiện / Ẩn mật khẩu
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("MatKhau");
+
+    togglePassword.addEventListener("click", () => {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Đổi icon con mắt
+        const icon = togglePassword.querySelector("i");
+        icon.classList.toggle("fa-eye");
+        icon.classList.toggle("fa-eye-slash");
+    });
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

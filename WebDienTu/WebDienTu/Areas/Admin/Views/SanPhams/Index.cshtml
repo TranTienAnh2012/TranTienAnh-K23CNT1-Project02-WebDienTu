@@ -18,17 +18,18 @@
 <!-- Bọc bảng trong table-responsive -->
 <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered align-middle">
-        <thead class="table-dark text-center">
+        <thead class="text-center table-header-gray">
+
             <tr>
                 <th>STT</th>
                 <th>Tên sản phẩm</th>
-                <th>Hình ảnh</th>
-                <th>Danh mục</th>
+                <th>Image</th>
+                <th>D/M</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
                 <th>Trạng thái</th>
                 <th>Ngày thêm</th>
-                <th>Loại</th>
+               @*  <th>Loại</th> *@
                 <th>Thương hiệu</th>
                 <th>Xuất xứ</th>
                 <th>Bảo hành</th>
@@ -73,7 +74,7 @@
                             </span>
                         </td>
                         <td>@item.NgayThem?.ToString("dd/MM/yyyy")</td>
-                        <td>@item.Loai</td>
+                       @*  <td>@item.Loai</td> *@
                         <td>@item.ThuongHieu</td>
                         <td>@item.XuatXu</td>
                         <td>@item.BaoHanh</td>
@@ -137,11 +138,26 @@
 
 <style>
     /* Giữ cố định tiêu đề khi cuộn */
-    .table thead th {
-        position: sticky;
-        top: 0;
-        background: #212529; /* màu .table-dark */
-        color: white;
-        z-index: 10;
+    .table-header-gray th {
+        background-color: #dee2e6; /* xám nhạt */
+        color: #212529;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Giới hạn độ dài tên sản phẩm */
+    td:nth-child(2) {
+        max-width: 180px; /* tùy chỉnh độ rộng */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Căn giữa hình ảnh */
+    td img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
     }
 </style>
+

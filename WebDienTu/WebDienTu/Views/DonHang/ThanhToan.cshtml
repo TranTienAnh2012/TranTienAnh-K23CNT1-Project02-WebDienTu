@@ -1,6 +1,9 @@
-﻿@model WebDienTu.Models.SanPham
+﻿@model WebDienTu.Models.ThanhToanViewModel
+
 @{
     ViewData["Title"] = "Thanh toán sản phẩm";
+    var sp = Model.SanPham;
+    var vouchers = Model.UserVouchers;
 }
 
 <div class="container mt-5">
@@ -9,40 +12,53 @@
     <div class="card shadow-sm p-3">
         <div class="row">
             <div class="col-md-4">
-                <img src="@Model.HinhAnh" alt="@Model.TenSanPham" class="img-fluid rounded" />
+                <img src="@sp.HinhAnh" alt="@sp.TenSanPham" class="img-fluid rounded" />
             </div>
             <div class="col-md-8">
-                <h5>@Model.TenSanPham</h5>
-                <p class="text-muted">@Model.MoTa</p>
+                <h5>@sp.TenSanPham</h5>
+                <p class="text-muted">@sp.MoTa</p>
 
-                <!-- Giá gốc và giá giảm -->
                 <p>
                     <span class="text-muted text-decoration-line-through">
-                        Giá gốc: @Model.Gia.ToString("N0") VNĐ
+                        Giá gốc: @sp.Gia.ToString("N0") VNĐ
                     </span>
                 </p>
                 <p class="fw-bold text-danger">
-                    Giá bán: @((Model.GiaBan ?? Model.Gia).ToString("N0")) VNĐ
+                    Giá bán: <span id="giaBan">@((sp.GiaBan ?? sp.Gia).ToString("N0"))</span> VNĐ
                 </p>
 
-                <!-- Thêm các thông tin khác -->
-                <ul class="list-unstyled">
-                    <li><strong>Thương hiệu:</strong> @Model.ThuongHieu</li>
-                    <li><strong>Xuất xứ:</strong> @Model.XuatXu</li>
-                    <li><strong>Bảo hành:</strong> @Model.BaoHanh</li>
-                    <li><strong>Loại:</strong> @Model.Loai</li>
-                    <li><strong>Số lượng tồn:</strong> @Model.SoLuongTon</li>
-                    <li><strong>Ngày thêm:</strong> @(Model.NgayThem?.ToString("dd/MM/yyyy"))</li>
-                </ul>
-
-                <!-- Form đặt hàng -->
-                <form asp-action="ThanhToan" method="post">
-                    <input type="hidden" name="sanPhamId" value="@Model.MaSanPham" />
+                <form asp-action="ThanhToan" method="post" id="formThanhToan">
+                    <input type="hidden" name="sanPhamId" value="@sp.MaSanPham" />
 
                     <div class="mb-3">
                         <label for="soLuong" class="form-label">Số lượng</label>
                         <input type="number" name="soLuong" id="soLuong" class="form-control"
-                               value="1" min="1" max="@Model.SoLuongTon" required />
+                               value="1" min="1" max="@sp.SoLuongTon" required />
+                    </div>
+
+                    @if (vouchers.Any())
+                    {
+                        <div class="mb-3">
+                            <label for="voucherId" class="form-label">Chọn voucher áp dụng</label>
+                            <select class="form-select" name="voucherId" id="voucherId">
+                                <option value="">-- Không dùng voucher --</option>
+                                @foreach (var uv in vouchers)
+                                {
+                                    var v = uv.MaKhuyenMaiNavigation;
+                                    var loai = (v.Loai.Trim().ToLower() == "tiền mặt" || v.Loai.Trim().ToLower() == "vnđ") ? "tien" : "phantram";
+                                    <option value="@v.MaKhuyenMai"
+                                            data-loai="@loai"
+                                            data-giatri="@v.GiaTri.ToString(System.Globalization.CultureInfo.InvariantCulture)">
+                                        @v.TenChuongTrinh (@(loai == "tien" ? v.GiaTri.ToString("N0") + " VNĐ" : v.GiaTri + "%"))
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Tổng tiền:</label>
+                        <p class="fs-5 text-danger" id="tongTien">@((sp.GiaBan ?? sp.Gia).ToString("N0")) VNĐ</p>
                     </div>
 
                     <button type="submit" class="btn btn-success">
@@ -56,3 +72,39 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        const giaBan = parseFloat("@((sp.GiaBan ?? sp.Gia).ToString(System.Globalization.CultureInfo.InvariantCulture))") || 0;
+        const soLuongInput = document.getElementById("soLuong");
+        const voucherSelect = document.getElementById("voucherId");
+        const tongTienEl = document.getElementById("tongTien");
+
+        function tinhTongTien() {
+            let soLuong = parseInt(soLuongInput.value) || 1;
+            let tong = giaBan * soLuong;
+
+            if (voucherSelect && voucherSelect.value) {
+                const opt = voucherSelect.options[voucherSelect.selectedIndex];
+                const loai = (opt.getAttribute("data-loai") || "").trim().toLowerCase();
+                const giatri = parseFloat(opt.getAttribute("data-giatri")) || 0;
+
+                if (loai === "tien") {
+                    tong -= giatri;
+                } else if (loai === "phantram") {
+                    tong -= tong * (giatri / 100);
+                }
+            }
+
+            if (tong < 0) tong = 0;
+
+            tongTienEl.textContent = tong.toLocaleString('vi-VN') + " VNĐ";
+        }
+
+        soLuongInput.addEventListener("input", tinhTongTien);
+        if (voucherSelect) voucherSelect.addEventListener("change", tinhTongTien);
+
+        // Tính ngay khi load trang
+        tinhTongTien();
+    </script>
+}

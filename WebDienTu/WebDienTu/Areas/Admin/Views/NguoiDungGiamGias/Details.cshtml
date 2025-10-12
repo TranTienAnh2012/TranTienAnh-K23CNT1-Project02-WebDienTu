@@ -1,0 +1,32 @@
+﻿@model WebDienTu.Models.NguoiDungGiamGia
+
+@{
+    ViewData["Title"] = "Chi tiết Người Dùng Giảm Giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card mb-3" style="max-width: 600px;">
+    <div class="card-body">
+        <h5 class="card-title">Thông tin chi tiết</h5>
+        <dl class="row mb-0">
+            <dt class="col-sm-4">Đã sử dụng</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.DaSuDung)</dd>
+
+            <dt class="col-sm-4">Ngày nhận</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.NgayNhan)</dd>
+
+            <dt class="col-sm-4">Chương trình giảm giá</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.MaKhuyenMaiNavigation.TenChuongTrinh)</dd>
+
+            <dt class="col-sm-4">Người dùng</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.MaNguoiDungNavigation.Email)</dd>
+        </dl>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Chỉnh sửa</a>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Quay lại danh sách</a>
+</div>

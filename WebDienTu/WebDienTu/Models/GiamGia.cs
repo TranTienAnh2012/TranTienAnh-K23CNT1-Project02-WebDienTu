@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WebDienTu.Models;
 
-public partial class GiamGia 
+public partial class GiamGia
 {
     public int MaKhuyenMai { get; set; }
 
@@ -19,6 +19,12 @@ public partial class GiamGia
 
     public bool TrangThai { get; set; }
 
-    public virtual ICollection<SanPham> MaSanPhams { get; set; } = new List<SanPham>();
+
+    public virtual ICollection<SanPham> SanPhams { get; set; } = new List<SanPham>();
+
+
+    public virtual ICollection<NguoiDungGiamGia> NguoiDungGiamGia { get; set; } = new List<NguoiDungGiamGia>();
+
+
 
 }

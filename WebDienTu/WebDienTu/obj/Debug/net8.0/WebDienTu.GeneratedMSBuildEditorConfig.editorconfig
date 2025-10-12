@@ -112,6 +112,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uSGFuZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiamGias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiamGias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiamGias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiamGias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiamGias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiaTriThuocTinhs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhVHJpVGh1b2NUaW5oc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -130,6 +150,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/GiaTriThuocTinhs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhVHJpVGh1b2NUaW5oc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/NguoiDungGiamGias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmd1b2lEdW5nR2lhbUdpYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/NguoiDungGiamGias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmd1b2lEdW5nR2lhbUdpYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/NguoiDungGiamGias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmd1b2lEdW5nR2lhbUdpYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/NguoiDungGiamGias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmd1b2lEdW5nR2lhbUdpYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/NguoiDungGiamGias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmd1b2lEdW5nR2lhbUdpYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Areas/Admin/Views/QuanTriViens/Create.cshtml]
@@ -294,6 +334,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/Voucher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TranTienAnh-K23CNT1-Project02-WebDienTu/WebDienTu/WebDienTu/Views/_ViewImports.cshtml]

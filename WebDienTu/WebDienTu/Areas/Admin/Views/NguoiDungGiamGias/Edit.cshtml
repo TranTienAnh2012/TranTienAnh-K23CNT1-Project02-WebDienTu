@@ -1,0 +1,54 @@
+﻿@model WebDienTu.Models.NguoiDungGiamGia
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Người Dùng Giảm Giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <!-- Người dùng -->
+            <div class="mb-3">
+                <label asp-for="MaNguoiDung" class="form-label">Người dùng</label>
+                <select asp-for="MaNguoiDung" class="form-select" asp-items="ViewBag.MaNguoiDung"></select>
+                <span asp-validation-for="MaNguoiDung" class="text-danger"></span>
+            </div>
+
+            <!-- Chương trình giảm giá -->
+            <div class="mb-3">
+                <label asp-for="MaKhuyenMai" class="form-label">Chương trình giảm giá</label>
+                <select asp-for="MaKhuyenMai" class="form-select" asp-items="ViewBag.MaKhuyenMai"></select>
+                <span asp-validation-for="MaKhuyenMai" class="text-danger"></span>
+            </div>
+
+            <!-- Đã sử dụng -->
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" asp-for="DaSuDung" id="DaSuDungCheck" />
+                <label class="form-check-label" for="DaSuDungCheck">Đã sử dụng</label>
+            </div>
+
+            <!-- Ngày nhận -->
+            <div class="mb-3">
+                <label asp-for="NgayNhan" class="form-label">Ngày nhận</label>
+                <input asp-for="NgayNhan" type="datetime-local" class="form-control"
+                       value="@(Model.NgayNhan.ToString("yyyy-MM-ddTHH:mm"))" />
+                <span asp-validation-for="NgayNhan" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Lưu</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Quay lại</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

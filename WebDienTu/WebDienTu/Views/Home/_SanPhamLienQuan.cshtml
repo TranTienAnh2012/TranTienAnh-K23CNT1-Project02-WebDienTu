@@ -27,11 +27,11 @@ else
                     <!-- Badge giảm giá -->
                     @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
                     {
-                        <span class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom small">
-                            <i class="fa-solid fa-tag me-1"></i>
-                            Giảm @(((1 - (item.GiaBan.Value / item.Gia)) * 100).ToString("0"))%
+                        var phanTramGiam = (1 - item.GiaBan.Value / item.Gia) * 100m; // 100m để là decimal
+                         <span class="badge-sale position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-bottom small">
+                                <i class="fa-solid fa-tag me-1"></i> Giảm @Math.Round(phanTramGiam, 0)%
+                         </span>
 
-                        </span>
                     }
 
                     <!-- Ảnh + overlay -->
@@ -56,13 +56,27 @@ else
                         <p class="card-text text-card-desc small text-truncate" title="@item.MoTa">@item.MoTa</p>
 
                         <div class="mt-auto">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="fw-bold text-card-price">
-                                    @((item.GiaBan ?? item.Gia).ToString("N0")) VNĐ
-                                </span>
+                            <div class="mb-2 ">
+                                <!-- căn giữa -->
+                                @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
+                                {
+                                    <div>
+                                        <span class="text-decoration-line-through">@item.Gia.ToString("N0") VNĐ</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-danger fw-semibold">@item.GiaBan.Value.ToString("N0") VNĐ</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div>
+                                        <span>@item.Gia.ToString("N0") VNĐ</span>
+                                    </div>
+                                }
                             </div>
 
                             <!-- Hiển thị sao -->
+                            <!-- Hiển thị sao đánh giá -->
                             @{
                                 var danhGiaList = item.DanhGia?.Cast<WebDienTu.Models.DanhGia>().ToList();
                             }

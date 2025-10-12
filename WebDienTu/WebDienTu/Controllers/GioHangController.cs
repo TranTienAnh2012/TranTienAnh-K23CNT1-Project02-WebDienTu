@@ -172,6 +172,63 @@ public class GioHangController : Controller
         return RedirectToAction("Index", "GioHang");
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ThanhToanSanPham(int gioHangId)
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            TempData["Warning"] = "Vui lòng đăng nhập để mua hàng!";
+            return RedirectToAction("Login", "Account");
+        }
+
+        int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
+
+        // ✅ Lấy sản phẩm cụ thể trong giỏ
+        var item = await _context.GioHangTams
+            .Include(g => g.MaSanPhamNavigation)
+            .FirstOrDefaultAsync(g => g.Id == gioHangId && g.MaNguoiDung == userId);
+
+        if (item == null)
+        {
+            TempData["Error"] = "Không tìm thấy sản phẩm trong giỏ!";
+            return RedirectToAction("Index");
+        }
+
+        var gia = item.MaSanPhamNavigation.GiaBan ?? item.MaSanPhamNavigation.Gia;
+
+        // ✅ Tạo đơn hàng mới cho 1 sản phẩm
+        var donHang = new DonHang
+        {
+            MaNguoiDung = userId,
+            NgayDatHang = DateTime.Now,
+            TongTien = gia * item.SoLuong,
+            TrangThai = false
+        };
+        _context.DonHangs.Add(donHang);
+        await _context.SaveChangesAsync();
+
+        // ✅ Thêm chi tiết đơn hàng
+        var chiTiet = new ChiTietDonHang
+        {
+            MaDonHang = donHang.MaDonHang,
+            MaSanPham = item.MaSanPham,
+            SoLuong = item.SoLuong,
+            DonGia = gia
+        };
+        _context.ChiTietDonHangs.Add(chiTiet);
+
+        // ✅ Trừ tồn kho
+        item.MaSanPhamNavigation.SoLuongTon -= item.SoLuong;
+
+        // ✅ Xóa sản phẩm khỏi giỏ
+        _context.GioHangTams.Remove(item);
+
+        await _context.SaveChangesAsync();
+
+        TempData["Success"] = "Đặt hàng thành công cho sản phẩm này!";
+        return RedirectToAction("Index");
+    }
 
 
     // Xóa sản phẩm khỏi giỏ hàng

@@ -1,0 +1,48 @@
+﻿@model WebDienTu.Models.NguoiDungGiamGia
+
+@{
+    ViewData["Title"] = "Thêm Người Dùng Giảm Giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card" style="max-width: 600px;">
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="MaNguoiDung" class="form-label"></label>
+                <select asp-for="MaNguoiDung" class="form-select" asp-items="ViewBag.MaNguoiDung"></select>
+                <span asp-validation-for="MaNguoiDung" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="MaKhuyenMai" class="form-label"></label>
+                <select asp-for="MaKhuyenMai" class="form-select" asp-items="ViewBag.MaKhuyenMai"></select>
+                <span asp-validation-for="MaKhuyenMai" class="text-danger"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="DaSuDung" class="form-check-input" />
+                <label asp-for="DaSuDung" class="form-check-label"></label>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NgayNhan" class="form-label"></label>
+                <input asp-for="NgayNhan" class="form-control" type="date" />
+                <span asp-validation-for="NgayNhan" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Tạo mới</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Quay lại danh sách</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

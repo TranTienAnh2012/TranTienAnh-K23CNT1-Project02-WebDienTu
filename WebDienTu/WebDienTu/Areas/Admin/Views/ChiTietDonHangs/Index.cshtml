@@ -19,10 +19,10 @@
     <table class="table table-striped table-hover align-middle shadow-sm">
         <thead class="table-primary text-center">
             <tr>
-                <th>@Html.DisplayNameFor(model => model[0].SoLuong)</th>
-                <th>@Html.DisplayNameFor(model => model[0].DonGia)</th>
-                <th>@Html.DisplayNameFor(model => model[0].MaDonHangNavigation)</th>
-                <th>@Html.DisplayNameFor(model => model[0].MaSanPhamNavigation)</th>
+                <th>Số Lượng</th>
+                <th>Đơn Giá</th>
+                <th>Mã ĐH</th>
+                <th>Mã SP</th>
                 <th style="width: 160px;">Thao tác</th>
             </tr>
         </thead>
@@ -35,14 +35,14 @@
                         <td class="text-center">
                             <span class="badge bg-secondary">@item.SoLuong</span>
                         </td>
-                        <td class="text-success fw-bold">
+                        <td class="text-success fw-bold text-center">
                             @item.DonGia.ToString("N0") ₫
                         </td>
                         <td class="text-center">
                             <span class="badge bg-info text-dark">#@item.MaDonHangNavigation?.MaDonHang</span>
                         </td>
                         @* Chỉ hiển thị khoảng 20 ký tự, nếu dài hơn thì cắt + thêm ..., đồng thời giữ tooltip để admin di chuột sẽ thấy đầy đủ tên sản phẩm. *@
-						<td>
+						<td class="text-center">
 							<span class="badge bg-success"
 								  title="@item.MaSanPhamNavigation?.TenSanPham">
 								@(item.MaSanPhamNavigation?.TenSanPham?.Length > 20 

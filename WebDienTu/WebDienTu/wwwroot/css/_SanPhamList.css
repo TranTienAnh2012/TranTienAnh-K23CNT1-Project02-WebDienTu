@@ -134,3 +134,25 @@
     color: #fff !important;
 }
 
+.sanpham-price {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--bs-body-color); /* Bootstrap sẽ tự đổi màu theo theme */
+}
+
+    .sanpham-price .gia-goc span {
+        text-decoration: line-through;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+    }
+
+    .sanpham-price .gia-ban span {
+        font-weight: 600;
+        color: var(--bs-danger); /* sẽ tự chuyển theo Bootstrap theme */
+    }
+.badge-sale {
+    z-index: 10;
+}
+

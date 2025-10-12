@@ -22,17 +22,51 @@
             <p class="mb-1"><strong>Bảo hành:</strong> @Model.BaoHanh</p>
             <p class="mb-1"><strong>Mô tả:</strong> @Model.MoTa</p>
 
-            <p class="fs-4 mt-3">
-                @if (Model.GiaBan < Model.Gia)
+            <p class="fs-4 mt-3 mb-0">
+                @if (Model.GiaBan.HasValue && Model.GiaBan.Value < Model.Gia)
                 {
-                    <span class="text-muted text-decoration-line-through">@Model.Gia.ToString("N0") VNĐ</span>
-                    <span class="text-danger fw-bold ms-2">@Model.GiaBan?.ToString("N0") VNĐ</span>
+                    var phanTramGiam = (1 - (double)(Model.GiaBan.Value / Model.Gia)) * 100;
+
+                    <span class="text-muted text-decoration-line-through me-2">
+                        @Model.Gia.ToString("N0") VNĐ
+                    </span>
+                    <span class="text-danger fw-bold">
+                        @Model.GiaBan?.ToString("N0") VNĐ
+                    </span>
+                    <span class="badge bg-danger ms-2">-@phanTramGiam.ToString("0")%</span>
                 }
                 else
                 {
-                    <span class="fw-bold">@Model.Gia.ToString("N0") VNĐ</span>
+                    <span class="fw-bold text-dark">@Model.Gia.ToString("N0") VNĐ</span>
                 }
             </p>
+            <p class="mb-2">
+                @if (ViewBag.TrungBinhSao > 0)
+                {
+                    var sao = Convert.ToDouble(ViewBag.TrungBinhSao);
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= sao)
+                        {
+                            <i class="fa-solid fa-star text-warning"></i>
+                        }
+                        else if (i - sao < 1 && sao % 1 >= 0.5)
+                        {
+                            <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                        }
+                        else
+                        {
+                            <i class="fa-regular fa-star text-warning"></i>
+                        }
+                    }
+                    <span class="ms-1 text-muted">(@sao/5)</span>
+                }
+                else
+                {
+                    <span class="text-muted">Chưa có đánh giá</span>
+                }
+            </p>
+
 
             <!-- Nút hành động -->
             <div class="mt-4 d-flex flex-wrap gap-2">

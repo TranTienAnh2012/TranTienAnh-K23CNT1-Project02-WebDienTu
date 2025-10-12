@@ -1,0 +1,66 @@
+﻿@model WebDienTu.Models.GiamGia
+
+@{
+    ViewData["Title"] = "Chi tiết giảm giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">
+            <i class="fa-solid fa-circle-info me-2"></i>Chi tiết chương trình giảm giá
+        </h4>
+        <a asp-action="Index" class="btn btn-light btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+    </div>
+
+    <div class="card-body">
+        <dl class="row mb-4">
+            <dt class="col-sm-4 fw-semibold text-muted">Tên chương trình</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.TenChuongTrinh)</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Loại giảm giá</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Loai)</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Giá trị giảm</dt>
+            <dd class="col-sm-8">
+                @if (Model.Loai.ToLower().Contains("phantram"))
+                {
+                    @($"{Model.GiaTri}%")
+                }
+                else
+                {
+                    @($"{Model.GiaTri:N0} ₫")
+                }
+            </dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Ngày bắt đầu</dt>
+            <dd class="col-sm-8">@Model.NgayBatDau.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Ngày kết thúc</dt>
+            <dd class="col-sm-8">@Model.NgayKetThuc.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4 fw-semibold text-muted">Trạng thái</dt>
+            <dd class="col-sm-8">
+                @if (Model.TrangThai)
+                {
+                    <span class="badge bg-success">Đang hoạt động</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">Ngừng áp dụng</span>
+                }
+            </dd>
+        </dl>
+
+        <div class="text-end">
+            <a asp-action="Edit" asp-route-id="@Model.MaKhuyenMai" class="btn btn-warning px-4">
+                <i class="fa-solid fa-pen-to-square me-2"></i>Chỉnh sửa
+            </a>
+            <a asp-action="Index" class="btn btn-secondary px-4 ms-2">
+                <i class="fa-solid fa-list me-2"></i>Danh sách
+            </a>
+        </div>
+    </div>
+</div>

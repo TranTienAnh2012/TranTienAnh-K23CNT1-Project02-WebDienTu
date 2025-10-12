@@ -31,6 +31,8 @@ public partial class DienTuStoreContext : DbContext
 
     public virtual DbSet<GioHangTam> GioHangTams { get; set; }
 
+    public virtual DbSet<NguoiDungGiamGia> NguoiDungGiamGia { get; set; }
+
     public virtual DbSet<QuanTriVien> QuanTriViens { get; set; }
 
     public virtual DbSet<SanPham> SanPhams { get; set; }
@@ -41,7 +43,7 @@ public partial class DienTuStoreContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=LAPTOP-F48PQH12\\TIENANH1;Database=DienTuStore;User Id=TtaAdmin;Password=tienanh2005;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=LAPTOP-F48PQH12\\TIENANH1;Database=DienTuStore;User ID=TtaAdmin;Password=tienanh2005;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -184,6 +186,27 @@ public partial class DienTuStoreContext : DbContext
                 .HasConstraintName("FK__GioHangTa__MaSan__5EBF139D");
         });
 
+        modelBuilder.Entity<NguoiDungGiamGia>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__NguoiDun__3214EC07625AC12E");
+
+            entity.Property(e => e.NgayNhan)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.Property(e => e.DaSuDung)
+             .HasColumnType("bit")
+             .HasDefaultValue(false);  // mặc định chưa sử dụng
+
+            entity.HasOne(d => d.MaKhuyenMaiNavigation).WithMany(p => p.NguoiDungGiamGia)
+                .HasForeignKey(d => d.MaKhuyenMai)
+                .HasConstraintName("FK_NguoiDungGiamGia_GiamGia");
+
+            entity.HasOne(d => d.MaNguoiDungNavigation).WithMany(p => p.NguoiDungGiamGia)
+                .HasForeignKey(d => d.MaNguoiDung)
+                .HasConstraintName("FK_NguoiDungGiamGia_NguoiDung");
+        });
+
         modelBuilder.Entity<QuanTriVien>(entity =>
         {
             entity.HasKey(e => e.MaNguoiDung).HasName("PK__NguoiDun__C539D7626A37A462");
@@ -226,22 +249,24 @@ public partial class DienTuStoreContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__SanPham__MaDanhM__412EB0B6");
 
-            entity.HasMany(d => d.MaKhuyenMais).WithMany(p => p.MaSanPhams)
-                .UsingEntity<Dictionary<string, object>>(
-                    "SanPhamKhuyenMai",
-                    r => r.HasOne<GiamGia>().WithMany()
-                        .HasForeignKey("MaKhuyenMai")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__SanPham_K__MaKhu__73BA3083"),
-                    l => l.HasOne<SanPham>().WithMany()
-                        .HasForeignKey("MaSanPham")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__SanPham_K__MaSan__72C60C4A"),
-                    j =>
-                    {
-                        j.HasKey("MaSanPham", "MaKhuyenMai").HasName("PK__SanPham___3C322F164FF0DFAB");
-                        j.ToTable("SanPham_KhuyenMai");
-                    });
+            entity.HasMany(s => s.MaKhuyenMai)  // đúng: SanPham.MaKhuyenMai
+      .WithMany(g => g.SanPhams)    // đúng: GiamGia.SanPhams
+      .UsingEntity<Dictionary<string, object>>(
+          "SanPhamKhuyenMai",
+          r => r.HasOne<GiamGia>()
+                .WithMany()
+                .HasForeignKey("MaKhuyenMai")
+                .OnDelete(DeleteBehavior.ClientSetNull),
+          l => l.HasOne<SanPham>()
+                .WithMany()
+                .HasForeignKey("MaSanPham")
+                .OnDelete(DeleteBehavior.ClientSetNull),
+          j =>
+          {
+              j.HasKey("MaSanPham", "MaKhuyenMai");
+              j.ToTable("SanPham_KhuyenMai");
+          });
+
         });
 
         modelBuilder.Entity<SanPhamDaXem>(entity =>
