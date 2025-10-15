@@ -8,7 +8,6 @@ wwwroot\css\DanhSachSanPham.css
 wwwroot\css\GioHang.css
 wwwroot\css\GioiThieu.css
 wwwroot\css\home.css
-wwwroot\css\LichSuMuaHang.css
 wwwroot\css\Login.css
 wwwroot\css\NavberUsers.css
 wwwroot\css\Register.css
@@ -117,3 +116,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\LichSuMuaHang.css

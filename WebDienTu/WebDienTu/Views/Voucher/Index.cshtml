@@ -2,95 +2,106 @@
 
 @{
     ViewData["Title"] = "Danh sách Voucher";
-    Layout = "~/Views/Shared/_Layout.cshtml"; // hoặc layout user
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 
 <style>
     body {
-        background: #f9f9ff;
+        background: linear-gradient(135deg, #f0f4ff, #fafaff);
+        font-family: 'Poppins', sans-serif;
+        color: #333;
     }
 
-    h2 {
+    h2.text-gradient {
         font-weight: 700;
-        letter-spacing: 0.5px;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .voucher-card {
-        border-radius: 16px;
-        border: none;
-        background: linear-gradient(145deg, #ffffff, #f1f1f1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        position: relative;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         overflow: hidden;
+        position: relative;
+        color: #444;
     }
 
         .voucher-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
+        /* Hiệu ứng sáng lướt qua khi hover */
         .voucher-card::before {
             content: "";
             position: absolute;
             top: 0;
             left: -100%;
-            width: 50%;
+            width: 60%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.7s;
         }
 
         .voucher-card:hover::before {
-            left: 100%;
+            left: 120%;
         }
 
         .voucher-card .card-body {
-            padding: 20px;
+            padding: 24px;
         }
 
     .voucher-title {
-        color: #ff7eb3;
+        font-size: 1.2rem;
         font-weight: 700;
-        font-size: 1.25rem;
+        color: #5a67d8; /* tím đậm hơn */
+        margin-bottom: 10px;
     }
 
     .voucher-value {
-        font-size: 1.1rem;
-        color: #333;
+        color: #1e3a8a; /* xanh navy nhẹ */
+        font-size: 1rem;
+        margin-bottom: 6px;
+        font-weight: 600;
     }
 
     .voucher-date {
-        color: #777;
         font-size: 0.9rem;
+        color: #6b7280; /* xám nhạt */
     }
 
     .badge {
-        border-radius: 10px;
-        padding: 4px 10px;
+        border-radius: 12px;
+        padding: 6px 12px;
+        font-weight: 600;
     }
 
     .btn-voucher {
-        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        background: linear-gradient(to right, #667eea, #764ba2);
         border: none;
         color: #fff;
         font-weight: 600;
-        padding: 8px 14px;
-        border-radius: 8px;
-        transition: 0.3s;
+        padding: 10px 18px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
     }
 
         .btn-voucher:hover {
-            background: linear-gradient(to right, #f6d365, #fda085);
-            color: white;
-            transform: scale(1.05);
+            background: linear-gradient(to right, #6b73ff, #000dff);
+            transform: scale(1.07);
+            color: #fff;
         }
 
     .alert {
-        border-radius: 10px;
+        border-radius: 12px;
         font-weight: 500;
+    }
+
+    form {
+        margin-top: 10px;
     }
 
     footer {
@@ -99,7 +110,7 @@
 </style>
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4 text-gradient">🎀 Danh sách Voucher hiện có</h2>
+    <h2 class="text-center mb-5 text-gradient">🎁 Danh sách Voucher Ưu Đãi</h2>
 
     <!-- Thông báo -->
     @if (TempData["Success"] != null)
@@ -121,27 +132,27 @@
         <div class="row g-4">
             @foreach (var item in Model)
             {
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card voucher-card h-100">
                         <div class="card-body text-center">
                             <h5 class="voucher-title">@item.TenChuongTrinh</h5>
-                            <p class="voucher-value mb-2">
-                                💰 Giảm: <strong>@item.GiaTri.ToString("N0")₫</strong>
+                            <p class="voucher-value">
+                                💰 <strong>Giảm @item.GiaTri.ToString("N0")₫</strong>
                             </p>
-                            <p class="voucher-date mb-1">
-                                <i class="fa fa-calendar"></i>
+                            <p class="voucher-date mb-2">
+                                <i class="fa-regular fa-calendar-days me-1"></i>
                                 @item.NgayBatDau.ToString("dd/MM/yyyy") - @item.NgayKetThuc.ToString("dd/MM/yyyy")
                             </p>
-                            <p class="mb-3">
+                            <p>
                                 <span class="badge bg-@(item.TrangThai ? "success" : "secondary")">
-                                    @(item.TrangThai ? "Đang hoạt động" : "Ngừng")
+                                    @(item.TrangThai ? "Đang hoạt động" : "Ngừng áp dụng")
                                 </span>
                             </p>
 
                             <form asp-action="NhanVoucher" asp-controller="Voucher" method="post">
                                 <input type="hidden" name="id" value="@item.MaKhuyenMai" />
                                 <button type="submit" class="btn btn-voucher">
-                                    <i class="fa fa-gift me-1"></i> Nhận Voucher
+                                    <i class="fa-solid fa-ticket me-2"></i> Nhận Voucher
                                 </button>
                             </form>
                         </div>
@@ -153,7 +164,7 @@
     else
     {
         <div class="alert alert-info text-center mt-4">
-            Hiện chưa có voucher nào khả dụng 💡
+            🌸 Hiện chưa có voucher nào khả dụng — quay lại sau nhé!
         </div>
     }
 </div>

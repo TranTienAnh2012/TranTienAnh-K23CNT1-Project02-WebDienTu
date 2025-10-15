@@ -9,6 +9,7 @@
     var isAuthenticated = user.Identity.IsAuthenticated;
     int userId = 0;
     string userName = null;
+    string shortName = null;
     bool isAdmin = false;
 
     if (isAuthenticated)
@@ -18,6 +19,12 @@
         int.TryParse(idClaim, out userId);
         userName = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
+        // 👉 Tách lấy từ cuối cùng trong tên
+        if (!string.IsNullOrEmpty(userName))
+        {
+            var parts = userName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            shortName = parts.Length > 0 ? parts.Last() : userName;
+        }
         // Kiểm tra role admin
         isAdmin = user.IsInRole("Admin");
     }
@@ -116,7 +123,8 @@
 
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Account" asp-action="Profile">
-                            <i class="fa-solid fa-user me-1"></i> Xin chào, @userName
+                            <i class="fa-solid fa-user me-1"></i> Xin chào, @shortName
+
                         </a>
                     </li>
 

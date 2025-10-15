@@ -6,6 +6,44 @@
     var vouchers = Model.UserVouchers;
 }
 
+<!-- 🟢 Thông báo toast toàn cục -->
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 2000">
+    @if (TempData["Success"] != null)
+    {
+        <div class="toast align-items-center text-white bg-success border-0 show" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fa-solid fa-circle-check me-2"></i> @TempData["Success"]
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    }
+    else if (TempData["Error"] != null)
+    {
+        <div class="toast align-items-center text-white bg-danger border-0 show" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i> @TempData["Error"]
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    }
+    else if (TempData["Warning"] != null)
+    {
+        <div class="toast align-items-center text-dark bg-warning border-0 show" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i> @TempData["Warning"]
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    }
+</div>
+
+
 <div class="container mt-5">
     <h3 class="mb-3">Xác nhận mua hàng</h3>
 
@@ -103,8 +141,34 @@
 
         soLuongInput.addEventListener("input", tinhTongTien);
         if (voucherSelect) voucherSelect.addEventListener("change", tinhTongTien);
-
-        // Tính ngay khi load trang
         tinhTongTien();
+
+              // 🔔 Thông báo ngay khi nhấn "Xác nhận thanh toán"
+        const formThanhToan = document.getElementById("formThanhToan");
+        if (formThanhToan) {
+            formThanhToan.addEventListener("submit", function (e) {
+                // Hiển thị toast tạm thời
+                const toastHtml = `
+                    <div class="toast align-items-center text-white bg-primary border-0 show position-fixed top-0 end-0 m-3"
+                         role="alert" aria-live="assertive" aria-atomic="true" style="z-index:3000;">
+                        <div class="d-flex">
+                            <div class="toast-body">
+                                <i class="fa-solid fa-spinner fa-spin me-2"></i> Đang xử lý thanh toán, vui lòng chờ...
+                            </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                        </div>
+                    </div>`;
+
+                // Thêm vào DOM
+                document.body.insertAdjacentHTML("beforeend", toastHtml);
+
+                // Tự động ẩn sau vài giây
+                setTimeout(() => {
+                    const toast = document.querySelector(".toast.bg-primary");
+                    if (toast) toast.remove();
+                }, 4000);
+            });
+        }
+
     </script>
 }

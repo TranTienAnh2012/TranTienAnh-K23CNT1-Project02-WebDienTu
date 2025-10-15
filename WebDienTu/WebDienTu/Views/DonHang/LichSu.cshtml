@@ -3,90 +3,113 @@
 @{
     ViewData["Title"] = "Lịch sử mua hàng";
 }
-<link href="~/css/LichSuMuaHang.css" rel="stylesheet" />
-<h2 class="mb-4">Lịch sử mua hàng</h2>
 
-@if (TempData["Warning"] != null)
+
+<!-- Thông báo góc trên phải (dùng class custom để dễ control CSS theo theme) -->
+@if (TempData["Success"] != null)
 {
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        @TempData["Warning"]
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+        <div class="toast custom-toast success show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fa-solid fa-circle-check me-2"></i>@TempData["Success"]
+                </div>
+                <button type="button" class="btn-close custom-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
     </div>
 }
 
+
+
+<h2 class="fw-bold mb-4 text-primary">
+    <i class="fa-solid fa-box-archive me-2"></i>Lịch sử mua hàng
+</h2>
+
 @if (Model == null || !Model.Any())
 {
-    <p>Bạn chưa có đơn hàng nào.</p>
+    <div class="text-center text-muted py-5">
+        <i class="fa-regular fa-box-open fa-3x mb-3"></i>
+        <p>Bạn chưa có đơn hàng nào.</p>
+    </div>
 }
 else
 {
-    <table class="table table-hover align-middle table-theme">
-        <thead class="table-primary">
-            <tr>
-                <th>Mã Đơn</th>
-                <th>Ngày mua</th>
-                <th>Trạng thái</th>
-                <th>Sản phẩm</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-                <th>Thao tác</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var dh in Model)
-            {
-                foreach (var ct in dh.ChiTietDonHangs)
-                {
-                    <tr>
-                        <td>#@dh.MaDonHang</td>
-                        <td>@dh.NgayDatHang?.ToString("dd/MM/yyyy HH:mm")</td>
-                        <td>
-                            @if (dh.TrangThai == true)
-                            {
-                                <span class="badge bg-success">Đã xác nhận</span>
-                            }
-                            else
-                            {
-                                <span class="badge bg-warning text-dark">Chờ xác nhận</span>
-                            }
-                        </td>
+    <div class="order-history">
+        @foreach (var dh in Model)
+        {
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>Mã đơn:</strong> <span class="order-code">#@dh.MaDonHang</span>
+                        <span class="text-muted ms-3">
+                            <i class="fa-regular fa-calendar-days me-1"></i>
+                            @dh.NgayDatHang?.ToString("dd/MM/yyyy HH:mm")
+                        </span>
+                    </div>
+                    <div>
+                        @if (dh.TrangThai == true)
+                        {
+                            <span class="badge bg-success px-3 py-2">Đã xác nhận</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning text-dark px-3 py-2">Chờ xác nhận</span>
+                        }
+                    </div>
+                </div>
 
-                        <td>
+                <div class="card-body p-3">
+                    @foreach (var ct in dh.ChiTietDonHangs)
+                    {
+                        <div class="d-flex justify-content-between align-items-center border-bottom py-2">
                             <div class="d-flex align-items-center">
                                 <img src="@ct.MaSanPhamNavigation.HinhAnh"
                                      alt="@ct.MaSanPhamNavigation.TenSanPham"
-                                     class="rounded me-2"
-                                     style="width:60px; height:60px; object-fit:cover;" />
-                                <span>@ct.MaSanPhamNavigation.TenSanPham</span>
+                                     class="rounded me-3 border"
+                                     style="width:70px; height:70px; object-fit:cover;" />
+                                <div>
+                                    <div class="fw-semibold">@ct.MaSanPhamNavigation.TenSanPham</div>
+                                    <div class="text-muted small">Số lượng: @ct.SoLuong</div>
+                                </div>
                             </div>
-                        </td>
-                        <td>@ct.DonGia.ToString("N0") VNĐ</td>
-                        <td>@ct.SoLuong</td>
-                        <td>@((ct.DonGia * ct.SoLuong).ToString("N0")) VNĐ</td>
+                            <div class="text-end">
+                                <div class="text-danger fw-bold">@ct.DonGia.ToString("N0") ₫</div>
+                                <div class="text-muted small">
+                                    Thành tiền: <strong>@((ct.DonGia * ct.SoLuong).ToString("N0")) ₫</strong>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
 
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div class="fw-bold text-primary">
+                        Tổng đơn: <span class="text-danger">@dh.TongTien.ToString("N0") ₫</span>
+                    </div>
 
-                        <td>
-                            @if (dh.TrangThai != true)
-                            {
-                                <form asp-action="HuyDon" asp-controller="DonHang" method="post"
-                                      onsubmit="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
-                                    <input type="hidden" name="id" value="@dh.MaDonHang" />
-                                    <button type="submit" class="btn btn-sm btn-outline-danger">
-                                        <i class="fa-solid fa-ban me-1"></i> Hủy
-                                    </button>
-                                </form>
-                            }
-
-                        </td>
-                    </tr>
-                }
-                <!-- Tổng tiền mỗi đơn -->
-                <tr class="table-light fw-bold">
-                    <td colspan="7" class="text-end">Tổng đơn #@dh.MaDonHang:</td>
-                    <td>@dh.TongTien.ToString("N0") VNĐ</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                    @if (dh.TrangThai != true)
+                    {
+                        <form asp-action="HuyDon" asp-controller="DonHang" method="post"
+                              onsubmit="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
+                            <input type="hidden" name="id" value="@dh.MaDonHang" />
+                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                <i class="fa-solid fa-ban me-1"></i> Hủy đơn
+                            </button>
+                        </form>
+                    }
+                </div>
+            </div>
+        }
+    </div>
 }
+<script>
+    setTimeout(() => {
+        const toast = document.querySelector('.toast');
+        if (toast) {
+            toast.classList.remove('show');
+            toast.classList.add('hide');
+        }
+    }, 3000);
+
+</script>
