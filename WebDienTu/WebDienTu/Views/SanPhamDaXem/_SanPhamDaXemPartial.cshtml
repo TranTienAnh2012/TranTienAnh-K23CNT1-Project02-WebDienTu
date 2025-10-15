@@ -6,12 +6,27 @@
         @foreach (var item in Model)
         {
             <div class="col">
-                <div class="card h-100">
-                    <img src="@item.HinhAnh" class="card-img-top" alt="@item.TenSanPham" style="height:120px; object-fit:cover;">
-                    <div class="card-body p-2">
-                        <h6 class="card-title text-truncate">@item.TenSanPham</h6>
-                        <p class="card-text text-danger fw-bold">@item.GiaBan?.ToString("N0") ?? item.Gia.ToString("N0") VNĐ</p>
-                    </div>
+                <div class="card h-100 shadow-sm border-0">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.MaSanPham" class="text-decoration-none text-dark">
+                        <img src="@item.HinhAnh" class="card-img-top rounded-top" alt="@item.TenSanPham"
+                             style="height:130px; object-fit:cover;">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-truncate mb-1">@item.TenSanPham</h6>
+
+                            <p class="card-text mb-0 text-danger fw-bold">
+                                @(item.GiaBan.HasValue && item.GiaBan.Value < item.Gia
+                                                        ? item.GiaBan.Value.ToString("N0") + " ₫"
+                                                        : item.Gia.ToString("N0") + " ₫")
+                    </p>
+
+                    @if (item.GiaBan.HasValue && item.GiaBan.Value < item.Gia)
+                            {
+                                <small class="text-muted text-decoration-line-through">
+                                    @item.Gia.ToString("N0") ₫
+                                </small>
+                            }
+                        </div>
+                    </a>
                 </div>
             </div>
         }
@@ -19,5 +34,5 @@
 }
 else
 {
-    <p class="text-muted">Bạn chưa xem sản phẩm nào.</p>
+    <p class="text-muted fst-italic">Bạn chưa xem sản phẩm nào.</p>
 }

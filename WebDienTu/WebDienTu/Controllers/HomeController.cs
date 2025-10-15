@@ -177,6 +177,8 @@ namespace WebDienTu.Controllers
                 await _context.SaveChangesAsync();
             }
 
+           
+
             // 🔹 Note: Khi view Details, bạn có thể dùng sp.GiaTriThuocTinhs để hiển thị
             // Ví dụ trong view:
             // @foreach(var gt in Model.GiaTriThuocTinhs) {

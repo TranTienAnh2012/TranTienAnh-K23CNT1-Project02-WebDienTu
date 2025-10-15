@@ -40,9 +40,9 @@
 </div>
 
 
-<div id="daXemContainer">
+@* <div id="daXemContainer">
     <!-- Nội dung sẽ load từ Ajax  (Tạm thới chưa làm)-->
-</div>
+</div> *@
 
 <!-- Thanh phân loại + Lọc -->
 <div class="nav nav-pills d-flex align-items-center justify-content-start flex-wrap mb-3 p-2 bg-light rounded" id="LoaiFilterNav">
@@ -302,12 +302,20 @@
                     });
             });
 
-        $(function() {
-            var maNguoiDung = @currentUserId;
-            if (maNguoiDung > 0) {
-                $("#daXemContainer").load("/SanPhamDaXem/Index?maNguoiDung=" + maNguoiDung);
-            }
-        });
+                // ========================
+        // 🔥 Load sản phẩm đã xem
+        // ========================
+        // $(function() {
+        //     var maNguoiDung = @ViewBag.MaNguoiDung; Sử dụng ViewBag.MaNguoiDung thay vì currentUserId
+        //     if (maNguoiDung > 0) {
+        //         $("#daXemContainer").load("/SanPhamDaXem/Index?maNguoiDung=" + maNguoiDung, function(response, status, xhr) {
+        //             if (status === "error") {
+        //                 console.error("Lỗi khi tải sản phẩm đã xem: " + xhr.status + " " + xhr.statusText);
+        //                 $("#daXemContainer").html("<p class='text-muted fst-italic'>Không thể tải sản phẩm đã xem.</p>");
+        //             }
+        //         });
+        //     }
+        // });
          // ========================
             // 🔥 Nút Xem Thêm
             // ========================
