@@ -17,5 +17,6 @@ public partial class DonHang
 
     public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; } = new List<ChiTietDonHang>();
 
-    public virtual QuanTriVien MaNguoiDungNavigation { get; set; } = null!;
+    public virtual QuanTriVien? MaNguoiDungNavigation { get; set; }
+
 }
