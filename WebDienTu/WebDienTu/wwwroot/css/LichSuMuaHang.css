@@ -109,3 +109,15 @@
 [data-theme="dark"] .order-history .order-code {
     color: var(--accent-color, #00b4ff);
 }
+/* =========================
+   FIX TOAST DARK MODE
+========================= */
+[data-theme="dark"] .custom-toast.success {
+    background-color: #1d3e28 !important; /* xanh lá đậm */
+    color: #dff6e6 !important; /* chữ sáng */
+    border-color: #2f6242 !important;
+}
+
+[data-theme="dark"] .custom-toast .btn-close {
+    filter: brightness(2);
+}

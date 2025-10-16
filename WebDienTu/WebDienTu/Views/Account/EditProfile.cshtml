@@ -1,0 +1,62 @@
+﻿@model WebDienTu.Models.EditProfileViewModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin cá nhân";
+}
+
+<div class="container mt-5" style="max-width: 600px;">
+    <h3 class="mb-4 text-center">Chỉnh sửa thông tin cá nhân</h3>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-action="EditProfile" method="post">
+        @Html.AntiForgeryToken()
+
+        <!-- Họ tên -->
+        <div class="form-group mb-3">
+            <label asp-for="HoTen"></label>
+            <input asp-for="HoTen" class="form-control" />
+            <span asp-validation-for="HoTen" class="text-danger"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <hr />
+        <h5 class="mt-4 mb-3">Đổi mật khẩu (tùy chọn)</h5>
+
+        <!-- Mật khẩu hiện tại -->
+        <div class="form-group mb-3">
+            <label asp-for="MatKhauHienTai"></label>
+            <input asp-for="MatKhauHienTai" class="form-control" type="password" />
+            <span asp-validation-for="MatKhauHienTai" class="text-danger"></span>
+        </div>
+
+        <!-- Mật khẩu mới -->
+        <div class="form-group mb-3">
+            <label asp-for="MatKhauMoi"></label>
+            <input asp-for="MatKhauMoi" class="form-control" type="password" />
+            <span asp-validation-for="MatKhauMoi" class="text-danger"></span>
+        </div>
+
+        <!-- Xác nhận mật khẩu mới -->
+        <div class="form-group mb-3">
+            <label asp-for="XacNhanMatKhauMoi"></label>
+            <input asp-for="XacNhanMatKhauMoi" class="form-control" type="password" />
+            <span asp-validation-for="XacNhanMatKhauMoi" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-3">Lưu thay đổi</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

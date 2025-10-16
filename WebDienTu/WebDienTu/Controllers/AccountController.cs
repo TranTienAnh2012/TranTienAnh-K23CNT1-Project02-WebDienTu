@@ -136,7 +136,6 @@ public class AccountController : Controller
         return View(user);
     }
 
-    // ========== CHỈNH SỬA THÔNG TIN ==========
     [HttpGet]
     public IActionResult EditProfile()
     {
@@ -144,28 +143,45 @@ public class AccountController : Controller
         var user = _context.QuanTriViens.FirstOrDefault(u => u.MaNguoiDung == userId);
         if (user == null) return NotFound();
 
-        return View(user);
+        var model = new EditProfileViewModel
+        {
+            HoTen = user.HoTen,
+            Email = user.Email
+        };
+
+        return View(model);
     }
 
     [HttpPost]
-    public async Task<IActionResult> EditProfile(QuanTriVien model)
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> EditProfile(EditProfileViewModel model)
     {
         int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
         var user = _context.QuanTriViens.FirstOrDefault(u => u.MaNguoiDung == userId);
         if (user == null) return NotFound();
 
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
+        if (!ModelState.IsValid) return View(model);
 
+        // Cập nhật thông tin cơ bản
         user.HoTen = model.HoTen;
         user.Email = model.Email;
-        await _context.SaveChangesAsync();
 
+        // Đổi mật khẩu nếu người dùng nhập
+        if (!string.IsNullOrWhiteSpace(model.MatKhauMoi))
+        {
+            if (user.MatKhau != model.MatKhauHienTai)
+            {
+                ViewBag.Error = "Mật khẩu hiện tại không đúng!";
+                return View(model);
+            }
+            user.MatKhau = model.MatKhauMoi;
+        }
+
+        await _context.SaveChangesAsync();
         TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
         return RedirectToAction("Profile");
     }
+
 
     // ========== TRANG CẤM TRUY CẬP ==========
     [HttpGet]

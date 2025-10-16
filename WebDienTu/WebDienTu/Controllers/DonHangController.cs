@@ -152,7 +152,7 @@ namespace WebDienTu.Controllers
             }
 
             int userId = int.Parse(User.Claims.First(c => c.Type == "UserId").Value);
-
+            //Lấy danh sách voucher của user đang còn hiệu lực gửi ViewModel này xuống View, để hiển thị sản phẩm và voucher
             var userVouchers = await _context.NguoiDungGiamGia
                 .Include(nd => nd.MaKhuyenMaiNavigation)
                 .Where(nd => nd.MaNguoiDung == userId && !nd.DaSuDung &&
