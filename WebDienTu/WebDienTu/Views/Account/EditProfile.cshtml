@@ -59,4 +59,33 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy TempData["SuccessMessage"] từ server
+            var successMessage = '@TempData["SuccessMessage"]';
+
+            if (successMessage) {
+                // Tạo alert div
+                var alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
+                alertDiv.role = 'alert';
+                alertDiv.style.top = '20px';
+                alertDiv.style.right = '20px';
+                alertDiv.style.zIndex = '9999';
+                alertDiv.style.minWidth = '250px';
+                alertDiv.innerHTML = successMessage +
+                    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+
+                document.body.appendChild(alertDiv);
+
+                // Tự động đóng sau 5 giây
+                setTimeout(function () {
+                    var alert = bootstrap.Alert.getOrCreateInstance(alertDiv);
+                    alert.close();
+                }, 5000);
+            }
+        });
+    </script>
 }
+
